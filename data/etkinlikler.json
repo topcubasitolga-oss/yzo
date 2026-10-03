@@ -1,0 +1,997 @@
+{
+  "site": {
+    "ad": "YZO Havuzu",
+    "altBaslik": "Okul öncesi ve ilkokul için yapay zekâ okuryazarlığı etkinlik havuzu",
+    "surum": "0.1",
+    "karakter": "Robot",
+    "sahip": "Dr. Tolga Topçubaşı, İstanbul 29 Mayıs Üniversitesi",
+    "lisans": "CC BY-NC-SA 4.0 (öneri, kesinleşmedi)"
+  },
+  "dunyalar": [
+    {
+      "id": 1,
+      "slug": "tani",
+      "ad": "Tanı",
+      "kisa": "Tanı",
+      "soru": "Bu akıllı mı?",
+      "renk": "portakal",
+      "aciklama": "Yapay zekâ nedir, ne değildir. Robot ile yapay zekâ aynı şey değildir. Günlük yaşamda nerede karşımıza çıkar."
+    },
+    {
+      "id": 2,
+      "slug": "ogrenir",
+      "ad": "Nasıl öğrenir",
+      "kisa": "Öğrenir",
+      "soru": "Nasıl biliyor?",
+      "renk": "cimen",
+      "aciklama": "Örnekten öğrenme, örüntü, veri, eğitim. Çok ve çeşitli örnek, daha iyi öğrenme."
+    },
+    {
+      "id": 3,
+      "slug": "sinirlar",
+      "ad": "Sınırlar",
+      "kisa": "Sınırlar",
+      "soru": "Her zaman doğru mu?",
+      "renk": "lavanta",
+      "aciklama": "Hata yapar, her şeyi bilmez, uydurabilir. İnsanla farkı nedir."
+    },
+    {
+      "id": 4,
+      "slug": "adil",
+      "ad": "Güvenli ve adil",
+      "kisa": "Adil",
+      "soru": "Bu adil mi?",
+      "renk": "kiraz",
+      "aciklama": "Gizlilik, önyargı, yetişkine sorma, ekran sınırı, emek ve sahiplik."
+    },
+    {
+      "id": 5,
+      "slug": "uret",
+      "ad": "Birlikte üret",
+      "kisa": "Üret",
+      "soru": "Birlikte ne yapabiliriz?",
+      "renk": "deniz",
+      "aciklama": "Üretken araçlarla yaratma, problem seçme, sonucu düzeltme. Son karar bizde."
+    }
+  ],
+  "bantlar": [
+    {
+      "id": "oo",
+      "ad": "Okul öncesi",
+      "yas": "4–6 yaş",
+      "duzey": "Farkındalık",
+      "sure": "15–20 dk",
+      "aciklama": "Bilgisayarsız oyun, kukla ve kartlarla. Yazma yok; işaretle, eşleştir, boya. Ekran yalnız akıllı tahtada, hep birlikte."
+    },
+    {
+      "id": "i1",
+      "ad": "1–2. sınıf",
+      "yas": "6–8 yaş",
+      "duzey": "Farkındalık → İşlevsellik",
+      "sure": "25–30 dk",
+      "aciklama": "Resimli senaryo, sınıflama kartları, kısa ekran etkileşimi ve sınıf tartışması. Kısa yanıt, çizim, sıralama."
+    },
+    {
+      "id": "i2",
+      "ad": "3–4. sınıf",
+      "yas": "8–10 yaş",
+      "duzey": "İşlevsellik → Eylemsellik",
+      "sure": "40 dk",
+      "aciklama": "Veri seti kurma, önyargı oyunu, felsefi tartışma ve öğretmen gözetiminde üretken araç kullanımı. Gerekçelendirme, mini proje."
+    }
+  ],
+  "etkinlikler": [
+    {
+      "kod": "YZO-OÖ-1.1",
+      "slug": "oo-1-1",
+      "bant": "oo",
+      "dunya": 1,
+      "ad": "Akıllı mı, Değil mi?",
+      "soru": "Kendi başına karar verebilir mi?",
+      "sure": "20 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Süpürge robotu, oyuncak ayı, sesli asistan ve bisiklet kartlarını \"kendi başına karar verir mi?\" sorusuyla iki kutuya ayırır.",
+      "kazanim": {
+        "cocuk": "Bazı makineler kendi başına karar verir, bazıları vermez; ikisini ayırt ederim.",
+        "akademik": "Yapay zekâ içeren ve içermeyen nesneleri \"kendi başına karar verme\" ölçütüyle sınıflandırır."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Bilişsel gelişim: nesneleri özelliklerine göre gruplama. Dil gelişimi: nedenleri açıklama.",
+        "cikti": ""
+      },
+      "malzeme": ["8 nesne kartı (basılı)", "iki kutu ya da iki çember", "isteğe bağlı: akıllı tahta"],
+      "hazirlik": "5 dk: kartları kes, kutuları etiketle (yeşil ✓ kendi başına / gri ✋ biri kullanmalı).",
+      "ekran": {
+        "durum": "hazir",
+        "modul": "oo-1-1",
+        "aciklama": "Kartlar tek tek gelir. Çocuk iki büyük düğmeden birine dokunur; Robot yanıtı ve bir cümlelik nedenini gösterir."
+      },
+      "kagit": {
+        "baslik": "Akıllı mı, Değil mi?",
+        "yonerge": "Kendi başına karar verenleri yeşil kutuya, birinin kullanması gerekenleri gri kutuya çizgiyle bağla.",
+        "bloklar": [
+          {
+            "tip": "iki-kutu",
+            "sol": { "ad": "Kendi başına karar verir", "simge": "✓" },
+            "sag": { "ad": "Biri kullanmalı", "simge": "✋" },
+            "ogeler": [
+              { "emoji": "🧹", "ad": "Süpürge robotu" },
+              { "emoji": "🧸", "ad": "Oyuncak ayı" },
+              { "emoji": "🔊", "ad": "Sesli asistan" },
+              { "emoji": "🚲", "ad": "Bisiklet" },
+              { "emoji": "📱", "ad": "Yüzünü tanıyan telefon" },
+              { "emoji": "✂️", "ad": "Makas" },
+              { "emoji": "📺", "ad": "Çizgi film öneren tablet" },
+              { "emoji": "🚂", "ad": "Kurmalı tren" }
+            ]
+          },
+          { "tip": "cizim", "baslik": "Evinde kendi başına karar veren bir şey var mı? Çiz." }
+        ]
+      },
+      "not": {
+        "giris": "Kukla ya da kısa bir süpürge robotu videosuyla başla: \"Bu duvara çarpınca ne yapıyor?\" Çocuklar \"dönüyor\" der. \"Ona kim söyledi dönmesini?\" sorusuyla kendi başına karar fikrini aç.",
+        "etkinlik": "Kartları tek tek göster, adını söyle, \"Kendi başına karar verebilir mi?\" diye sor. Çocuklar kutuyu seçer; her kartta bir cümlelik gerekçe iste. Ekran etkileşimi varsa aynı kartları tahtada sırayla oyna.",
+        "kapanis": "Yeşil kutudakilere bakın: hepsi bir şeyi görüp duyuyor ve ona göre davranıyor. Gri kutudakiler bir insan olmadan hiçbir şey yapmaz.",
+        "sorular": [
+          "Süpürge robotu duvara çarpınca neden dönüyor?",
+          "Oyuncak ayı seni görünce bir şey yapar mı?",
+          "Evde kendi başına karar veren başka ne var?"
+        ],
+        "yanilgilar": [
+          "Hareket eden her şey akıllıdır (kurmalı tren, bisiklet).",
+          "Robot biçiminde olan her şey yapay zekâdır; biçim değil davranış önemli."
+        ],
+        "degerlendirme": "Gözlem: çocuk en az 6 kartı doğru kutuya koyar ve ikisi için gerekçe söyler.",
+        "kolay": "Kart sayısını 4'e indir; yalnız çok belirgin çiftler (süpürge robotu / oyuncak ayı).",
+        "zor": "Çamaşır makinesi kartını ekle: \"Düğmeye basınca hep aynı şeyi yapar; karar vermez.\"",
+        "aile": "Bu akşam evde \"kendi başına karar veren\" bir alet arayın; bulduğunuzu yarın anlatsın."
+      }
+    },
+    {
+      "kod": "YZO-OÖ-2.1",
+      "slug": "oo-2-1",
+      "bant": "oo",
+      "dunya": 2,
+      "ad": "Robot Kediyi Tanımıyor",
+      "soru": "Robot nasıl öğrenir?",
+      "sure": "20 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Kukla Robot kedi ile köpeği ayıramaz. Çocuklar örnek kart gösterdikçe öğrenir; az örnekte yanılır.",
+      "kazanim": {
+        "cocuk": "Robot örnek görerek öğrenir; az örnek görürse yanılır.",
+        "akademik": "Makine öğrenmesini \"örneklerden öğrenme\" olarak somutlaştırır; örnek sayısı ile doğruluk arasındaki ilişkiyi fark eder."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Bilişsel gelişim: neden-sonuç ilişkisi kurma, gruplama.",
+        "cikti": ""
+      },
+      "malzeme": ["Kukla ya da kutudan Robot", "12 kedi/köpek kartı", "\"öğrendim\" sayacı için 12 pul"],
+      "hazirlik": "10 dk: kartları kes, Robot kuklasını hazırla.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "\"Örnek göster\" oyunu: kart ver, sayaç dolsun, Robot'u sına."
+      },
+      "kagit": {
+        "baslik": "Robot'a Örnek Gösterelim",
+        "yonerge": "Kedileri boya. Köpekleri çember içine al. Robot kaç örnek gördü? Pulları boya.",
+        "bloklar": [
+          {
+            "tip": "kartlar",
+            "baslik": "Örnek kartlar",
+            "ogeler": [
+              { "emoji": "🐱", "ad": "kedi" },
+              { "emoji": "🐶", "ad": "köpek" },
+              { "emoji": "🐈", "ad": "kedi" },
+              { "emoji": "🐕", "ad": "köpek" },
+              { "emoji": "🐈‍⬛", "ad": "kedi" },
+              { "emoji": "🐩", "ad": "köpek" },
+              { "emoji": "😺", "ad": "kedi" },
+              { "emoji": "🦮", "ad": "köpek" }
+            ]
+          },
+          { "tip": "sayac", "baslik": "Robot kaç örnek gördü?", "adet": 12 }
+        ]
+      },
+      "not": {
+        "giris": "Robot kukla sınıfa gelir: \"Ben kedi ile köpeği ayıramıyorum. Bana öğretir misiniz?\" Çocuklar güler; merak oluşur.",
+        "etkinlik": "Bir çocuk kart gösterir, \"Bu kedi\" der; Robot \"öğrendim\" deyip pul alır. Üç kartta Robot'u sına: öğretmen Robot'u bilerek yanıltır (\"Hmm… köpek?\"). Çocuklar \"daha çok göster\" der. 8–10 kartta Robot doğru bilir.",
+        "kapanis": "\"Robot nasıl öğrendi?\" Cevap: çok örnek gördü. \"Ya hiç siyah kedi göstermeseydik?\" sorusunu açık bırak; bir sonraki derse köprü.",
+        "sorular": [
+          "Robot ilk başta neden yanıldı?",
+          "Kaç örnekten sonra bilmeye başladı?",
+          "Robot'a hiç göstermediğimiz bir hayvanı bilir mi?"
+        ],
+        "yanilgilar": [
+          "Robot kediyi zaten bilir, öğrenmesine gerek yoktur.",
+          "Bir kez görmek yeter; tekrar gerekmez."
+        ],
+        "degerlendirme": "Gözlem: çocuk \"Robot örnek görünce öğrenir\" fikrini kendi sözleriyle söyler.",
+        "kolay": "Yalnız kedi–köpek; 6 kart.",
+        "zor": "Üçüncü hayvan (tavşan) ekle; Robot yeniden yanılır, yeniden öğrenir.",
+        "aile": "Evde bir hayvanın resmini çizsin; \"Robot'a bunu öğretsem kaç tane göstermeliyim?\" diye konuşun."
+      }
+    },
+    {
+      "kod": "YZO-OÖ-3.1",
+      "slug": "oo-3-1",
+      "bant": "oo",
+      "dunya": 3,
+      "ad": "Robot Masal Anlatıyor, Ama…",
+      "soru": "Robot hiç yanılır mı?",
+      "sure": "15 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Robot'un masalındaki saçma hataları (mavi muz, uçan koyun) bulunca çocuklar \"Robot yanıldı!\" der.",
+      "kazanim": {
+        "cocuk": "Robot da yanılır; yanlışı ben bulabilirim.",
+        "akademik": "Yapay zekâ çıktılarının hatalı olabileceğini fark eder; hatayı bulmak için kendi bilgisini kullanır."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Dil gelişimi: dinlediğini anlama, yanlışı fark etme. Bilişsel gelişim: gerçek–hayal ayrımı.",
+        "cikti": ""
+      },
+      "malzeme": ["Masal metni (öğretmen notunda)", "4 hatalı sahne resmi", "kırmızı \"dur\" kartı (her çocuğa)"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Resimde hatayı bul, dokun."
+      },
+      "kagit": {
+        "baslik": "Hata Nerede?",
+        "yonerge": "Her resimde bir yanlış var. Yanlışı bul, üstüne çarpı koy. Doğrusunu yanındaki kutuya çiz.",
+        "bloklar": [
+          {
+            "tip": "sahneler",
+            "ogeler": [
+              { "emoji": "🍌", "ad": "Mavi muz" },
+              { "emoji": "🐑", "ad": "Uçan koyun" },
+              { "emoji": "🌙", "ad": "Gece parlayan güneş" },
+              { "emoji": "🐟", "ad": "Ağaçta yüzen balık" }
+            ]
+          }
+        ]
+      },
+      "not": {
+        "giris": "Robot (kukla) masal anlatacak: \"Yanlış duyarsanız kırmızı kartı kaldırın.\"",
+        "etkinlik": "Masal: \"Ali pazara gitti, mavi bir muz aldı. Yolda uçan bir koyun gördü. Gece güneş parlıyordu, ağaçta bir balık yüzüyordu…\" Her hatada çocuklar kartı kaldırır, doğrusunu söyler. Dört hata.",
+        "kapanis": "\"Robot neden yanıldı?\" Çünkü her şeyi bilmiyor; biz biliyoruz ve düzelttik.",
+        "sorular": [
+          "Muz ne renk olur?",
+          "Robot neden böyle dedi sence?",
+          "Robot yanılınca ne yaparız?"
+        ],
+        "yanilgilar": [
+          "Robot her şeyi bilir.",
+          "Robot yanılırsa kızmak gerekir; hayır, düzeltiriz."
+        ],
+        "degerlendirme": "Gözlem: çocuk 4 hatadan en az 3'ünü fark eder ve doğrusunu söyler.",
+        "kolay": "2 hata, çok belirgin.",
+        "zor": "Çocuklar Robot için kendi \"hatalı masalını\" uydurur, arkadaşı bulur.",
+        "aile": "Akşam kitap okurken bir kelimeyi bilerek yanlış okuyun; çocuk \"dur\" desin."
+      }
+    },
+    {
+      "kod": "YZO-OÖ-4.1",
+      "slug": "oo-4-1",
+      "bant": "oo",
+      "dunya": 4,
+      "ad": "Sır Kutusu",
+      "soru": "Bunu Robot'a söyler miyim?",
+      "sure": "15 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Konuşan oyuncağa ya da ekrana neyi söyler, neyi önce bir yetişkine sorar; kartları iki kutuya atar.",
+      "kazanim": {
+        "cocuk": "Adımı, evimi, okulumu ekrana söylemeden önce büyüğüme sorarım.",
+        "akademik": "Kişisel bilgi kavramını tanır; dijital ortamda paylaşım için yetişkine danışma davranışı geliştirir."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Sosyal-duygusal gelişim: kendini koruma, güvenli davranış. Hayat Bilgisi \"Sağlığım ve Güvenliğim\" alanına köprü.",
+        "cikti": ""
+      },
+      "malzeme": ["10 durum kartı", "iki kutu: \"Söylerim\" / \"Önce büyüğüme sorarım\"", "konuşan oyuncak ya da kukla"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Kutuya at oyunu."
+      },
+      "kagit": {
+        "baslik": "Sır Kutusu",
+        "yonerge": "Konuşan oyuncak soruyor. Söyleyebileceklerini yeşil kutuya, önce büyüğüne soracaklarını kırmızı kutuya çizgiyle bağla.",
+        "bloklar": [
+          {
+            "tip": "iki-kutu",
+            "sol": { "ad": "Söylerim", "simge": "🙂" },
+            "sag": { "ad": "Önce büyüğüme sorarım", "simge": "🛑" },
+            "ogeler": [
+              { "emoji": "🎨", "ad": "En sevdiğim renk" },
+              { "emoji": "🏠", "ad": "Evimin adresi" },
+              { "emoji": "🐶", "ad": "Sevdiğim hayvan" },
+              { "emoji": "📞", "ad": "Annemin telefonu" },
+              { "emoji": "🏫", "ad": "Okulumun adı" },
+              { "emoji": "⚽", "ad": "Sevdiğim oyun" }
+            ]
+          }
+        ]
+      },
+      "not": {
+        "giris": "Kukla: \"Merhaba! Adın ne, evin nerede?\" Çocuklar cevap vermeye başlayınca dur: \"Dur bakalım, bunu bir oyuncağa söyler miyiz?\"",
+        "etkinlik": "Kartları tek tek oku; çocuk kutuyu seçer. Kural basit: \"beni bulmaya yarayan şeyler\" kırmızı kutuya.",
+        "kapanis": "Kırmızı kutudakiler sır değil, özel. Özel şeyleri sadece büyüklerimizle konuşuruz.",
+        "sorular": [
+          "Oyuncak evini neden bilmek istesin?",
+          "Sevdiğin rengi söylemek sorun olur mu?",
+          "Emin olmayınca ne yaparsın?"
+        ],
+        "yanilgilar": [
+          "Oyuncak ya da ekran dinlemez, ona her şey söylenir.",
+          "Hiçbir şey söylenmez; hayır, özel olanlar söylenmez."
+        ],
+        "degerlendirme": "Gözlem: çocuk 6 karttan 5'ini doğru kutuya koyar.",
+        "kolay": "4 kart.",
+        "zor": "\"Fotoğrafımı göstereyim mi?\" kartı ekle; tartış.",
+        "aile": "Evdeki sesli cihazla konuşurken çocuk yanınızda olsun; \"adresi söylemiyoruz\" kuralını birlikte söyleyin."
+      }
+    },
+    {
+      "kod": "YZO-OÖ-5.1",
+      "slug": "oo-5-1",
+      "bant": "oo",
+      "dunya": 5,
+      "ad": "Hikâyeyi Birlikte Tamamla",
+      "soru": "Robot bizim gibi resim yapar mı?",
+      "sure": "20 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Öğretmen tahtada üretken araçla çocukların üç sözcüğünden resim başlatır; çocuklar \"böyle olmasın\" diyerek düzeltir.",
+      "kazanim": {
+        "cocuk": "Robot, söylediklerimizden resim yapar; beğenmezsek değiştiririz.",
+        "akademik": "Üretken yapay zekâ çıktısının insan yönergesine bağlı olduğunu ve düzeltilebildiğini deneyimler."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Sanat ve yaratıcılık: kendi ürünü ile başkasının ürününü karşılaştırma. Dil gelişimi: betimleme.",
+        "cikti": ""
+      },
+      "malzeme": ["Öğretmen hesabıyla bir görsel üretme aracı (akıllı tahta)", "boya kalemleri", "A4 kâğıt"],
+      "hazirlik": "10 dk: aracı önceden dene. Çocuk hesabı açılmaz, çocuk adı girilmez.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Öğretmen üretir; çocuklar seçer ve oylar."
+      },
+      "kagit": {
+        "baslik": "Benim Çizimim, Robot'un Çizimi",
+        "yonerge": "Üç sözcüğü söyledik: ______  ______  ______. Sol kutuya kendi resmini çiz. Sağ kutuya Robot'un resminde beğendiğin bir şeyi çiz.",
+        "bloklar": [
+          { "tip": "iki-cizim", "sol": "Benim çizimim", "sag": "Robot'un çiziminden" }
+        ]
+      },
+      "not": {
+        "giris": "Çocuklardan üç sözcük iste: \"kedi, uçurtma, pazar\". Tahtada araçla üret. Resim gelince şaşırma anını bekle.",
+        "etkinlik": "Resme bakın: \"Kedi nerede? Pazar olmuş mu?\" Beğenilmeyen bir şeyi birlikte değiştirin (\"kedi mavi olsun\"). İkinci sonucu karşılaştırın. Sonra herkes aynı üç sözcükle kendi resmini çizer.",
+        "kapanis": "Robot bizim sözcüklerimizle yaptı; sözcük değişince resim değişti. Bizim resimlerimiz birbirine benzemiyor, çünkü biz farklıyız.",
+        "sorular": [
+          "Robot neyi doğru yaptı, neyi eksik bıraktı?",
+          "Senin resminde Robot'unkinde olmayan ne var?",
+          "Bu resmi kim yaptı: Robot mu, biz mi?"
+        ],
+        "yanilgilar": [
+          "Robot'un resmi \"daha iyi\"dir; hayır, farklıdır ve bizim sözcüklerimizden çıkmıştır.",
+          "Robot istediğini kendi uydurur; hayır, bizim sözcüklerimize göre yapar."
+        ],
+        "degerlendirme": "Ürün: çocuğun çizimi üç sözcüğün en az ikisini içerir; tartışmada bir karşılaştırma cümlesi söyler.",
+        "kolay": "İki sözcük.",
+        "zor": "Çocuk yönergeyi kendi verir: \"Robot'a ne diyelim?\"",
+        "aile": "Birlikte ürettiğiniz resmi evde anlatsın; \"Robot'a ne söyledik?\" sorusunu sorun."
+      }
+    },
+    {
+      "kod": "YZO-İ1-1.1",
+      "slug": "i1-1-1",
+      "bant": "i1",
+      "dunya": 1,
+      "ad": "Günümde Yapay Zekâ Avı",
+      "soru": "Yapay zekâ bugün nerede karşıma çıktı?",
+      "sure": "30 dk",
+      "duzey": "Farkındalık → İşlevsellik",
+      "ozet": "Sabahtan akşama resimli gün şeridinde yapay zekânın olduğu yerleri bulur: video önerisi, navigasyon, sesli asistan.",
+      "kazanim": {
+        "cocuk": "Günümde yapay zekânın olduğu yerleri bulurum.",
+        "akademik": "Günlük yaşamda yapay zekâ içeren uygulamaları tanır; \"öneren, tanıyan, yol bulan\" işlevleriyle adlandırır."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (1–2. sınıf)",
+        "alan": "Bilim, Teknoloji ve Sanat. Ben ve Okulum (günlük yaşam).",
+        "cikti": ""
+      },
+      "malzeme": ["Gün şeridi çalışma kâğıdı", "çıkartma ya da renkli kalem", "akıllı tahta (isteğe bağlı)"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Sahnede gizli noktaları bul."
+      },
+      "kagit": {
+        "baslik": "Günümde Yapay Zekâ Avı",
+        "yonerge": "Sabahtan akşama kadar yaptıklarına bak. Yapay zekânın olduğu yerleri daire içine al. Her daireye ne yaptığını yaz: öneriyor, tanıyor ya da yol buluyor.",
+        "bloklar": [
+          {
+            "tip": "serit",
+            "ogeler": [
+              { "saat": "07:30", "emoji": "⏰", "ad": "Telefon alarmı" },
+              { "saat": "08:00", "emoji": "🚗", "ad": "Arabada navigasyon" },
+              { "saat": "09:00", "emoji": "📚", "ad": "Sınıfta ders" },
+              { "saat": "12:30", "emoji": "🍽️", "ad": "Öğle yemeği" },
+              { "saat": "16:00", "emoji": "📱", "ad": "Tablette video önerisi" },
+              { "saat": "17:00", "emoji": "🔊", "ad": "Sesli asistana hava durumu sorma" },
+              { "saat": "18:00", "emoji": "📷", "ad": "Telefon yüzünü tanıyıp açılıyor" },
+              { "saat": "20:00", "emoji": "📖", "ad": "Kitap okuma" }
+            ]
+          },
+          { "tip": "satirlar", "baslik": "Bulduğun yapay zekâ ne yapıyor? (öneriyor / tanıyor / yol buluyor)", "adet": 3 }
+        ]
+      },
+      "not": {
+        "giris": "\"Bugün sabah uyandığından beri hangi aletleri kullandın?\" Tahtaya yaz. \"Hangileri senin ne istediğini tahmin ediyor?\"",
+        "etkinlik": "Gün şeridini birlikte inceleyin; her sahnede \"Bu alet bir şeyi tanıyor mu, öneriyor mu, yol mu buluyor?\" sorusunu sor. Üç fiil yapay zekânın üç yüzüdür. Çocuklar kâğıtta daire içine alır ve fiili yazar.",
+        "kapanis": "Yapay zekâ her yerde ama görünmüyor; biz onu davranışından tanırız.",
+        "sorular": [
+          "Alarm neden yapay zekâ değil?",
+          "Video önerisi senin ne izlediğini nereden biliyor?",
+          "Yüzünü tanıyan telefon seni nasıl tanıyor?"
+        ],
+        "yanilgilar": [
+          "Her ekran yapay zekâdır.",
+          "Yapay zekâ yalnız robotlardadır."
+        ],
+        "degerlendirme": "Çalışma kâğıdı: 4 yapay zekâ sahnesinden en az 3'ü işaretlenir; en az bir fiil doğru eşlenir.",
+        "kolay": "Şerit 5 sahneye iner.",
+        "zor": "Çocuk kendi gününden bir sahne ekler.",
+        "aile": "Akşam telefonda \"öneren\" bir şeyi birlikte bulun."
+      }
+    },
+    {
+      "kod": "YZO-İ1-2.1",
+      "slug": "i1-2-1",
+      "bant": "i1",
+      "dunya": 2,
+      "ad": "Pazarcı Robot: Elma mı, Armut mu?",
+      "soru": "Kaç örnek yeter?",
+      "sure": "30 dk",
+      "duzey": "İşlevsellik",
+      "ozet": "Robot'u kartlarla eğitir; 2 örnekle sınavda hata, 10 örnekle doğru. \"Kaç örnek yeter?\" sorusuna kendi cevabını bulur.",
+      "kazanim": {
+        "cocuk": "Robot'a çok ve çeşitli örnek gösterirsem daha iyi öğrenir.",
+        "akademik": "Eğitim verisinin miktarı ve çeşitliliği ile model doğruluğu arasındaki ilişkiyi deneysel olarak gözlemler."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (1–2. sınıf)",
+        "alan": "Bilim, Teknoloji ve Sanat. Matematik ile köprü: sayma, karşılaştırma.",
+        "cikti": ""
+      },
+      "malzeme": ["Elma/armut kartları (kırmızı, yeşil, sarı çeşitleri)", "\"Robot'un defteri\" kâğıdı", "akıllı tahta ya da tablet (ekran etkileşimi)"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "hazir",
+        "modul": "i1-2-1",
+        "aciklama": "Robot'u örneklerle eğit, sonra sına. Örnek arttıkça ve çeşitlendikçe yıldız artar."
+      },
+      "kagit": {
+        "baslik": "Robot'un Defteri",
+        "yonerge": "Robot'a hangi örnekleri gösterdin? İşaretle. Sınavda kaçını bildi? Yaz. Daha çok örnek gösterince ne oldu?",
+        "bloklar": [
+          {
+            "tip": "tablo",
+            "basliklar": ["Deneme", "Kaç örnek gösterdim?", "Sınavda kaçını bildi? (6 üzerinden)"],
+            "satirlar": [["1. deneme", "", ""], ["2. deneme", "", ""], ["3. deneme", "", ""]]
+          },
+          { "tip": "isaretle", "baslik": "Robot'a gösterdiğim örnekler", "secenekler": ["Kırmızı elma", "Yeşil elma", "Sarı armut", "Yeşil armut"] },
+          { "tip": "satirlar", "baslik": "Robot yeşil elmayı armut sandı. Neden olabilir?", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "Pazarcı Robot işe başlıyor ama elma ile armudu karıştırıyor; müşteriler şikâyetçi. \"Ona nasıl öğretiriz?\"",
+        "etkinlik": "Tahtada ekran etkileşimi: 2 örnekle eğit, sına (yanılır). Sınıf \"daha çok\" der; 6, sonra 10 örnek. Her denemede sonuç tabloya yazılır. Önemli an: yalnız kırmızı elma gösterilince yeşil elmayı armut sanır; çeşitlilik fikri burada açılır.",
+        "kapanis": "Daha çok ve daha çeşitli örnek, daha iyi Robot. Örnek sayısı ile doğru sayısı tahtada basit bir çubuk grafikle gösterilebilir.",
+        "sorular": [
+          "2 örnekle neden yanıldı?",
+          "Yeşil elmayı neden armut sandı?",
+          "Hiç görmediği bir meyveyi bilir mi?"
+        ],
+        "yanilgilar": [
+          "Robot elmayı görür ve bilir; öğretmek gerekmez.",
+          "Bir tür örnek yeter; çeşitlilik gerekmez."
+        ],
+        "degerlendirme": "Robot'un defteri tablosu dolu; \"neden olabilir?\" sorusuna \"yeşil elma göstermedik\" benzeri bir gerekçe.",
+        "kolay": "Yalnız kırmızı elma ve yeşil armut.",
+        "zor": "Üçüncü meyve (portakal) eklenir; çocuklar kaç örnek gerektiğini tahmin eder.",
+        "aile": "Evde meyve tabağıyla oyun: \"Robot olsan bunu ne sanırdın?\""
+      }
+    },
+    {
+      "kod": "YZO-İ1-3.1",
+      "slug": "i1-3-1",
+      "bant": "i1",
+      "dunya": 3,
+      "ad": "İnsan mı Yazdı, Makine mi?",
+      "soru": "Bunu kim yazdı?",
+      "sure": "30 dk",
+      "duzey": "İşlevsellik",
+      "ozet": "Kısa metinlerden hangisinin makineden çıktığını tahmin eder, gerekçe söyler; makinenin bilemediği şeyleri listeler.",
+      "kazanim": {
+        "cocuk": "Makinenin yazdığını her zaman ayırt edemem; ipuçlarına bakarım ve sorarım.",
+        "akademik": "Yapay zekâ üretimi metni insan üretiminden ayırt etmeye yönelik ipuçları kullanır ve bu ayrımın kesin olmadığını fark eder."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (1–2. sınıf); Türkçe ile köprü",
+        "alan": "Bilim, Teknoloji ve Sanat. Türkçe: metinde kişisel ayrıntıyı fark etme.",
+        "cikti": ""
+      },
+      "malzeme": ["6 metin kartı (ekranda hazır)", "✓/✗ kâğıdı"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "hazir",
+        "modul": "i1-3-1",
+        "aciklama": "Kartı oku, \"İnsan\" ya da \"Makine\" de, kartı çevir; ipucu görünür."
+      },
+      "kagit": {
+        "baslik": "İnsan mı, Makine mi?",
+        "yonerge": "Her metni oku. Kim yazdı? İşaretle. Sonra \"Neden böyle düşündüm?\" kutusuna bir ipucu yaz.",
+        "bloklar": [
+          {
+            "tip": "secim-metin",
+            "ogeler": [
+              { "metin": "Dün parkta kardeşimle salıncağa bindik. Kardeşim düştü ama ağlamadı, dizine yaprak yapıştırdık.", "secenekler": ["İnsan", "Makine"] },
+              { "metin": "Park, çocuklar için eğlenceli bir yerdir. Parkta salıncak, kaydırak ve tahterevalli bulunur. Çocuklar parkta mutlu olur.", "secenekler": ["İnsan", "Makine"] },
+              { "metin": "Kedimizin adı Pamuk. Pamuk en çok babamın terliğinde uyur, bir de kutuların içinde.", "secenekler": ["İnsan", "Makine"] }
+            ]
+          },
+          { "tip": "satirlar", "baslik": "Neden böyle düşündüm? İpucum:", "adet": 2 },
+          { "tip": "isaretle", "baslik": "Makinenin bilemeyeceği şeyler", "secenekler": ["Benim kedimin adı", "Dünkü gezide ne olduğu", "Dünyanın en yüksek dağı", "Bugün ne yediğim"] }
+        ]
+      },
+      "not": {
+        "giris": "Tahtaya iki cümle: \"Parklar güzeldir.\" / \"Dün parkta ayakkabımı kaybettim.\" Hangisini bir makine yazmış olabilir? Neden?",
+        "etkinlik": "Ekranda 6 kart; her kartta sınıf oylar, kart çevrilir, ipucu okunur. İpuçları: kişisel ayrıntı, duygu, küçük hata, \"genel geçer\" cümleler. Vurgu: ipucu var ama kesinlik yok; bazı makine metinleri çok \"insan gibi\".",
+        "kapanis": "Emin olamadığımızda ne yaparız? Sorarız: Kim yazdı? Nereden biliyor?",
+        "sorular": [
+          "Hangi ipucu seni en çok yanılttı?",
+          "Makine kedinin adını neden bilemez?",
+          "Bir metni makinenin yazması kötü mü?"
+        ],
+        "yanilgilar": [
+          "Makine yazısı hep bellidir.",
+          "Makinenin yazdığı her şey yanlıştır."
+        ],
+        "degerlendirme": "Kâğıt: 3 metinden 2'si doğru işaretlenir ve bir ipucu yazılır.",
+        "kolay": "Yalnız 2 çok belirgin kart.",
+        "zor": "Çocuklar bir \"makine gibi\", bir \"kendi gibi\" cümle yazar; arkadaşı tahmin eder.",
+        "aile": "Evde bir reklam metni ile çocuğun yazdığı bir notu karşılaştırın."
+      }
+    },
+    {
+      "kod": "YZO-İ1-4.1",
+      "slug": "i1-4-1",
+      "bant": "i1",
+      "dunya": 4,
+      "ad": "Adil Robot",
+      "soru": "Robot neden yalnız onlara veriyor?",
+      "sure": "30 dk",
+      "duzey": "İşlevsellik",
+      "ozet": "Öyküde Robot topu yalnız kırmızı ayakkabılılara verir, çünkü hep öyle örnek görmüştür. Adil mi, nasıl düzeltiriz?",
+      "kazanim": {
+        "cocuk": "Robot gördüğü örneklere göre davranır; örnekler eksikse haksızlık yapabilir. Düzeltmek için örnekleri değiştiririz.",
+        "akademik": "Algoritmik önyargıyı eğitim verisindeki dengesizlikle ilişkilendirir; çözüm olarak veri çeşitliliğini önerir."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (1–2. sınıf)",
+        "alan": "Ben ve Okulum: adalet, kurallar, arkadaşlık. Değer: Adalet.",
+        "cikti": ""
+      },
+      "malzeme": ["Öykü (öğretmen notunda)", "ayakkabı kartları (kırmızı/mavi/yeşil)", "\"Robot'a hangi örnekleri gösterelim?\" kâğıdı"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Örnekleri karıştır, yeniden eğit, sonucu gör."
+      },
+      "kagit": {
+        "baslik": "Adil Robot",
+        "yonerge": "Robot topu kime verdi, kime vermedi? İşaretle. Robot'un adil olması için ona hangi ayakkabıları göstermeliyiz? Çiz.",
+        "bloklar": [
+          {
+            "tip": "tablo",
+            "basliklar": ["Çocuk", "Ayakkabısı", "Top aldı mı?"],
+            "satirlar": [["Ece", "kırmızı", "☐ evet   ☐ hayır"], ["Can", "mavi", "☐ evet   ☐ hayır"], ["Zeynep", "yeşil", "☐ evet   ☐ hayır"], ["Ali", "kırmızı", "☐ evet   ☐ hayır"]]
+          },
+          { "tip": "cizim", "baslik": "Robot'a göstereceğim örnekler (adil olması için)" },
+          { "tip": "satirlar", "baslik": "Robot neden haksızlık yaptı?", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "Öykü: Okulun bahçesine top dağıtan bir Robot gelir. Ece'ye verir, Can'a vermez, Zeynep'e vermez, Ali'ye verir. Çocuklar fark eder: kırmızı ayakkabılılar alıyor.",
+        "etkinlik": "\"Robot neden böyle yapıyor?\" Tahmin alın. Sonra Robot'un \"örnek defterini\" açın: öğretilirken hep kırmızı ayakkabılı çocuklara top veren örnekler gösterilmiş. Çocuklar yeni örnek seti önerir: her renkten ayakkabı. Kâğıtta çizerler.",
+        "kapanis": "Robot kötü değildi; eksik örnek görmüştü. Haksızlık fark edilince düzeltilir.",
+        "sorular": [
+          "Robot Can'ı sevmiyor mu?",
+          "Robot'a ne gösterseydik adil olurdu?",
+          "Sınıfta böyle bir haksızlığı kim fark eder?"
+        ],
+        "yanilgilar": [
+          "Robot kötü niyetlidir.",
+          "Robot'un kararı kesindir, değiştirilemez."
+        ],
+        "degerlendirme": "Çizim: en az iki farklı renkte ayakkabı örneği; sözlü gerekçe: \"hep kırmızı görmüştü\".",
+        "kolay": "İki renk.",
+        "zor": "Başka bir öykü: \"yalnız uzun saçlılara kitap veren Robot\".",
+        "aile": "Birlikte bir \"adil kural\" bulun: evde oyuncaklar nasıl paylaşılıyor?"
+      }
+    },
+    {
+      "kod": "YZO-İ1-5.1",
+      "slug": "i1-5-1",
+      "bant": "i1",
+      "dunya": 5,
+      "ad": "Sınıf Maskotunu Tasarlıyoruz",
+      "soru": "Ne söyledik, ne çıktı?",
+      "sure": "30 dk",
+      "duzey": "İşlevsellik",
+      "ozet": "Sınıf ortak komutla maskot görseli üretir, üç deneme yapar, düzeltir; sonra herkes kendi maskotunu çizer.",
+      "kazanim": {
+        "cocuk": "Robot'a ne söylediğim önemli; sonucu beğenmezsem değiştiririm.",
+        "akademik": "Üretken yapay zekâ ile yineleme döngüsünü (yönerge, sonuç, düzeltme) uygular; çıktı üzerinde insan kararını korur."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (1–2. sınıf)",
+        "alan": "Bilim, Teknoloji ve Sanat. Ben ve Okulum: sınıf içi karar alma.",
+        "cikti": ""
+      },
+      "malzeme": ["Öğretmen hesabıyla görsel üretme aracı", "\"Ne söyledik, ne çıktı?\" kâğıdı", "boya kalemleri"],
+      "hazirlik": "10 dk: aracı dene. Çocuk hesabı yok, çocuk adı girilmez.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Öğretmen üretir, sınıf oylar."
+      },
+      "kagit": {
+        "baslik": "Ne Söyledik, Ne Çıktı, Ne Değiştirdik?",
+        "yonerge": "Üç denemeyi yaz. Sonra kendi maskotunu çiz.",
+        "bloklar": [
+          {
+            "tip": "tablo",
+            "basliklar": ["Deneme", "Robot'a söylediğimiz", "Çıkan resimde beğendiğimiz", "Değiştirmek istediğimiz"],
+            "satirlar": [["1", "", "", ""], ["2", "", "", ""], ["3", "", "", ""]]
+          },
+          { "tip": "cizim", "baslik": "Benim maskotum" }
+        ]
+      },
+      "not": {
+        "giris": "\"Sınıfımızın bir maskotu olsun. Nasıl olsun?\" Fikirler tahtaya: hayvan, renk, elinde ne tutuyor.",
+        "etkinlik": "Birinci yönerge sınıfın cümlesiyle verilir (\"mavi bir baykuş, elinde kitap\"). Sonuç tartışılır, bir şey değiştirilir, ikinci deneme, üçüncü deneme. Her denemede kâğıt doldurulur. Sonra herkes kendi maskotunu çizer; bir çocuk çizimi ve bir Robot üretimi yan yana asılır.",
+        "kapanis": "Maskotu kim tasarladı? Biz; Robot bizim söylediğimizi çizdi, biz seçtik.",
+        "sorular": [
+          "Söylediğimizi değiştirince ne değişti?",
+          "Robot bizim istemediğimiz bir şey ekledi mi?",
+          "Çizimini Robot'unkinden ayıran ne?"
+        ],
+        "yanilgilar": [
+          "Robot fikri kendi bulur.",
+          "İlk sonuç kesindir, düzeltilemez."
+        ],
+        "degerlendirme": "Tablo: 3 satır dolu; çizim var; sözlü olarak bir karşılaştırma cümlesi.",
+        "kolay": "İki deneme.",
+        "zor": "Her grup kendi yönergesini yazar, sınıf sonuçları karşılaştırır.",
+        "aile": "Evde çocuk size \"yönerge\" versin, siz çizin; sonucu birlikte düzeltin."
+      }
+    },
+    {
+      "kod": "YZO-İ2-1.1",
+      "slug": "i2-1-1",
+      "bant": "i2",
+      "dunya": 1,
+      "ad": "Programlı mı, Otomatik mi, Akıllı mı?",
+      "soru": "Bu alet karar mı veriyor, tarifi mi uyguluyor?",
+      "sure": "40 dk",
+      "duzey": "İşlevsellik → Eylemsellik",
+      "ozet": "Çamaşır makinesi, fabrika kolu, navigasyon, öneri sistemi gibi örnekleri üç kümeye ayırır, gerekçelendirir.",
+      "kazanim": {
+        "cocuk": "Programlı, otomatik ve akıllı aletleri ayırt eder, gerekçesini söylerim.",
+        "akademik": "Otomasyon ile yapay zekâyı \"veriden öğrenerek karar verme\" ölçütüyle ayırt eder."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (3. sınıf) / Sosyal Bilgiler (4. sınıf)",
+        "alan": "Bilim, Teknoloji ve Sanat: teknoloji ürünlerinin yaşamımıza etkisi.",
+        "cikti": ""
+      },
+      "malzeme": ["12 örnek kartı", "üç küme çemberi", "gerekçe tablosu"],
+      "hazirlik": "5 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Sınıflama ve açıklama kartları."
+      },
+      "kagit": {
+        "baslik": "Üç Küme",
+        "yonerge": "Her aleti bir kümeye yaz. Programlı: hep aynı adımları yapar. Otomatik: bir sensöre göre açılıp kapanır. Akıllı: örneklerden öğrenip karar verir. Gerekçeni yaz.",
+        "bloklar": [
+          {
+            "tip": "tablo",
+            "basliklar": ["Alet", "Küme (P / O / A)", "Gerekçem"],
+            "satirlar": [
+              ["Çamaşır makinesi", "", ""],
+              ["Otomatik kapı", "", ""],
+              ["Navigasyon (yol öneren)", "", ""],
+              ["Video öneri sistemi", "", ""],
+              ["Fabrika robot kolu", "", ""],
+              ["Yüz tanıyan telefon kilidi", "", ""],
+              ["Termostat (sıcaklığa göre kapanan)", "", ""],
+              ["Sesli asistan", "", ""]
+            ]
+          },
+          { "tip": "satirlar", "baslik": "Zor karar verdiğim bir alet ve nedeni:", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "Tahtaya üç kelime: tarif, sensör, öğrenme. Çamaşır makinesi hangisi? \"Düğmeye bastım, hep aynı program.\"",
+        "etkinlik": "Kartlar gruplara dağıtılır; her grup 4 kartı kümelere koyar ve gerekçe yazar. Sınıf tartışması: tartışmalı kartlar (termostat, navigasyon) özellikle konuşulur; navigasyon trafik verisinden öğreniyorsa akıllıdır.",
+        "kapanis": "Akıllı olan, yeni durumda bile karar verebilendir; tarif uygulayan değil.",
+        "sorular": [
+          "Otomatik kapı seni tanıyor mu, yoksa yalnız hareketi mi görüyor?",
+          "Navigasyon trafikten nasıl haberdar oluyor?",
+          "Bir alet hem otomatik hem akıllı olabilir mi?"
+        ],
+        "yanilgilar": [
+          "Elektrikli her şey akıllıdır.",
+          "Robot kolu akıllıdır; çoğu programlıdır."
+        ],
+        "degerlendirme": "Tablo: 8 aletten 6'sı savunulabilir kümede, gerekçeli.",
+        "kolay": "5 alet, iki küme (programlı / akıllı).",
+        "zor": "Çocuk evden bir alet getirir, sınıf kümeler.",
+        "aile": "Evdeki aletleri üç kümeye ayırın; tartışmalı olanı not alıp sınıfa getirsin."
+      }
+    },
+    {
+      "kod": "YZO-İ2-2.1",
+      "slug": "i2-2-1",
+      "bant": "i2",
+      "dunya": 2,
+      "ad": "Sınıfın Veri Seti",
+      "soru": "Robot'u geri dönüşüme nasıl öğretiriz?",
+      "sure": "40 dk (+40 dk ekranlı, isteğe bağlı)",
+      "duzey": "Eylemsellik",
+      "ozet": "Geri dönüşüm nesnelerini kartlarla toplar, etiketler, eğitir, test eder; eksik örnekleri bulur. Teachable Machine'e bağlanabilir.",
+      "kazanim": {
+        "cocuk": "Veri toplar, etiketler, Robot'u eğitir ve sınarım; eksik örnekleri bulurum.",
+        "akademik": "Veri toplama, etiketleme, eğitme ve test döngüsünü uygular; veri kalitesi sorunlarını (eksik sınıf, dengesizlik) tanılar."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (3. sınıf) / Fen Bilimleri (4. sınıf)",
+        "alan": "Doğa ve Çevre: geri dönüşüm. Bilim, Teknoloji ve Sanat.",
+        "cikti": ""
+      },
+      "malzeme": ["Geri dönüşüm nesne kartları ya da temiz atıklar", "etiket çıkartmaları: kâğıt / plastik / cam / metal", "veri toplama formu", "isteğe bağlı: tablet ve Teachable Machine (öğretmen hesabı)"],
+      "hazirlik": "15 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Etiketle, eğit, test et; sonuç tablosu çocuk diliyle."
+      },
+      "kagit": {
+        "baslik": "Veri Toplama Formu",
+        "yonerge": "Topladığın her nesneyi yaz, etiketini seç. Eğitimden sonra Robot'un yanıldığı nesneleri işaretle. Hangi örnekler eksikti?",
+        "bloklar": [
+          { "tip": "tablo", "basliklar": ["Nesne", "Etiket (kâğıt / plastik / cam / metal)", "Robot doğru bildi mi?"], "satir": 8 },
+          { "tip": "isaretle", "baslik": "Veri setimizde eksik olan", "secenekler": ["Çok az cam örneği", "Hep aynı şişe", "Etiketi yanlış yapıştırdık", "Karışık (kâğıt + plastik) nesne"] },
+          { "tip": "satirlar", "baslik": "Robot'u daha iyi yapmak için ne eklerdim?", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "\"Okulun geri dönüşüm kutusuna yanlış şeyler atılıyor. Ayıran bir Robot yapsak, ona nasıl öğretiriz?\"",
+        "etkinlik": "Gruplar nesneleri toplar, etiketler (form). Eğitim: öğretmen kartlarla \"Robot\" olur ya da Teachable Machine ile gerçek eğitim yapılır. Test: yeni nesneler; hatalar tabloya işlenir. Eksik sınıf tartışması: \"Cam örneği bir taneydi, Robot camı plastik sandı.\"",
+        "kapanis": "Robot bizim topladığımız kadar iyi. Veri setinin kalitesi Robot'un kalitesidir.",
+        "sorular": [
+          "Robot neden camı plastik sandı?",
+          "Etiket yanlışsa Robot ne öğrenir?",
+          "Daha iyi bir veri seti için ne toplarız?"
+        ],
+        "yanilgilar": [
+          "Robot nesneyi anlar; aslında etiketleri öğrenir.",
+          "Çok nesne iyi veri demektir; çeşitlilik ve doğru etiket de gerekir."
+        ],
+        "degerlendirme": "Form dolu, eksik analizi yapılmış; grup sunumunda \"eksik örnek\" kavramı kullanılır.",
+        "kolay": "İki sınıf (kâğıt / plastik), 8 nesne.",
+        "zor": "Grup, test setini başka bir grup için hazırlar.",
+        "aile": "Evde bir hafta atıkları ayırın; \"Robot bunu bilir miydi?\" sorusunu sorun."
+      }
+    },
+    {
+      "kod": "YZO-İ2-3.1",
+      "slug": "i2-3-1",
+      "bant": "i2",
+      "dunya": 3,
+      "ad": "Dedektif: Doğru mu, Uydurma mı?",
+      "soru": "Yapay zekâ emin konuşunca doğru mu söyler?",
+      "sure": "40 dk",
+      "duzey": "Eylemsellik",
+      "ozet": "Yapay zekânın verdiği beş yanıtı atlas, kitap ve öğretmenle doğrular. Emin gibi konuşur ama yanılabilir.",
+      "kazanim": {
+        "cocuk": "Yapay zekânın yanıtını kaynaktan kontrol ederim; emin konuşması doğru olduğu anlamına gelmez.",
+        "akademik": "Yapay zekâ çıktılarını bağımsız kaynaklarla doğrular; uydurma (halüsinasyon) olgusunu çocuk diliyle tanır."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (3. sınıf) / Sosyal Bilgiler (4. sınıf)",
+        "alan": "Yaşadığım Yer ve Ülkem: bilgi kaynakları. Bilgi okuryazarlığı.",
+        "cikti": ""
+      },
+      "malzeme": ["5 yanıt kartı (3 doğru, 2 uydurma)", "atlas, ansiklopedi, ders kitabı", "doğrulama tablosu"],
+      "hazirlik": "10 dk: yanıt kartlarını sınıfın konusuna göre hazırla (iller, hayvanlar).",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Yanıt kartı ve kaynak kontrolü."
+      },
+      "kagit": {
+        "baslik": "Dedektif Defteri",
+        "yonerge": "Her iddiayı bir kaynaktan kontrol et. Kaynağın adını yaz. Sonuç: doğru / yanlış / emin değilim.",
+        "bloklar": [
+          {
+            "tip": "tablo",
+            "basliklar": ["Yapay zekânın iddiası", "Baktığım kaynak", "Sonuç"],
+            "satirlar": [
+              ["Türkiye'nin en uzun nehri Kızılırmak'tır.", "", ""],
+              ["Penguenler Kuzey Kutbu'nda yaşar.", "", ""],
+              ["İstanbul iki kıtada yer alır.", "", ""],
+              ["Zürafaların boynunda 30 kemik vardır.", "", ""],
+              ["Ay'ın kendi ışığı yoktur.", "", ""]
+            ]
+          },
+          { "tip": "satirlar", "baslik": "Yanlış iddia neden inandırıcıydı?", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "Ekrana ya da karta bir yapay zekâ yanıtı: \"Penguenler Kuzey Kutbu'nda yaşar.\" Çok emin bir cümle. \"Doğru mu? Nereden bileceğiz?\"",
+        "etkinlik": "Gruplara 5 iddia; her iddia için bir kaynak bulunur (atlas, ansiklopedi, ders kitabı). Tablo doldurulur. Grup sunar: hangisi doğru, hangisi uydurma, nasıl anladık?",
+        "kapanis": "Yapay zekâ bazen uydurur ve uydururken de emin konuşur. Dedektif gibi kaynağa bakarız.",
+        "sorular": [
+          "Emin konuşmak doğru olmak mıdır?",
+          "Hangi kaynak daha güvenilir: ansiklopedi mi, bir video mu? Neden?",
+          "Yapay zekâ neden uydurmuş olabilir?"
+        ],
+        "yanilgilar": [
+          "Yapay zekâ bilgisayar olduğu için yanılmaz.",
+          "Yapay zekâ bilerek yalan söyler; hayır, örüntüden üretir."
+        ],
+        "degerlendirme": "Tablo: 5 iddianın 4'ü doğru sonuçlanır, kaynak adı yazılır.",
+        "kolay": "3 iddia; kaynak öğretmen tarafından verilir.",
+        "zor": "Çocuklar yapay zekâya kendi sorularını sorar (öğretmen hesabı), yanıtı doğrular.",
+        "aile": "Evde telefondan bakılan bir \"hızlı bilgi\"yi kitaptan doğrulayın."
+      }
+    },
+    {
+      "kod": "YZO-İ2-4.1",
+      "slug": "i2-4-1",
+      "bant": "i2",
+      "dunya": 4,
+      "ad": "Mahalle Meclisi: Okul Kapısında Yüz Tanıma?",
+      "soru": "Okul kapısına yüz tanıyan kamera koyalım mı?",
+      "sure": "40 dk",
+      "duzey": "Eylemsellik",
+      "ozet": "Çocuklar için felsefe (P4C) tartışması: fayda, risk, gizlilik, rıza. Görüş alır, gerekçelendirir, görüşünü değiştirebilir.",
+      "kazanim": {
+        "cocuk": "Bir yapay zekâ kararının iyi ve kötü yanlarını düşünür, gerekçeli görüş söyler, fikrimi değiştirebilirim.",
+        "akademik": "Yapay zekâ uygulamalarını gizlilik, rıza ve adalet ölçütleriyle değerlendirir; diyalojik tartışmada gerekçelendirme yapar."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (3. sınıf) / Sosyal Bilgiler (4. sınıf)",
+        "alan": "Ben ve Okulum: haklar ve sorumluluklar, çocuk hakları. Sağlığım ve Güvenliğim.",
+        "cikti": ""
+      },
+      "malzeme": ["Uyarıcı öykü (öğretmen notunda)", "üç konum kartı: katılıyorum / katılmıyorum / kararsızım", "argüman şeması"],
+      "hazirlik": "5 dk; sandalyeler halka düzeninde.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Konum al, argüman kartları, oylama."
+      },
+      "kagit": {
+        "baslik": "Düşünüyorum, Çünkü…",
+        "yonerge": "Önce görüşünü işaretle. Tartışmadan sonra yeniden işaretle. Değiştiysen neden?",
+        "bloklar": [
+          {
+            "tip": "secim-metin",
+            "ogeler": [
+              { "metin": "Okul kapısına yüz tanıyan kamera koyulsun.", "secenekler": ["Katılıyorum", "Katılmıyorum", "Kararsızım"] }
+            ]
+          },
+          { "tip": "tablo", "basliklar": ["İyi yanı", "Kötü yanı"], "satir": 3 },
+          {
+            "tip": "secim-metin",
+            "ogeler": [
+              { "metin": "Tartışmadan sonra görüşüm:", "secenekler": ["Katılıyorum", "Katılmıyorum", "Kararsızım"] }
+            ]
+          },
+          { "tip": "satirlar", "baslik": "Görüşüm değişti ya da değişmedi, çünkü…", "adet": 2 }
+        ]
+      },
+      "not": {
+        "giris": "Öykü: Belediye okula teklif getirir: kapıya yüz tanıyan kamera; yabancılar giremez, geç kalanlar anında belirlenir. Veli grubu ikiye bölünür. \"Siz ne dersiniz?\"",
+        "etkinlik": "P4C: halka, soru seçimi (\"Bizi tanıyan bir makine bizi korur mu, izler mi?\"), konum alma, gerekçe, karşı görüş, yeniden konum. Öğretmen soru sorar, görüş bildirmez. Kavramlar: gizlilik, rıza (\"bize sordular mı?\"), hata (\"ya kardeşini seninle karıştırırsa?\").",
+        "kapanis": "Son tur: \"Bu kararı kim vermeli?\" Çocukların kendi haklarıyla bağ kurulur.",
+        "sorular": [
+          "Kamera kimi korur, kimi rahatsız eder?",
+          "Bize sorulmadan yüzümüz kaydedilebilir mi?",
+          "Kamera yanılırsa ne olur?"
+        ],
+        "yanilgilar": [
+          "Güvenlik her zaman gizlilikten önemlidir (ya da tersi); ikisi birlikte tartılır.",
+          "Kamera kimseyi yanlış tanımaz."
+        ],
+        "degerlendirme": "Kâğıt: iki konum işareti ve gerekçe. Tartışma gözlem formu: gerekçe sunma, karşı görüşü dinleme.",
+        "kolay": "İki konum (evet / hayır), 2 iyi–2 kötü yan.",
+        "zor": "Rol kartları: müdür, veli, öğrenci, belediye; her rol gerekçe üretir.",
+        "aile": "Evde \"telefon yüzümü tanıyor\" konusunu konuşun: kim izin verdi?"
+      }
+    },
+    {
+      "kod": "YZO-İ2-5.1",
+      "slug": "i2-5-1",
+      "bant": "i2",
+      "dunya": 5,
+      "ad": "Mini Proje: Sınıfın Sorununu Çözelim",
+      "soru": "Yapay zekâ sınıfımızın hangi sorununu çözebilir?",
+      "sure": "2 × 40 dk",
+      "duzey": "Eylemsellik",
+      "ozet": "Bir sınıf sorununu seçer (kütüphane kitaplarını türe göre ayırma), veri, eğitim ve test adımlarıyla çözüm tasarlar, sunar. Robot seti varsa uygular.",
+      "kazanim": {
+        "cocuk": "Bir sorun seçer, yapay zekâ ile çözülebilir mi karar verir, çözümü adım adım tasarlar ve anlatırım.",
+        "akademik": "Yapay zekâ ile çözülebilecek bir problemi tanımlar; veri, eğitim ve test döngüsüyle çözüm tasarlar, sunar ve sınırlarını belirtir."
+      },
+      "program": {
+        "ad": "Hayat Bilgisi (3. sınıf) / Fen Bilimleri ve Sosyal Bilgiler (4. sınıf)",
+        "alan": "Bilim, Teknoloji ve Sanat: tasarım süreci. Ben ve Okulum: sorun çözme.",
+        "cikti": ""
+      },
+      "malzeme": ["Proje kanvası (A3 ya da kâğıt)", "yapışkan notlar", "isteğe bağlı: robotik set ya da Teachable Machine"],
+      "hazirlik": "10 dk.",
+      "ekran": {
+        "durum": "yakinda",
+        "modul": "",
+        "aciklama": "Tasarım kanvası."
+      },
+      "kagit": {
+        "baslik": "Proje Kanvası",
+        "yonerge": "Sorunu yaz. Yapay zekâ bu sorunu çözebilir mi, neden? Hangi örnekleri toplarız? Nasıl sınarız? Neyi yapamaz?",
+        "bloklar": [
+          {
+            "tip": "kanvas",
+            "kutular": ["Sorunumuz", "Yapay zekâ ile çözülür mü? Neden?", "Toplayacağımız örnekler (veri)", "Nasıl eğitiriz?", "Nasıl sınarız?", "Yapamayacağı şeyler, dikkat edilecekler"]
+          },
+          { "tip": "satirlar", "baslik": "Sunum planı (kim, ne anlatacak?)", "adet": 3 }
+        ]
+      },
+      "not": {
+        "giris": "Sınıfın sorunlarını listeleyin (kitaplar karışıyor, dolap dağınık, nöbetçi unutuluyor). \"Hangisi örneklerden öğrenen bir makineyle çözülür?\" Eleme de bir öğrenmedir: nöbet listesi için yapay zekâ gerekmez.",
+        "etkinlik": "Gruplar bir sorun seçer, kanvası doldurur. Örnek: kitapları türe göre ayıran sistem; veri: kitap kapakları ve etiketleri; eğitim; test. Set varsa ikinci derste basit uygulama. Sunum: 3 dk, kanvas üzerinden.",
+        "kapanis": "Her sorun yapay zekâ istemez; istediğinde de veri ve sınama gerekir. Son kararı yine biz veririz.",
+        "sorular": [
+          "Sorununuz için yapay zekâ gerçekten gerekli mi?",
+          "Hangi örnekler olmazsa Robot yanılır?",
+          "Sistem yanıldığında kim fark eder?"
+        ],
+        "yanilgilar": [
+          "Yapay zekâ her sorunu çözer.",
+          "Tasarlamak uygulama yazmaktır; hayır, önce sorun ve veri."
+        ],
+        "degerlendirme": "Kanvas rubriği: sorun tanımı, veri önerisi, test önerisi, sınır ifadesi (4 ölçüt, 3 düzey).",
+        "kolay": "Sorun öğretmen tarafından verilir; grup yalnız veri ve test kutularını doldurur.",
+        "zor": "Grup, çözümünün adil olup olmadığını (Güvenli ve adil dünyası) ayrıca değerlendirir.",
+        "aile": "Evde bir \"sorun\" seçin; yapay zekâ gerekir mi, konuşun."
+      }
+    }
+  ]
+}
