@@ -25,7 +25,7 @@ const blokUreticiler = {
 <div class="blok">
   <h2>${h(b.baslik)}</h2>
   <div class="kartlar">${b.ogeler.map(o => `<div class="kart"><span class="resim" aria-hidden="true">${o.emoji}</span>${h(o.ad)}</div>`).join('')}</div>
-  <p class="kes-notu">Kesik çizgiden kes. Kartları Robot'a tek tek göster.</p>
+  <p class="kes-notu">Kesik çizgiden kes. Kartları ARF'a tek tek göster.</p>
 </div>`,
 
   'sayac': (b) => `

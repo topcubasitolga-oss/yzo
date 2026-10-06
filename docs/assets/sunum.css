@@ -9,7 +9,7 @@ body { font-family: var(--f-metin); }
 .s-ust { font-family: var(--f-baslik); font-weight: 600; font-size: 24px; color: var(--kursun); margin: 0 0 8px; }
 .s-alt { font-size: 32px; max-width: 26ch; margin: 0; }
 .s-not { font-size: 24px; color: var(--kursun); }
-.robot-buyuk svg { width: 220px; height: 220px; }
+.robot-buyuk svg { width: 260px; height: 286px; }
 .s-kapak { display: flex; align-items: center; gap: 56px; height: 100%; }
 .s-konusma { display: flex; gap: 40px; align-items: flex-start; }
 .balonlar { display: grid; gap: 18px; }

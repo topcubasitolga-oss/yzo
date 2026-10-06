@@ -259,7 +259,7 @@ ${e.sunum ? '' : `<section class="bolum d-${d.id}" id="ekran" aria-labelledby="e
 
 
 /* ---------------- Ders akışı (sunum + plan + oyunlar) ---------------- */
-const SLAYT_AD = { kapak: 'Giriş', soru: 'Isınma sorusu', konusma: 'Robot anlatıyor', kartlar: 'Kavram kartları', ikili: 'Karşılaştırma', oyun: 'Etkinlik (oyun)', tartisma: 'Tartışma', kagit: 'Çalışma kâğıdı', kapanis: 'Kapanış' };
+const SLAYT_AD = { kapak: 'Giriş', soru: 'Isınma sorusu', konusma: 'ARF anlatıyor', kartlar: 'Kavram kartları', ikili: 'Karşılaştırma', oyun: 'Etkinlik (oyun)', tartisma: 'Tartışma', kagit: 'Çalışma kâğıdı', kapanis: 'Kapanış' };
 function slaytBasligi(s) { return s.baslik || s.soru || ''; }
 function akisBolumu(e, d, kok) {
   const sl = e.sunum.slaytlar;
@@ -317,7 +317,6 @@ function sunumSayfasi(veri, e, kok = '../../') {
 </head>
 <body class="d-${d.id}">
 <div id="sahne"><div id="slayt" class="slayt"></div></div>
-<template id="robot-sablon">${robotSvg('', 220)}</template>
 <div id="not" role="note"></div>
 <div id="cubuk">
   <a href="${kok}e/${e.slug}/index.html">Kapat</a>
@@ -326,10 +325,13 @@ function sunumSayfasi(veri, e, kok = '../../') {
   <span id="sayac"></span>
   <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
   <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
   <button type="button" id="not-dugme">Öğretmen notu</button>
   <button type="button" id="tam">Tam ekran</button>
 </div>
 <script type="application/json" id="sunum-veri">${json}</script>
+<script src="${kok}assets/arf.js"></script>
+<script src="${kok}assets/ses.js"></script>
 <script src="${kok}assets/etkilesim/motor.js"></script>
 ${moduller.map(m => `<script src="${kok}assets/etkilesim/${h(m)}.js"></script>`).join('\n')}
 <script src="${kok}assets/sunum.js"></script>
@@ -358,8 +360,10 @@ function ekranSayfasi(veri, e, kok = '../../') {
 <style>body{background:#fff}.tam-ust{position:fixed;top:10px;right:10px;z-index:9}.tam-ust a{font-size:.9rem;padding:6px 12px;box-shadow:none}</style>
 </head>
 <body class="oyun-tam">
-<div class="tam-ust"><a class="dugme dugme-ikincil" href="${kok}e/${e.slug}/index.html">Etkinliğe dön</a></div>
+<div class="tam-ust"><button type="button" class="dugme dugme-ikincil ses-dugme" data-ses-dugme>🔊 Ses açık</button> <a class="dugme dugme-ikincil" href="${kok}e/${e.slug}/index.html">Etkinliğe dön</a></div>
 <div class="ekran-icerik" data-modul="${h(e.ekran.modul)}"></div>
+<script src="${kok}assets/arf.js"></script>
+<script src="${kok}assets/ses.js"></script>
 <script src="${kok}assets/site.js"></script>
 <script src="${kok}assets/etkilesim/motor.js"></script>
 <script src="${kok}assets/etkilesim/${h(e.ekran.modul)}.js"></script>

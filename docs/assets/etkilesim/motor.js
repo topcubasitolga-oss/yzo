@@ -1,6 +1,6 @@
 // YZO etkileşim motoru: modül kaydı, küçük DOM yardımcıları, tohumlu rastgele.
 // Her etkileşim bir modül dosyasıdır: YZO.kaydet('slug', function (kutu, Y) { ... })
-window.YZO = (function () {
+window.YZO = Object.assign(window.YZO || {}, (function () {
   'use strict';
   var moduller = {};
 
@@ -32,6 +32,20 @@ window.YZO = (function () {
       if (c == null || c === false) return;
       e.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
     });
+    if (/\bgeri-bildirim\b/.test(e.className)) {
+      var eski = e.querySelector('svg.arf');
+      if (eski) {
+        var dogru = /\bdogru\b/.test(e.className);
+        var yeni = robot(dogru ? 'sevincli' : 'dusunceli', dogru ? 'zipla' : 'dusun');
+        if (yeni) eski.parentNode.replaceChild(yeni, eski);
+        if (window.YZO && window.YZO.ses) {
+          window.YZO.ses.efekt(dogru ? 'dogru' : 'bak');
+          var metin = e.lastChild ? Array.prototype.map.call(e.lastChild.childNodes, function (n) { return n.textContent; }).join(' ') : '';
+          var ses = window.YZO.ses;
+          setTimeout(function () { ses.soyle(metin); }, 350);
+        }
+      }
+    }
     return e;
   }
 
@@ -55,18 +69,11 @@ window.YZO = (function () {
     return a;
   }
 
-  var ROBOT = '<svg class="robot" viewBox="0 0 64 64" aria-hidden="true" focusable="false">' +
-    '<line x1="32" y1="6" x2="32" y2="14" stroke="#1F2A48" stroke-width="3" stroke-linecap="round"/>' +
-    '<circle cx="32" cy="6" r="4" fill="#F6C945" stroke="#1F2A48" stroke-width="2.5"/>' +
-    '<rect x="10" y="14" width="44" height="40" rx="14" fill="#FFFFFF" stroke="#1F2A48" stroke-width="3"/>' +
-    '<rect x="4" y="28" width="6" height="12" rx="3" fill="#F6C945" stroke="#1F2A48" stroke-width="2.5"/>' +
-    '<rect x="54" y="28" width="6" height="12" rx="3" fill="#F6C945" stroke="#1F2A48" stroke-width="2.5"/>' +
-    '<circle cx="23" cy="31" r="5" fill="#1F2A48"/><circle cx="41" cy="31" r="5" fill="#1F2A48"/>' +
-    '<circle cx="24.5" cy="29.5" r="1.6" fill="#FFFFFF"/><circle cx="42.5" cy="29.5" r="1.6" fill="#FFFFFF"/>' +
-    '<circle cx="17" cy="40" r="3" fill="#FADFE4"/><circle cx="47" cy="40" r="3" fill="#FADFE4"/>' +
-    '<path d="M24 42 Q32 49 40 42" fill="none" stroke="#1F2A48" stroke-width="3" stroke-linecap="round"/></svg>';
-
-  function robot() { var s = el('span', { html: ROBOT }); return s.firstChild; }
+function robot(ruh, sinif) {
+    var s = document.createElement('span');
+    s.innerHTML = window.ARF ? window.ARF.svg(ruh || 'merakli', { boy: 64, sinif: 'robot ' + (sinif || ''), defter: false, tebesir: false }) : '';
+    return s.firstChild;
+  }
 
   function yildizlar(n, toplam) {
     var s = '';
@@ -78,7 +85,7 @@ window.YZO = (function () {
   var EKLER = { 1: "'ini", 2: "'sini", 3: "'ünü", 4: "'ünü", 5: "'ini", 6: "'sını", 7: "'sini", 8: "'ini", 9: "'unu", 10: "'unu", 11: "'ini", 12: "'sini" };
   function sayili(n) { return n === 0 ? 'hiçbirini' : n + (EKLER[n] || "'ini"); }
 
-  // Genel kart oyunu: her kartta bir soru, iki-üç seçenek, Robot açıklar, sonunda puan.
+  // Genel kart oyunu: her kartta bir soru, iki-üç seçenek, ARF açıklar, sonunda puan.
   // ayar = { soru, kartlar:[{emoji?, ad?, metin?, cevap, neden}], secenekler:[{deger, etiket, ikon, sinif}], son }
   function kartOyunu(kutu, ayar) {
     var sira = 0, dogru = 0;
@@ -142,7 +149,7 @@ window.YZO = (function () {
       oyun.appendChild(el('div', { class: 'baslik' }, [el('h2', {}, [ayar.soru]), ilerleme]));
       var tepsi = el('div', { class: 'sb-tepsi' });
       var mesaj = el('div', { class: 'sb-mesaj', 'aria-live': 'polite' });
-      var hedefler = el('div', { class: 'sb-hedefler' });
+      var hedefler = el('div', { class: 'sb-hedefler', style: 'grid-template-columns:repeat(' + ayar.kutular.length + ',minmax(0,1fr))' });
       var hedefEl = {};
       ayar.kutular.forEach(function (k) {
         var icAlan = el('div', { class: 'sb-ic' });
@@ -237,4 +244,4 @@ window.YZO = (function () {
   }
 
   return { surukleBirak: surukleBirak, kartOyunu: kartOyunu, kaydet: kaydet, baslat: baslat, el: el, tohum: tohum, karistir: karistir, robot: robot, yildizlar: yildizlar, sayili: sayili };
-})();
+})());

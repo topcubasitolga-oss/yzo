@@ -3,7 +3,7 @@
     "ad": "YZO Havuzu",
     "altBaslik": "Okul öncesi ve ilkokul için yapay zekâ okuryazarlığı etkinlik havuzu",
     "surum": "0.1",
-    "karakter": "Robot",
+    "karakter": "ARF",
     "sahip": "Dr. Tolga Topçubaşı, İstanbul 29 Mayıs Üniversitesi",
     "lisans": "CC BY-NC-SA 4.0 (öneri, kesinleşmedi)"
   },
@@ -15,7 +15,7 @@
       "kisa": "Tanı",
       "soru": "Bu akıllı mı?",
       "renk": "portakal",
-      "aciklama": "Yapay zekâ nedir, ne değildir. Robot ile yapay zekâ aynı şey değildir. Günlük yaşamda nerede karşımıza çıkar."
+      "aciklama": "Yapay zekâ nedir, ne değildir. Her robot yapay zekâ değildir. Günlük yaşamda nerede karşımıza çıkar."
     },
     {
       "id": 2,
@@ -82,6 +82,257 @@
   ],
   "etkinlikler": [
     {
+      "kod": "YZO-OÖ-1.0",
+      "slug": "oo-1-0",
+      "bant": "oo",
+      "dunya": 1,
+      "hafta": 1,
+      "ad": "ARF ile Tanışalım",
+      "soru": "ARF kim? Adı nereden geliyor?",
+      "sure": "20 dk",
+      "duzey": "Farkındalık",
+      "ozet": "Sınıfa yeni bir arkadaş geliyor: ARF. ARF bir makinedir; kamerasıyla görür, mikrofonuyla duyar, öğrendiklerini defterine yazar. Adını \"Makine düşünebilir mi?\" diye soran Cahit Arf'tan alır.",
+      "kazanim": {
+        "cocuk": "ARF'ın bir makine olduğunu, kamerasıyla gördüğünü, mikrofonuyla duyduğunu söylerim.",
+        "akademik": "Yapay zekâ içeren bir makineyi canlılardan ayırt eder; makinenin algılama araçlarını (kamera, mikrofon) insan duyularıyla karşılaştırır."
+      },
+      "program": {
+        "ad": "Okul Öncesi Eğitim Programı",
+        "alan": "Bilişsel gelişim: canlı-cansız ayrımı, eşleştirme. Dil gelişimi: dinleme, tanıtma.",
+        "cikti": ""
+      },
+      "malzeme": [
+        "Akıllı tahta",
+        "\"ARF'ın Kimlik Kartı\" çalışma kâğıdı",
+        "Boya kalemleri",
+        "İsteğe bağlı: Cahit Arf fotoğrafı ya da 10 TL banknot"
+      ],
+      "hazirlik": "5 dk: sunumu tahtada açın, sesi açın.",
+      "ekran": {
+        "durum": "hazir",
+        "modul": "oo-1-0-parcalar",
+        "aciklama": "Bizim gözümüz ve ARF'ın kamerası: kim ne yapar? Parçaları görür, duyar, hatırlar kutularına taşı."
+      },
+      "oyunlar": [
+        {
+          "modul": "oo-1-0-parcalar",
+          "ad": "Kim Ne Yapar?",
+          "aciklama": "Gözümüz ve ARF'ın kamerası, kulağımız ve ARF'ın mikrofonu: görür, duyar, hatırlar kutularına taşı.",
+          "tur": "Sürükle-bırak"
+        },
+        {
+          "modul": "oo-1-0-canli",
+          "ad": "Canlı mı, Makine mi?",
+          "aciklama": "Kedi, ARF, çiçek, tablet… Canlıları ve makineleri ayır.",
+          "tur": "Sürükle-bırak"
+        }
+      ],
+      "kagit": {
+        "baslik": "ARF'ın Kimlik Kartı",
+        "yonerge": "ARF'ı çiz. Sonra ARF'ın yapabildiklerini yeşil kutuya, yapamadıklarını gri kutuya çizgiyle bağla.",
+        "bloklar": [
+          {
+            "tip": "cizim",
+            "baslik": "Benim çizdiğim ARF"
+          },
+          {
+            "tip": "iki-kutu",
+            "sol": {
+              "ad": "ARF yapar",
+              "simge": "✓"
+            },
+            "sag": {
+              "ad": "ARF yapamaz",
+              "simge": "✗"
+            },
+            "ogeler": [
+              {
+                "emoji": "👀",
+                "ad": "Görür"
+              },
+              {
+                "emoji": "🍎",
+                "ad": "Yemek yer"
+              },
+              {
+                "emoji": "👂",
+                "ad": "Duyar"
+              },
+              {
+                "emoji": "😴",
+                "ad": "Uyur"
+              },
+              {
+                "emoji": "📒",
+                "ad": "Hatırlar"
+              },
+              {
+                "emoji": "🌱",
+                "ad": "Büyür"
+              },
+              {
+                "emoji": "🎨",
+                "ad": "Resim yapar"
+              },
+              {
+                "emoji": "🤗",
+                "ad": "Sarılır"
+              }
+            ]
+          }
+        ]
+      },
+      "not": {
+        "giris": "Sunumu açın; ARF sınıfa tekerleğiyle gelir. \"Bugün sınıfımıza yeni bir arkadaş geldi!\" deyin.",
+        "etkinlik": "ARF kendini tanıtır, adının hikâyesini anlatır. Çocuklar sırayla tahtaya gelip iki sürükle-bırak oyununu oynar: \"Kim ne yapar?\" ve \"Canlı mı, makine mi?\".",
+        "kapanis": "\"ARF görür, duyar, hatırlar; ama yemez, büyümez, uyumaz. ARF bir makine!\" Hep birlikte ARF'a el sallayın.",
+        "sorular": [
+          "ARF canlı mı? Nereden anladın?",
+          "ARF neyle görüyor, neyle duyuyor?",
+          "ARF'a ne öğretmek isterdin?"
+        ],
+        "yanilgilar": [
+          "Konuşan ve gören her şey canlıdır.",
+          "ARF'ın duyguları vardır; ARF ekranında yüz ifadesi gösterir ama hissetmez."
+        ],
+        "degerlendirme": "Gözlem: çocuk ARF'ın makine olduğunu söyler ve kamera-görme, mikrofon-duyma eşleştirmesini yapar.",
+        "kolay": "Canlı mı makine mi oyununda 4 kart.",
+        "zor": "\"ARF resim yapar mı?\" kartını tartışın: yapar ama kendi aklıyla değil, öğrendiği örneklerle.",
+        "aile": "Evde \"canlı mı makine mi\" oyunu oynayın: çocuk evdeki eşyaları gösterip söylesin."
+      },
+      "sunum": {
+        "slaytlar": [
+          {
+            "tip": "kapak",
+            "baslik": "ARF ile Tanışalım",
+            "metin": "Sınıfımıza yeni bir arkadaş geldi!",
+            "anlatim": "Merhaba çocuklar! Ben geldim!",
+            "plan": {
+              "sure": "1 dk",
+              "ogretmen": "Sesi açın. ARF tekerleğiyle sahneye gelir. \"Bakın, sınıfımıza kim geldi?\" diye sorun.",
+              "cocuk": "ARF'a el sallar, merhaba der."
+            }
+          },
+          {
+            "tip": "konusma",
+            "baslik": "Merhaba, ben ARF!",
+            "ruh": "sevincli",
+            "balonlar": [
+              "Merhaba! Benim adım ARF.",
+              "Ben bir makineyim.",
+              "Bir kameram var. Onunla görürüm.",
+              "Bir mikrofonum var. Onunla duyarım.",
+              "Bir de defterim var. Öğrendiklerimi oraya yazarım."
+            ],
+            "plan": {
+              "sure": "3 dk",
+              "ogretmen": "Her dokunuşta bir balon açılır ve ARF konuşur. Kamera ve mikrofon balonlarında ARF'ın resminde o parçayı gösterin. Sınıftaki tabletin kamerasını da gösterebilirsiniz.",
+              "cocuk": "Dinler; ARF'ın kamerasını ve defterini parmakla gösterir."
+            }
+          },
+          {
+            "tip": "soru",
+            "baslik": "Sence ARF nedir?",
+            "secenekler": [
+              {
+                "emoji": "🐶",
+                "ad": "Bir hayvan"
+              },
+              {
+                "emoji": "🧒",
+                "ad": "Bir çocuk"
+              },
+              {
+                "emoji": "⚙️",
+                "ad": "Bir makine"
+              }
+            ],
+            "metin": "Dokun, seç. Neden böyle düşündün?",
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Oylama yapın, seçenekleri tahtada işaretleyin. Doğru cevabı ARF söylesin: bir önceki slayta dönüp \"Ben bir makineyim\" balonunu gösterin.",
+              "cocuk": "Parmak kaldırarak oy verir, nedenini söyler."
+            }
+          },
+          {
+            "tip": "konusma",
+            "baslik": "Adım nereden geliyor?",
+            "ruh": "merakli",
+            "balonlar": [
+              "Çok uzun zaman önce, 1958 yılında…",
+              "Cahit Arf adında bir bilim insanı vardı. Çok iyi bir matematikçiydi.",
+              "Bir gün herkese şunu sordu: Makine düşünebilir mi?",
+              "Benim adım ondan geliyor. Bu soruyu sizinle birlikte düşüneceğiz!"
+            ],
+            "plan": {
+              "sure": "3 dk",
+              "ogretmen": "Hikâyeyi balon balon açın. İsterseniz Cahit Arf'ın fotoğrafını ya da 10 TL banknottaki portresini gösterin. \"Sizce makine düşünebilir mi?\" sorusunu cevaplamadan bırakın; yıl boyunca bu soruya döneceğiz.",
+              "cocuk": "Dinler; \"Makine düşünebilir mi?\" sorusuna ilk tahminini söyler."
+            }
+          },
+          {
+            "tip": "oyun",
+            "baslik": "Etkinlik 1: Kim ne yapar?",
+            "modul": "oo-1-0-parcalar",
+            "plan": {
+              "sure": "4 dk",
+              "ogretmen": "Çocukları sırayla tahtaya çağırın. Her çocuk bir kartı sürükler. \"Senin gözün de ARF'ın kamerası da görür\" diye eşleştirmeyi vurgulayın.",
+              "cocuk": "Kartı parmağıyla görür, duyar ya da hatırlar kutusuna taşır."
+            }
+          },
+          {
+            "tip": "oyun",
+            "baslik": "Etkinlik 2: Canlı mı, makine mi?",
+            "modul": "oo-1-0-canli",
+            "plan": {
+              "sure": "4 dk",
+              "ogretmen": "Canlıların yediğini, büyüdüğünü, uyuduğunu hatırlatın. ARF kartında durun: \"ARF yemek yer mi?\"",
+              "cocuk": "Kartı canlı ya da makine kutusuna taşır, nedenini söyler."
+            }
+          },
+          {
+            "tip": "tartisma",
+            "soru": "ARF'a ne öğretmek istersin?",
+            "cevaplar": [
+              "Kedileri tanımayı",
+              "Şarkı söylemeyi",
+              "Resim yapmayı"
+            ],
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Önce çocukların fikirlerini alın, sonra örnekleri açın. \"ARF'a nasıl öğreteceğiz? Ona örnek göstereceğiz!\" diyerek gelecek haftaya köprü kurun.",
+              "cocuk": "ARF'a öğretmek istediği bir şeyi söyler."
+            }
+          },
+          {
+            "tip": "kagit",
+            "baslik": "Çalışma kâğıdı: ARF'ın Kimlik Kartı",
+            "metin": "ARF'ı çiz. ARF'ın yapabildiklerini ve yapamadıklarını çizgiyle bağla.",
+            "plan": {
+              "sure": "Ders sonu",
+              "ogretmen": "Kâğıdı dağıtın, yönergeyi okuyun. Okul öncesinde yazma beklenmez; çizim ve çizgi yeterli.",
+              "cocuk": "ARF'ı çizer, çizgiyle eşleştirir."
+            }
+          },
+          {
+            "tip": "kapanis",
+            "baslik": "ARF bir makine!",
+            "maddeler": [
+              "ARF kamerasıyla görür, mikrofonuyla duyar.",
+              "ARF öğrendiklerini defterine yazar.",
+              "ARF yemez, büyümez, uyumaz. Canlı değildir."
+            ],
+            "anlatim": "Görüşürüz çocuklar! Gelecek hafta bana yeni şeyler öğreteceksiniz.",
+            "plan": {
+              "sure": "1 dk",
+              "ogretmen": "Maddeleri birlikte okuyun, ARF'a el sallayarak vedalaşın.",
+              "cocuk": "Maddeleri tekrar eder, ARF'a el sallar."
+            }
+          }
+        ]
+      }
+    },
+    {
       "kod": "YZO-OÖ-1.1",
       "slug": "oo-1-1",
       "bant": "oo",
@@ -109,7 +360,7 @@
       "ekran": {
         "durum": "hazir",
         "modul": "oo-1-1",
-        "aciklama": "Kartlar tek tek gelir. Çocuk iki büyük düğmeden birine dokunur; Robot yanıtı ve bir cümlelik nedenini gösterir."
+        "aciklama": "Kartlar tek tek gelir. Çocuk iki büyük düğmeden birine dokunur; ARF yanıtı ve bir cümlelik nedenini gösterir."
       },
       "kagit": {
         "baslik": "Akıllı mı, Değil mi?",
@@ -199,8 +450,8 @@
         },
         {
           "modul": "oo-1-1",
-          "ad": "Robot'a Sor",
-          "aciklama": "Kart kart ilerle; Robot her cevabın nedenini söylesin.",
+          "ad": "ARF'a Sor",
+          "aciklama": "Kart kart ilerle; ARF her cevabın nedenini söylesin.",
           "tur": "Kart oyunu"
         }
       ],
@@ -212,8 +463,8 @@
             "metin": "Hangi makineler kendi başına karar verir?",
             "plan": {
               "sure": "1 dk",
-              "ogretmen": "Başlığı yüksek sesle okuyun. Robot'u tanıtın: \"Bugün Robot bize bir şey soracak.\"",
-              "cocuk": "Robot'a el sallar, başlığı tekrar eder."
+              "ogretmen": "Başlığı yüksek sesle okuyun. ARF'ı tanıtın: \"Bugün ARF bize bir şey soracak.\"",
+              "cocuk": "ARF'a el sallar, başlığı tekrar eder."
             }
           },
           {
@@ -242,17 +493,17 @@
           },
           {
             "tip": "konusma",
-            "baslik": "Robot kendini tanıtıyor",
+            "baslik": "ARF kendini tanıtıyor",
             "balonlar": [
-              "Merhaba! Ben Robot.",
+              "Merhaba! Ben ARF.",
               "Ben görürüm, duyarım.",
               "Gördüğüme ve duyduğuma göre karar veririm.",
               "Bazı makineler benim gibi. Bazıları değil!"
             ],
             "plan": {
               "sure": "2 dk",
-              "ogretmen": "Her dokunuşta bir balon açılır; Robot'un sesini taklit ederek okuyun. Son balonda \"Hangileri Robot gibi olabilir?\" diye sorun.",
-              "cocuk": "Dinler, Robot'un cümlelerini tekrarlar."
+              "ogretmen": "Her dokunuşta bir balon açılır; ARF'ın sesini taklit ederek okuyun. Son balonda \"Hangileri ARF gibi olabilir?\" diye sorun.",
+              "cocuk": "Dinler, ARF'ın cümlelerini tekrarlar."
             }
           },
           {
@@ -303,7 +554,7 @@
             "modul": "oo-1-1-sb",
             "plan": {
               "sure": "4 dk",
-              "ogretmen": "Çocukları sırayla tahtaya çağırın; her çocuk bir nesneyi sürükler. Yanlışta Robot ipucu verir; sınıfa \"Yardım edelim mi?\" diye sorun.",
+              "ogretmen": "Çocukları sırayla tahtaya çağırın; her çocuk bir nesneyi sürükler. Yanlışta ARF ipucu verir; sınıfa \"Yardım edelim mi?\" diye sorun.",
               "cocuk": "Tahtaya gelir, nesneyi parmağıyla doğru kutuya taşır, nedenini söyler."
             }
           },
@@ -363,13 +614,13 @@
       "slug": "oo-2-1",
       "bant": "oo",
       "dunya": 2,
-      "ad": "Robot Kediyi Tanımıyor",
-      "soru": "Robot nasıl öğrenir?",
+      "ad": "ARF Kediyi Tanımıyor",
+      "soru": "ARF nasıl öğrenir?",
       "sure": "20 dk",
       "duzey": "Farkındalık",
-      "ozet": "Kukla Robot kedi ile köpeği ayıramaz. Çocuklar örnek kart gösterdikçe öğrenir; az örnekte yanılır.",
+      "ozet": "Kukla ARF kedi ile köpeği ayıramaz. Çocuklar örnek kart gösterdikçe öğrenir; az örnekte yanılır.",
       "kazanim": {
-        "cocuk": "Robot örnek görerek öğrenir; az örnek görürse yanılır.",
+        "cocuk": "ARF örnek görerek öğrenir; az örnek görürse yanılır.",
         "akademik": "Makine öğrenmesini \"örneklerden öğrenme\" olarak somutlaştırır; örnek sayısı ile doğruluk arasındaki ilişkiyi fark eder."
       },
       "program": {
@@ -378,19 +629,19 @@
         "cikti": ""
       },
       "malzeme": [
-        "Kukla ya da kutudan Robot",
+        "Kukla ya da kutudan ARF",
         "12 kedi/köpek kartı",
         "\"öğrendim\" sayacı için 12 pul"
       ],
-      "hazirlik": "10 dk: kartları kes, Robot kuklasını hazırla.",
+      "hazirlik": "10 dk: kartları kes, ARF kuklasını hazırla.",
       "ekran": {
         "durum": "hazir",
         "modul": "oo-2-1",
-        "aciklama": "Kedi ve köpek resimlerine dokunarak Robot'a örnek göster, sonra sına. Az örnekte yanılır."
+        "aciklama": "Kedi ve köpek resimlerine dokunarak ARF'a örnek göster, sonra sına. Az örnekte yanılır."
       },
       "kagit": {
-        "baslik": "Robot'a Örnek Gösterelim",
-        "yonerge": "Kedileri boya. Köpekleri çember içine al. Robot kaç örnek gördü? Pulları boya.",
+        "baslik": "ARF'a Örnek Gösterelim",
+        "yonerge": "Kedileri boya. Köpekleri çember içine al. ARF kaç örnek gördü? Pulları boya.",
         "bloklar": [
           {
             "tip": "kartlar",
@@ -432,28 +683,28 @@
           },
           {
             "tip": "sayac",
-            "baslik": "Robot kaç örnek gördü?",
+            "baslik": "ARF kaç örnek gördü?",
             "adet": 12
           }
         ]
       },
       "not": {
-        "giris": "Robot kukla sınıfa gelir: \"Ben kedi ile köpeği ayıramıyorum. Bana öğretir misiniz?\" Çocuklar güler; merak oluşur.",
-        "etkinlik": "Bir çocuk kart gösterir, \"Bu kedi\" der; Robot \"öğrendim\" deyip pul alır. Üç kartta Robot'u sına: öğretmen Robot'u bilerek yanıltır (\"Hmm… köpek?\"). Çocuklar \"daha çok göster\" der. 8–10 kartta Robot doğru bilir.",
-        "kapanis": "\"Robot nasıl öğrendi?\" Cevap: çok örnek gördü. \"Ya hiç siyah kedi göstermeseydik?\" sorusunu açık bırak; bir sonraki derse köprü.",
+        "giris": "ARF kukla sınıfa gelir: \"Ben kedi ile köpeği ayıramıyorum. Bana öğretir misiniz?\" Çocuklar güler; merak oluşur.",
+        "etkinlik": "Bir çocuk kart gösterir, \"Bu kedi\" der; ARF \"öğrendim\" deyip pul alır. Üç kartta ARF'ı sına: öğretmen ARF'ı bilerek yanıltır (\"Hmm… köpek?\"). Çocuklar \"daha çok göster\" der. 8–10 kartta ARF doğru bilir.",
+        "kapanis": "\"ARF nasıl öğrendi?\" Cevap: çok örnek gördü. \"Ya hiç siyah kedi göstermeseydik?\" sorusunu açık bırak; bir sonraki derse köprü.",
         "sorular": [
-          "Robot ilk başta neden yanıldı?",
+          "ARF ilk başta neden yanıldı?",
           "Kaç örnekten sonra bilmeye başladı?",
-          "Robot'a hiç göstermediğimiz bir hayvanı bilir mi?"
+          "ARF'a hiç göstermediğimiz bir hayvanı bilir mi?"
         ],
         "yanilgilar": [
-          "Robot kediyi zaten bilir, öğrenmesine gerek yoktur.",
+          "ARF kediyi zaten bilir, öğrenmesine gerek yoktur.",
           "Bir kez görmek yeter; tekrar gerekmez."
         ],
-        "degerlendirme": "Gözlem: çocuk \"Robot örnek görünce öğrenir\" fikrini kendi sözleriyle söyler.",
+        "degerlendirme": "Gözlem: çocuk \"ARF örnek görünce öğrenir\" fikrini kendi sözleriyle söyler.",
         "kolay": "Yalnız kedi–köpek; 6 kart.",
-        "zor": "Üçüncü hayvan (tavşan) ekle; Robot yeniden yanılır, yeniden öğrenir.",
-        "aile": "Evde bir hayvanın resmini çizsin; \"Robot'a bunu öğretsem kaç tane göstermeliyim?\" diye konuşun."
+        "zor": "Üçüncü hayvan (tavşan) ekle; ARF yeniden yanılır, yeniden öğrenir.",
+        "aile": "Evde bir hayvanın resmini çizsin; \"ARF'a bunu öğretsem kaç tane göstermeliyim?\" diye konuşun."
       }
     },
     {
@@ -461,13 +712,13 @@
       "slug": "oo-3-1",
       "bant": "oo",
       "dunya": 3,
-      "ad": "Robot Masal Anlatıyor, Ama…",
-      "soru": "Robot hiç yanılır mı?",
+      "ad": "ARF Masal Anlatıyor, Ama…",
+      "soru": "ARF hiç yanılır mı?",
       "sure": "15 dk",
       "duzey": "Farkındalık",
-      "ozet": "Robot'un masalındaki saçma hataları (mavi muz, uçan koyun) bulunca çocuklar \"Robot yanıldı!\" der.",
+      "ozet": "ARF'ın masalındaki saçma hataları (mavi muz, uçan koyun) bulunca çocuklar \"ARF yanıldı!\" der.",
       "kazanim": {
-        "cocuk": "Robot da yanılır; yanlışı ben bulabilirim.",
+        "cocuk": "ARF da yanılır; yanlışı ben bulabilirim.",
         "akademik": "Yapay zekâ çıktılarının hatalı olabileceğini fark eder; hatayı bulmak için kendi bilgisini kullanır."
       },
       "program": {
@@ -484,7 +735,7 @@
       "ekran": {
         "durum": "hazir",
         "modul": "oo-3-1",
-        "aciklama": "Robot masal anlatıyor; her sahnede yanlış resme dokun."
+        "aciklama": "ARF masal anlatıyor; her sahnede yanlış resme dokun."
       },
       "kagit": {
         "baslik": "Hata Nerede?",
@@ -514,21 +765,21 @@
         ]
       },
       "not": {
-        "giris": "Robot (kukla) masal anlatacak: \"Yanlış duyarsanız kırmızı kartı kaldırın.\"",
+        "giris": "ARF (kukla) masal anlatacak: \"Yanlış duyarsanız kırmızı kartı kaldırın.\"",
         "etkinlik": "Masal: \"Ali pazara gitti, mavi bir muz aldı. Yolda uçan bir koyun gördü. Gece güneş parlıyordu, ağaçta bir balık yüzüyordu…\" Her hatada çocuklar kartı kaldırır, doğrusunu söyler. Dört hata.",
-        "kapanis": "\"Robot neden yanıldı?\" Çünkü her şeyi bilmiyor; biz biliyoruz ve düzelttik.",
+        "kapanis": "\"ARF neden yanıldı?\" Çünkü her şeyi bilmiyor; biz biliyoruz ve düzelttik.",
         "sorular": [
           "Muz ne renk olur?",
-          "Robot neden böyle dedi sence?",
-          "Robot yanılınca ne yaparız?"
+          "ARF neden böyle dedi sence?",
+          "ARF yanılınca ne yaparız?"
         ],
         "yanilgilar": [
-          "Robot her şeyi bilir.",
-          "Robot yanılırsa kızmak gerekir; hayır, düzeltiriz."
+          "ARF her şeyi bilir.",
+          "ARF yanılırsa kızmak gerekir; hayır, düzeltiriz."
         ],
         "degerlendirme": "Gözlem: çocuk 4 hatadan en az 3'ünü fark eder ve doğrusunu söyler.",
         "kolay": "2 hata, çok belirgin.",
-        "zor": "Çocuklar Robot için kendi \"hatalı masalını\" uydurur, arkadaşı bulur.",
+        "zor": "Çocuklar ARF için kendi \"hatalı masalını\" uydurur, arkadaşı bulur.",
         "aile": "Akşam kitap okurken bir kelimeyi bilerek yanlış okuyun; çocuk \"dur\" desin."
       }
     },
@@ -538,7 +789,7 @@
       "bant": "oo",
       "dunya": 4,
       "ad": "Sır Kutusu",
-      "soru": "Bunu Robot'a söyler miyim?",
+      "soru": "Bunu ARF'a söyler miyim?",
       "sure": "15 dk",
       "duzey": "Farkındalık",
       "ozet": "Konuşan oyuncağa ya da ekrana neyi söyler, neyi önce bir yetişkine sorar; kartları iki kutuya atar.",
@@ -630,12 +881,12 @@
       "bant": "oo",
       "dunya": 5,
       "ad": "Hikâyeyi Birlikte Tamamla",
-      "soru": "Robot bizim gibi resim yapar mı?",
+      "soru": "ARF bizim gibi resim yapar mı?",
       "sure": "20 dk",
       "duzey": "Farkındalık",
       "ozet": "Öğretmen tahtada üretken araçla çocukların üç sözcüğünden resim başlatır; çocuklar \"böyle olmasın\" diyerek düzeltir.",
       "kazanim": {
-        "cocuk": "Robot, söylediklerimizden resim yapar; beğenmezsek değiştiririz.",
+        "cocuk": "ARF, söylediklerimizden resim yapar; beğenmezsek değiştiririz.",
         "akademik": "Üretken yapay zekâ çıktısının insan yönergesine bağlı olduğunu ve düzeltilebildiğini deneyimler."
       },
       "program": {
@@ -655,33 +906,33 @@
         "aciklama": "Öğretmen üretir; çocuklar seçer ve oylar."
       },
       "kagit": {
-        "baslik": "Benim Çizimim, Robot'un Çizimi",
-        "yonerge": "Üç sözcüğü söyledik: ______  ______  ______. Sol kutuya kendi resmini çiz. Sağ kutuya Robot'un resminde beğendiğin bir şeyi çiz.",
+        "baslik": "Benim Çizimim, ARF'ın Çizimi",
+        "yonerge": "Üç sözcüğü söyledik: ______  ______  ______. Sol kutuya kendi resmini çiz. Sağ kutuya ARF'ın resminde beğendiğin bir şeyi çiz.",
         "bloklar": [
           {
             "tip": "iki-cizim",
             "sol": "Benim çizimim",
-            "sag": "Robot'un çiziminden"
+            "sag": "ARF'ın çiziminden"
           }
         ]
       },
       "not": {
         "giris": "Çocuklardan üç sözcük iste: \"kedi, uçurtma, pazar\". Tahtada araçla üret. Resim gelince şaşırma anını bekle.",
         "etkinlik": "Resme bakın: \"Kedi nerede? Pazar olmuş mu?\" Beğenilmeyen bir şeyi birlikte değiştirin (\"kedi mavi olsun\"). İkinci sonucu karşılaştırın. Sonra herkes aynı üç sözcükle kendi resmini çizer.",
-        "kapanis": "Robot bizim sözcüklerimizle yaptı; sözcük değişince resim değişti. Bizim resimlerimiz birbirine benzemiyor, çünkü biz farklıyız.",
+        "kapanis": "ARF bizim sözcüklerimizle yaptı; sözcük değişince resim değişti. Bizim resimlerimiz birbirine benzemiyor, çünkü biz farklıyız.",
         "sorular": [
-          "Robot neyi doğru yaptı, neyi eksik bıraktı?",
-          "Senin resminde Robot'unkinde olmayan ne var?",
-          "Bu resmi kim yaptı: Robot mu, biz mi?"
+          "ARF neyi doğru yaptı, neyi eksik bıraktı?",
+          "Senin resminde ARF'ınkinde olmayan ne var?",
+          "Bu resmi kim yaptı: ARF mı, biz mi?"
         ],
         "yanilgilar": [
-          "Robot'un resmi \"daha iyi\"dir; hayır, farklıdır ve bizim sözcüklerimizden çıkmıştır.",
-          "Robot istediğini kendi uydurur; hayır, bizim sözcüklerimize göre yapar."
+          "ARF'ın resmi \"daha iyi\"dir; hayır, farklıdır ve bizim sözcüklerimizden çıkmıştır.",
+          "ARF istediğini kendi uydurur; hayır, bizim sözcüklerimize göre yapar."
         ],
         "degerlendirme": "Ürün: çocuğun çizimi üç sözcüğün en az ikisini içerir; tartışmada bir karşılaştırma cümlesi söyler.",
         "kolay": "İki sözcük.",
-        "zor": "Çocuk yönergeyi kendi verir: \"Robot'a ne diyelim?\"",
-        "aile": "Birlikte ürettiğiniz resmi evde anlatsın; \"Robot'a ne söyledik?\" sorusunu sorun."
+        "zor": "Çocuk yönergeyi kendi verir: \"ARF'a ne diyelim?\"",
+        "aile": "Birlikte ürettiğiniz resmi evde anlatsın; \"ARF'a ne söyledik?\" sorusunu sorun."
       }
     },
     {
@@ -794,13 +1045,13 @@
       "slug": "i1-2-1",
       "bant": "i1",
       "dunya": 2,
-      "ad": "Pazarcı Robot: Elma mı, Armut mu?",
+      "ad": "Pazarcı ARF: Elma mı, Armut mu?",
       "soru": "Kaç örnek yeter?",
       "sure": "30 dk",
       "duzey": "İşlevsellik",
-      "ozet": "Robot'u kartlarla eğitir; 2 örnekle sınavda hata, 10 örnekle doğru. \"Kaç örnek yeter?\" sorusuna kendi cevabını bulur.",
+      "ozet": "ARF'ı kartlarla eğitir; 2 örnekle sınavda hata, 10 örnekle doğru. \"Kaç örnek yeter?\" sorusuna kendi cevabını bulur.",
       "kazanim": {
-        "cocuk": "Robot'a çok ve çeşitli örnek gösterirsem daha iyi öğrenir.",
+        "cocuk": "ARF'a çok ve çeşitli örnek gösterirsem daha iyi öğrenir.",
         "akademik": "Eğitim verisinin miktarı ve çeşitliliği ile model doğruluğu arasındaki ilişkiyi deneysel olarak gözlemler."
       },
       "program": {
@@ -810,18 +1061,18 @@
       },
       "malzeme": [
         "Elma/armut kartları (kırmızı, yeşil, sarı çeşitleri)",
-        "\"Robot'un defteri\" kâğıdı",
+        "\"ARF'ın defteri\" kâğıdı",
         "akıllı tahta ya da tablet (ekran etkileşimi)"
       ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "hazir",
         "modul": "i1-2-1",
-        "aciklama": "Robot'u örneklerle eğit, sonra sına. Örnek arttıkça ve çeşitlendikçe yıldız artar."
+        "aciklama": "ARF'ı örneklerle eğit, sonra sına. Örnek arttıkça ve çeşitlendikçe yıldız artar."
       },
       "kagit": {
-        "baslik": "Robot'un Defteri",
-        "yonerge": "Robot'a hangi örnekleri gösterdin? İşaretle. Sınavda kaçını bildi? Yaz. Daha çok örnek gösterince ne oldu?",
+        "baslik": "ARF'ın Defteri",
+        "yonerge": "ARF'a hangi örnekleri gösterdin? İşaretle. Sınavda kaçını bildi? Yaz. Daha çok örnek gösterince ne oldu?",
         "bloklar": [
           {
             "tip": "tablo",
@@ -850,7 +1101,7 @@
           },
           {
             "tip": "isaretle",
-            "baslik": "Robot'a gösterdiğim örnekler",
+            "baslik": "ARF'a gösterdiğim örnekler",
             "secenekler": [
               "Kırmızı elma",
               "Yeşil elma",
@@ -860,28 +1111,28 @@
           },
           {
             "tip": "satirlar",
-            "baslik": "Robot yeşil elmayı armut sandı. Neden olabilir?",
+            "baslik": "ARF yeşil elmayı armut sandı. Neden olabilir?",
             "adet": 2
           }
         ]
       },
       "not": {
-        "giris": "Pazarcı Robot işe başlıyor ama elma ile armudu karıştırıyor; müşteriler şikâyetçi. \"Ona nasıl öğretiriz?\"",
+        "giris": "Pazarcı ARF işe başlıyor ama elma ile armudu karıştırıyor; müşteriler şikâyetçi. \"Ona nasıl öğretiriz?\"",
         "etkinlik": "Tahtada ekran etkileşimi: 2 örnekle eğit, sına (yanılır). Sınıf \"daha çok\" der; 6, sonra 10 örnek. Her denemede sonuç tabloya yazılır. Önemli an: yalnız kırmızı elma gösterilince yeşil elmayı armut sanır; çeşitlilik fikri burada açılır.",
-        "kapanis": "Daha çok ve daha çeşitli örnek, daha iyi Robot. Örnek sayısı ile doğru sayısı tahtada basit bir çubuk grafikle gösterilebilir.",
+        "kapanis": "Daha çok ve daha çeşitli örnek, daha iyi ARF. Örnek sayısı ile doğru sayısı tahtada basit bir çubuk grafikle gösterilebilir.",
         "sorular": [
           "2 örnekle neden yanıldı?",
           "Yeşil elmayı neden armut sandı?",
           "Hiç görmediği bir meyveyi bilir mi?"
         ],
         "yanilgilar": [
-          "Robot elmayı görür ve bilir; öğretmek gerekmez.",
+          "ARF elmayı görür ve bilir; öğretmek gerekmez.",
           "Bir tür örnek yeter; çeşitlilik gerekmez."
         ],
-        "degerlendirme": "Robot'un defteri tablosu dolu; \"neden olabilir?\" sorusuna \"yeşil elma göstermedik\" benzeri bir gerekçe.",
+        "degerlendirme": "ARF'ın defteri tablosu dolu; \"neden olabilir?\" sorusuna \"yeşil elma göstermedik\" benzeri bir gerekçe.",
         "kolay": "Yalnız kırmızı elma ve yeşil armut.",
         "zor": "Üçüncü meyve (portakal) eklenir; çocuklar kaç örnek gerektiğini tahmin eder.",
-        "aile": "Evde meyve tabağıyla oyun: \"Robot olsan bunu ne sanırdın?\""
+        "aile": "Evde meyve tabağıyla oyun: \"ARF olsan bunu ne sanırdın?\""
       }
     },
     {
@@ -1039,7 +1290,7 @@
       },
       "not": {
         "giris": "Tahtada iki resim göster; biri gerçek fotoğraf, biri yapay zekâ ile üretilmiş (öğretmen önceden hazırlar). \"Hangisi yapay?\" Tahminleri al, henüz cevap verme.",
-        "etkinlik": "Oyunu tahtada Kolay seviyede aç. Her turda sınıf A, B ya da C diye oylar; çoğunluğun cevabıyla dokunun. İpucu düğmesini sınıfa söz hakkı vererek kullanın. Her turun sonunda \"Robot neyi yanlış yaptı?\" diye sorun ve hata türünü tahtaya yazın.",
+        "etkinlik": "Oyunu tahtada Kolay seviyede aç. Her turda sınıf A, B ya da C diye oylar; çoğunluğun cevabıyla dokunun. İpucu düğmesini sınıfa söz hakkı vererek kullanın. Her turun sonunda \"ARF neyi yanlış yaptı?\" diye sorun ve hata türünü tahtaya yazın.",
         "kapanis": "Tahtadaki hata listesini toplayın: yazı, parmak, sayı, gölge, parçalar. Son soru: \"Hiç hata görmezsek ne yaparız?\" Cevap: kaynağa bakarız, kimin yaptığını sorarız.",
         "sorular": [
           "Yapay zekâ en çok neyi yanlış çiziyor?",
@@ -1061,13 +1312,13 @@
       "slug": "i1-4-1",
       "bant": "i1",
       "dunya": 4,
-      "ad": "Adil Robot",
-      "soru": "Robot neden yalnız onlara veriyor?",
+      "ad": "Adil ARF",
+      "soru": "ARF neden yalnız onlara veriyor?",
       "sure": "30 dk",
       "duzey": "İşlevsellik",
-      "ozet": "Öyküde Robot topu yalnız kırmızı ayakkabılılara verir, çünkü hep öyle örnek görmüştür. Adil mi, nasıl düzeltiriz?",
+      "ozet": "Öyküde ARF topu yalnız kırmızı ayakkabılılara verir, çünkü hep öyle örnek görmüştür. Adil mi, nasıl düzeltiriz?",
       "kazanim": {
-        "cocuk": "Robot gördüğü örneklere göre davranır; örnekler eksikse haksızlık yapabilir. Düzeltmek için örnekleri değiştiririz.",
+        "cocuk": "ARF gördüğü örneklere göre davranır; örnekler eksikse haksızlık yapabilir. Düzeltmek için örnekleri değiştiririz.",
         "akademik": "Algoritmik önyargıyı eğitim verisindeki dengesizlikle ilişkilendirir; çözüm olarak veri çeşitliliğini önerir."
       },
       "program": {
@@ -1078,17 +1329,17 @@
       "malzeme": [
         "Öykü (öğretmen notunda)",
         "ayakkabı kartları (kırmızı/mavi/yeşil)",
-        "\"Robot'a hangi örnekleri gösterelim?\" kâğıdı"
+        "\"ARF'a hangi örnekleri gösterelim?\" kâğıdı"
       ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "hazir",
         "modul": "i1-4-1",
-        "aciklama": "Robot topu yalnız kırmızı ayakkabılılara veriyor. Defterine örnek ekle, adil yap."
+        "aciklama": "ARF topu yalnız kırmızı ayakkabılılara veriyor. Defterine örnek ekle, adil yap."
       },
       "kagit": {
-        "baslik": "Adil Robot",
-        "yonerge": "Robot topu kime verdi, kime vermedi? İşaretle. Robot'un adil olması için ona hangi ayakkabıları göstermeliyiz? Çiz.",
+        "baslik": "Adil ARF",
+        "yonerge": "ARF topu kime verdi, kime vermedi? İşaretle. ARF'ın adil olması için ona hangi ayakkabıları göstermeliyiz? Çiz.",
         "bloklar": [
           {
             "tip": "tablo",
@@ -1122,31 +1373,31 @@
           },
           {
             "tip": "cizim",
-            "baslik": "Robot'a göstereceğim örnekler (adil olması için)"
+            "baslik": "ARF'a göstereceğim örnekler (adil olması için)"
           },
           {
             "tip": "satirlar",
-            "baslik": "Robot neden haksızlık yaptı?",
+            "baslik": "ARF neden haksızlık yaptı?",
             "adet": 2
           }
         ]
       },
       "not": {
-        "giris": "Öykü: Okulun bahçesine top dağıtan bir Robot gelir. Ece'ye verir, Can'a vermez, Zeynep'e vermez, Ali'ye verir. Çocuklar fark eder: kırmızı ayakkabılılar alıyor.",
-        "etkinlik": "\"Robot neden böyle yapıyor?\" Tahmin alın. Sonra Robot'un \"örnek defterini\" açın: öğretilirken hep kırmızı ayakkabılı çocuklara top veren örnekler gösterilmiş. Çocuklar yeni örnek seti önerir: her renkten ayakkabı. Kâğıtta çizerler.",
-        "kapanis": "Robot kötü değildi; eksik örnek görmüştü. Haksızlık fark edilince düzeltilir.",
+        "giris": "Öykü: Okulun bahçesine top dağıtan bir ARF gelir. Ece'ye verir, Can'a vermez, Zeynep'e vermez, Ali'ye verir. Çocuklar fark eder: kırmızı ayakkabılılar alıyor.",
+        "etkinlik": "\"ARF neden böyle yapıyor?\" Tahmin alın. Sonra ARF'ın \"örnek defterini\" açın: öğretilirken hep kırmızı ayakkabılı çocuklara top veren örnekler gösterilmiş. Çocuklar yeni örnek seti önerir: her renkten ayakkabı. Kâğıtta çizerler.",
+        "kapanis": "ARF kötü değildi; eksik örnek görmüştü. Haksızlık fark edilince düzeltilir.",
         "sorular": [
-          "Robot Can'ı sevmiyor mu?",
-          "Robot'a ne gösterseydik adil olurdu?",
+          "ARF Can'ı sevmiyor mu?",
+          "ARF'a ne gösterseydik adil olurdu?",
           "Sınıfta böyle bir haksızlığı kim fark eder?"
         ],
         "yanilgilar": [
-          "Robot kötü niyetlidir.",
-          "Robot'un kararı kesindir, değiştirilemez."
+          "ARF kötü niyetlidir.",
+          "ARF'ın kararı kesindir, değiştirilemez."
         ],
         "degerlendirme": "Çizim: en az iki farklı renkte ayakkabı örneği; sözlü gerekçe: \"hep kırmızı görmüştü\".",
         "kolay": "İki renk.",
-        "zor": "Başka bir öykü: \"yalnız uzun saçlılara kitap veren Robot\".",
+        "zor": "Başka bir öykü: \"yalnız uzun saçlılara kitap veren ARF\".",
         "aile": "Birlikte bir \"adil kural\" bulun: evde oyuncaklar nasıl paylaşılıyor?"
       }
     },
@@ -1161,7 +1412,7 @@
       "duzey": "İşlevsellik",
       "ozet": "Sınıf ortak komutla maskot görseli üretir, üç deneme yapar, düzeltir; sonra herkes kendi maskotunu çizer.",
       "kazanim": {
-        "cocuk": "Robot'a ne söylediğim önemli; sonucu beğenmezsem değiştiririm.",
+        "cocuk": "ARF'a ne söylediğim önemli; sonucu beğenmezsem değiştiririm.",
         "akademik": "Üretken yapay zekâ ile yineleme döngüsünü (yönerge, sonuç, düzeltme) uygular; çıktı üzerinde insan kararını korur."
       },
       "program": {
@@ -1188,7 +1439,7 @@
             "tip": "tablo",
             "basliklar": [
               "Deneme",
-              "Robot'a söylediğimiz",
+              "ARF'a söylediğimiz",
               "Çıkan resimde beğendiğimiz",
               "Değiştirmek istediğimiz"
             ],
@@ -1221,15 +1472,15 @@
       },
       "not": {
         "giris": "\"Sınıfımızın bir maskotu olsun. Nasıl olsun?\" Fikirler tahtaya: hayvan, renk, elinde ne tutuyor.",
-        "etkinlik": "Birinci yönerge sınıfın cümlesiyle verilir (\"mavi bir baykuş, elinde kitap\"). Sonuç tartışılır, bir şey değiştirilir, ikinci deneme, üçüncü deneme. Her denemede kâğıt doldurulur. Sonra herkes kendi maskotunu çizer; bir çocuk çizimi ve bir Robot üretimi yan yana asılır.",
-        "kapanis": "Maskotu kim tasarladı? Biz; Robot bizim söylediğimizi çizdi, biz seçtik.",
+        "etkinlik": "Birinci yönerge sınıfın cümlesiyle verilir (\"mavi bir baykuş, elinde kitap\"). Sonuç tartışılır, bir şey değiştirilir, ikinci deneme, üçüncü deneme. Her denemede kâğıt doldurulur. Sonra herkes kendi maskotunu çizer; bir çocuk çizimi ve bir ARF üretimi yan yana asılır.",
+        "kapanis": "Maskotu kim tasarladı? Biz; ARF bizim söylediğimizi çizdi, biz seçtik.",
         "sorular": [
           "Söylediğimizi değiştirince ne değişti?",
-          "Robot bizim istemediğimiz bir şey ekledi mi?",
-          "Çizimini Robot'unkinden ayıran ne?"
+          "ARF bizim istemediğimiz bir şey ekledi mi?",
+          "Çizimini ARF'ınkinden ayıran ne?"
         ],
         "yanilgilar": [
-          "Robot fikri kendi bulur.",
+          "ARF fikri kendi bulur.",
           "İlk sonuç kesindir, düzeltilemez."
         ],
         "degerlendirme": "Tablo: 3 satır dolu; çizim var; sözlü olarak bir karşılaştırma cümlesi.",
@@ -1354,12 +1605,12 @@
       "bant": "i2",
       "dunya": 2,
       "ad": "Sınıfın Veri Seti",
-      "soru": "Robot'u geri dönüşüme nasıl öğretiriz?",
+      "soru": "ARF'ı geri dönüşüme nasıl öğretiriz?",
       "sure": "40 dk (+40 dk ekranlı, isteğe bağlı)",
       "duzey": "Eylemsellik",
       "ozet": "Geri dönüşüm nesnelerini kartlarla toplar, etiketler, eğitir, test eder; eksik örnekleri bulur. Teachable Machine'e bağlanabilir.",
       "kazanim": {
-        "cocuk": "Veri toplar, etiketler, Robot'u eğitir ve sınarım; eksik örnekleri bulurum.",
+        "cocuk": "Veri toplar, etiketler, ARF'ı eğitir ve sınarım; eksik örnekleri bulurum.",
         "akademik": "Veri toplama, etiketleme, eğitme ve test döngüsünü uygular; veri kalitesi sorunlarını (eksik sınıf, dengesizlik) tanılar."
       },
       "program": {
@@ -1381,14 +1632,14 @@
       },
       "kagit": {
         "baslik": "Veri Toplama Formu",
-        "yonerge": "Topladığın her nesneyi yaz, etiketini seç. Eğitimden sonra Robot'un yanıldığı nesneleri işaretle. Hangi örnekler eksikti?",
+        "yonerge": "Topladığın her nesneyi yaz, etiketini seç. Eğitimden sonra ARF'ın yanıldığı nesneleri işaretle. Hangi örnekler eksikti?",
         "bloklar": [
           {
             "tip": "tablo",
             "basliklar": [
               "Nesne",
               "Etiket (kâğıt / plastik / cam / metal)",
-              "Robot doğru bildi mi?"
+              "ARF doğru bildi mi?"
             ],
             "satir": 8
           },
@@ -1404,28 +1655,28 @@
           },
           {
             "tip": "satirlar",
-            "baslik": "Robot'u daha iyi yapmak için ne eklerdim?",
+            "baslik": "ARF'ı daha iyi yapmak için ne eklerdim?",
             "adet": 2
           }
         ]
       },
       "not": {
-        "giris": "\"Okulun geri dönüşüm kutusuna yanlış şeyler atılıyor. Ayıran bir Robot yapsak, ona nasıl öğretiriz?\"",
-        "etkinlik": "Gruplar nesneleri toplar, etiketler (form). Eğitim: öğretmen kartlarla \"Robot\" olur ya da Teachable Machine ile gerçek eğitim yapılır. Test: yeni nesneler; hatalar tabloya işlenir. Eksik sınıf tartışması: \"Cam örneği bir taneydi, Robot camı plastik sandı.\"",
-        "kapanis": "Robot bizim topladığımız kadar iyi. Veri setinin kalitesi Robot'un kalitesidir.",
+        "giris": "\"Okulun geri dönüşüm kutusuna yanlış şeyler atılıyor. Ayıran bir makine yapsak, ona nasıl öğretiriz?\"",
+        "etkinlik": "Gruplar nesneleri toplar, etiketler (form). Eğitim: öğretmen kartlarla \"ARF\" olur ya da Teachable Machine ile gerçek eğitim yapılır. Test: yeni nesneler; hatalar tabloya işlenir. Eksik sınıf tartışması: \"Cam örneği bir taneydi, ARF camı plastik sandı.\"",
+        "kapanis": "ARF bizim topladığımız kadar iyi. Veri setinin kalitesi ARF'ın kalitesidir.",
         "sorular": [
-          "Robot neden camı plastik sandı?",
-          "Etiket yanlışsa Robot ne öğrenir?",
+          "ARF neden camı plastik sandı?",
+          "Etiket yanlışsa ARF ne öğrenir?",
           "Daha iyi bir veri seti için ne toplarız?"
         ],
         "yanilgilar": [
-          "Robot nesneyi anlar; aslında etiketleri öğrenir.",
+          "ARF nesneyi anlar; aslında etiketleri öğrenir.",
           "Çok nesne iyi veri demektir; çeşitlilik ve doğru etiket de gerekir."
         ],
         "degerlendirme": "Form dolu, eksik analizi yapılmış; grup sunumunda \"eksik örnek\" kavramı kullanılır.",
         "kolay": "İki sınıf (kâğıt / plastik), 8 nesne.",
         "zor": "Grup, test setini başka bir grup için hazırlar.",
-        "aile": "Evde bir hafta atıkları ayırın; \"Robot bunu bilir miydi?\" sorusunu sorun."
+        "aile": "Evde bir hafta atıkları ayırın; \"ARF bunu bilir miydi?\" sorusunu sorun."
       }
     },
     {
@@ -1456,7 +1707,7 @@
       "ekran": {
         "durum": "hazir",
         "modul": "i2-3-1",
-        "aciklama": "Robot'un emin cümlelerini değerlendir: doğru mu, uydurma mı? Kaynağı gör."
+        "aciklama": "ARF'ın emin cümlelerini değerlendir: doğru mu, uydurma mı? Kaynağı gör."
       },
       "kagit": {
         "baslik": "Dedektif Defteri",
@@ -1626,7 +1877,7 @@
       "soru": "Yapay zekâ sınıfımızın hangi sorununu çözebilir?",
       "sure": "2 × 40 dk",
       "duzey": "Eylemsellik",
-      "ozet": "Bir sınıf sorununu seçer (kütüphane kitaplarını türe göre ayırma), veri, eğitim ve test adımlarıyla çözüm tasarlar, sunar. Robot seti varsa uygular.",
+      "ozet": "Bir sınıf sorununu seçer (kütüphane kitaplarını türe göre ayırma), veri, eğitim ve test adımlarıyla çözüm tasarlar, sunar. Robotik set varsa uygular.",
       "kazanim": {
         "cocuk": "Bir sorun seçer, yapay zekâ ile çözülebilir mi karar verir, çözümü adım adım tasarlar ve anlatırım.",
         "akademik": "Yapay zekâ ile çözülebilecek bir problemi tanımlar; veri, eğitim ve test döngüsüyle çözüm tasarlar, sunar ve sınırlarını belirtir."
@@ -1675,7 +1926,7 @@
         "kapanis": "Her sorun yapay zekâ istemez; istediğinde de veri ve sınama gerekir. Son kararı yine biz veririz.",
         "sorular": [
           "Sorununuz için yapay zekâ gerçekten gerekli mi?",
-          "Hangi örnekler olmazsa Robot yanılır?",
+          "Hangi örnekler olmazsa ARF yanılır?",
           "Sistem yanıldığında kim fark eder?"
         ],
         "yanilgilar": [

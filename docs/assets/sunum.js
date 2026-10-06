@@ -11,15 +11,16 @@
   var no = 0, adim = 0;
 
   function h(s) { return String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
-  var robot = document.getElementById('robot-sablon').innerHTML;
+  function arf(ruh, sinif) { return window.ARF.svg(ruh, { boy: 220, sinif: sinif || '' }); }
+  var robot = arf('merakli');
 
   var CIZ = {
     kapak: function (s) {
-      return '<div class="s-kapak"><div class="robot-buyuk">' + robot + '</div><div><p class="s-ust">' + h(V.kod) + ' · ' + h(V.dunya) + '</p><h1>' + h(s.baslik) + '</h1><p class="s-alt">' + h(s.metin) + '</p></div></div>';
+      return '<div class="s-kapak"><div class="robot-buyuk">' + arf(s.ruh || 'sevincli', 'gel') + '</div><div><p class="s-ust">' + h(V.kod) + ' · ' + h(V.dunya) + '</p><h1>' + h(s.baslik) + '</h1><p class="s-alt">' + h(s.metin) + '</p></div></div>';
     },
     konusma: function (s) {
-      return '<h2>' + h(s.baslik) + '</h2><div class="s-konusma"><div class="robot-buyuk">' + robot + '</div><div class="balonlar">' +
-        s.balonlar.map(function (b) { return '<p class="s-balon adim">' + h(b) + '</p>'; }).join('') + '</div></div>';
+      return '<h2>' + h(s.baslik) + '</h2><div class="s-konusma"><div class="robot-buyuk">' + arf(s.ruh || 'merakli') + '</div><div class="balonlar">' +
+        s.balonlar.map(function (b) { var t = typeof b === 'string' ? b : b.metin, d = typeof b === 'string' ? '' : (b.ses || ''); return '<p class="s-balon adim"' + (d ? ' data-ses="' + h(d) + '"' : '') + '>' + h(t) + '</p>'; }).join('') + '</div></div>';
     },
     soru: function (s) {
       return '<h2>' + h(s.baslik) + '</h2><div class="s-secenekler">' + s.secenekler.map(function (o) {
@@ -48,7 +49,7 @@
       return '<h2>' + h(s.baslik) + '</h2><div class="s-kagit"><div class="s-a4">' + h(V.kagitBaslik) + '</div><div><p>' + h(s.metin) + '</p><a class="s-dugme" href="' + h(V.kagitYolu) + '" target="_blank">Çalışma kâğıdını aç</a></div></div>';
     },
     kapanis: function (s) {
-      return '<div class="s-kapak"><div class="robot-buyuk">' + robot + '</div><div><p class="s-ust">Bugün öğrendik</p><h1>' + h(s.baslik) + '</h1>' +
+      return '<div class="s-kapak"><div class="robot-buyuk">' + arf('sevincli', 'zipla') + '</div><div><p class="s-ust">Bugün öğrendik</p><h1>' + h(s.baslik) + '</h1>' +
         (s.maddeler ? '<ul class="s-maddeler">' + s.maddeler.map(function (m) { return '<li class="adim">' + h(m) + '</li>'; }).join('') + '</ul>' : '') + '</div></div>';
     }
   };
@@ -67,14 +68,27 @@
     if (oyun && window.YZO) window.YZO.baslat(oyun.dataset.modul, oyun);
     ic.querySelectorAll('.s-secenek').forEach(function (b) { b.addEventListener('click', function (e) { e.stopPropagation(); b.classList.toggle('secili'); }); });
     if (history.replaceState) history.replaceState(null, '', '#' + (no + 1));
+    if (window.YZO && YZO.ses) { YZO.ses.sus(); if (s.anlatim) konus(s.anlatim, s.anlatimSes); }
   }
 
   function ileri() {
     var a = adimlar();
-    if (adim < a.length) { a[adim].classList.add('acik'); adim++; return; }
+    if (adim < a.length) {
+      var acilan = a[adim];
+      acilan.classList.add('acik'); adim++;
+      if (acilan.classList.contains('s-balon')) konus(acilan.textContent, acilan.dataset.ses);
+      else if (window.YZO && YZO.ses) YZO.ses.efekt('tik');
+      return;
+    }
     if (no < V.slaytlar.length - 1) { no++; goster(); }
   }
   function geri() { if (no > 0) { no--; goster(); } }
+  function konus(metin, dosya) {
+    var a = ic.querySelector('.robot-buyuk svg.arf');
+    if (a) a.classList.add('konusuyor');
+    var bitir = function () { if (a) a.classList.remove('konusuyor'); };
+    if (window.YZO && YZO.ses) YZO.ses.soyle(metin, { dosya: dosya, bitince: bitir }); else setTimeout(bitir, 1500);
+  }
 
   document.getElementById('ileri').addEventListener('click', ileri);
   document.getElementById('geri').addEventListener('click', geri);

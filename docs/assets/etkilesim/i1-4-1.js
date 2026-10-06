@@ -1,5 +1,5 @@
-// YZO-İ1-4.1 Adil Robot — Robot topu yalnız kırmızı ayakkabılılara veriyor. Neden? Düzelt.
-// Robot, eğitim defterinde gördüğü ayakkabı renklerine top verir. Çocuk deftere örnek ekler.
+// YZO-İ1-4.1 Adil ARF — ARF topu yalnız kırmızı ayakkabılılara veriyor. Neden? Düzelt.
+// ARF, eğitim defterinde gördüğü ayakkabı renklerine top verir. Çocuk deftere örnek ekler.
 YZO.kaydet('i1-4-1', function (kutu, Y) {
   'use strict';
   var el = Y.el;
@@ -35,7 +35,7 @@ YZO.kaydet('i1-4-1', function (kutu, Y) {
     kutu.appendChild(oyun);
     var alan = COCUKLAR.filter(topAlir).length;
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, [asama === 'oyku' ? 'Robot bahçede top dağıtıyor' : 'Robot\'un defterini düzelt']),
+      el('h2', {}, [asama === 'oyku' ? 'ARF bahçede top dağıtıyor' : 'ARF\'un defterini düzelt']),
       el('span', { class: 'ilerleme' }, [alan + ' / ' + COCUKLAR.length + ' çocuk top aldı'])
     ]));
     var sahne = el('div', { class: 'sahne' });
@@ -46,14 +46,14 @@ YZO.kaydet('i1-4-1', function (kutu, Y) {
     if (asama === 'oyku') {
       sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, [
         'Bu adil mi? Kimler top alamadı?',
-        el('span', { class: 'aciklama' }, ['Robot\'un neden böyle yaptığını bulmak için defterine bak.'])
+        el('span', { class: 'aciklama' }, ['ARF\'un neden böyle yaptığını bulmak için defterine bak.'])
       ])]));
       sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
-        el('button', { class: 'secim sari', type: 'button', onclick: function () { asama = 'defter'; ciz(); } }, ['Robot\'un defterini aç'])
+        el('button', { class: 'secim sari', type: 'button', onclick: function () { asama = 'defter'; ciz(); } }, ['ARF\'un defterini aç'])
       ]));
     } else {
       sahne.appendChild(el('div', { class: 'robot-defter' }, [Y.robot(), el('div', {}, [
-        el('span', { class: 'sayac' }, ['Robot\'a öğretirken gösterilen örnekler']),
+        el('span', { class: 'sayac' }, ['ARF\'a öğretirken gösterilen örnekler']),
         el('span', { class: 'kucuk' }, [Object.keys(RENKLER).map(function (r) { return defter[r] + ' ' + RENKLER[r].ad + ' ayakkabılı çocuk'; }).join(', ')])
       ])]));
       var butonlar = el('div', { class: 'etiketler' });
@@ -64,9 +64,9 @@ YZO.kaydet('i1-4-1', function (kutu, Y) {
       sahne.appendChild(butonlar);
       var adil = alan === COCUKLAR.length;
       sahne.appendChild(el('div', { class: 'geri-bildirim ' + (adil ? 'dogru' : 'bak') }, [Y.robot(), el('div', {}, [
-        adil ? 'Artık herkes top alıyor!' : 'Robot hep kırmızı ayakkabılı örnek görmüş.',
+        adil ? 'Artık herkes top alıyor!' : 'ARF hep kırmızı ayakkabılı örnek görmüş.',
         el('span', { class: 'aciklama' }, [adil
-          ? 'Robot kötü değildi; eksik örnek görmüştü. Örnekleri çeşitlendirince adil oldu.'
+          ? 'ARF kötü değildi; eksik örnek görmüştü. Örnekleri çeşitlendirince adil oldu.'
           : 'Ona başka renklerden de örnek göster. Hangi renkler eksik?'])
       ])]));
       sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [

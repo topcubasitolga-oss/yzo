@@ -1,6 +1,6 @@
-// YZO-İ1-2.1 Pazarcı Robot: Elma mı, Armut mu? — eğit ve sına (1–2. sınıf)
-// Çocuk Robot'a örnek gösterir (meyveye dokun, etiketini söyle). Sonra Robot sınava girer.
-// Robot'un bilgisi yalnız gösterilen örneklerdir: az örnek → hata, görmediği çeşit → renk karışıklığı.
+// YZO-İ1-2.1 Pazarcı ARF: Elma mı, Armut mu? — eğit ve sına (1–2. sınıf)
+// Çocuk ARF'a örnek gösterir (meyveye dokun, etiketini söyle). Sonra ARF sınava girer.
+// ARF'ın bilgisi yalnız gösterilen örneklerdir: az örnek → hata, görmediği çeşit → renk karışıklığı.
 YZO.kaydet('i1-2-1', function (kutu, Y) {
   'use strict';
   var el = Y.el;
@@ -24,7 +24,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
     return e >= liste.length - e ? 'elma' : 'armut';
   }
 
-  // Robot'un tahmini: önce aynı çeşit örnekleri, yoksa aynı renk, yoksa genel çoğunluk, yoksa yazı tura.
+  // ARF'ın tahmini: önce aynı çeşit örnekleri, yoksa aynı renk, yoksa genel çoğunluk, yoksa yazı tura.
   function tahmin(cesit, rnd) {
     var c = CESITLER[cesit];
     var ayni = ornekler.filter(function (o) { return o.cesit === cesit; });
@@ -64,7 +64,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
     return el('div', { class: 'robot-defter' }, [
       Y.robot(),
       el('div', {}, [
-        el('span', { class: 'sayac' }, ['Robot ' + ornekler.length + ' örnek gördü']),
+        el('span', { class: 'sayac' }, ['ARF ' + ornekler.length + ' örnek gördü']),
         el('span', { class: 'kucuk' }, [CESITLER.map(function (c, i) { return c.ad + ': ' + sayilar[i]; }).join(', ')])
       ])
     ]);
@@ -75,7 +75,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
     var oyun = el('div', { class: 'oyun' });
     kutu.appendChild(oyun);
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, ['Robot\'a öğret: meyveye dokun, ne olduğunu söyle']),
+      el('h2', {}, ['ARF\'a öğret: meyveye dokun, ne olduğunu söyle']),
       el('span', { class: 'ilerleme' }, [deneme ? deneme + ' sınav yapıldı' : 'Henüz sınav yok'])
     ]));
     var sahne = el('div', { class: 'sahne' });
@@ -88,7 +88,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
       var c = CESITLER[secili];
       var etiketle = function (etiket) {
         ornekler.push({ cesit: c.id, etiket: etiket });
-        mesaj = 'Robot: "Öğrendim, ' + c.ad.toLowerCase() + ' bir ' + etiket + '."' + (etiket !== c.tur ? ' (Yanlış öğrettin; Robot öyle bilecek.)' : '');
+        mesaj = 'ARF: "Öğrendim, ' + c.ad.toLowerCase() + ' bir ' + etiket + '."' + (etiket !== c.tur ? ' (Yanlış öğrettin; ARF öyle bilecek.)' : '');
         secili = null;
         ciz();
       };
@@ -97,13 +97,13 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
         el('button', { class: 'secim sari', type: 'button', onclick: function () { etiketle('armut'); } }, ['Bu bir armut'])
       ]));
     } else if (ornekler.length >= EN_COK) {
-      sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, ['Robot\'un defteri doldu. Şimdi sınav zamanı.'])]));
+      sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, ['ARF\'un defteri doldu. Şimdi sınav zamanı.'])]));
     }
 
     if (mesaj) sahne.appendChild(el('div', { class: 'geri-bildirim dogru' }, [Y.robot(), el('div', {}, [mesaj])]));
 
     sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
-      el('button', { class: 'secim mavi', type: 'button', disabled: ornekler.length === 0, onclick: sinav }, ['Robot\'u sına']),
+      el('button', { class: 'secim mavi', type: 'button', disabled: ornekler.length === 0, onclick: sinav }, ['ARF\'u sına']),
       el('button', { class: 'secim gri', type: 'button', onclick: function () { ornekler = []; deneme = 0; secili = null; mesaj = ''; ciz(); } }, ['Baştan'])
     ]));
     oyun.appendChild(sahne);
@@ -124,7 +124,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
     var oyun = el('div', { class: 'oyun' });
     kutu.appendChild(oyun);
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, ['Sınav: Robot ne dedi?']),
+      el('h2', {}, ['Sınav: ARF ne dedi?']),
       el('span', { class: 'ilerleme' }, [deneme + '. deneme, ' + ornekler.length + ' örnekle'])
     ]));
     var sahne = el('div', { class: 'sahne' });
@@ -134,12 +134,12 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
       sira.appendChild(el('div', { class: 'sinav-kart ' + (s.dogru ? 'dogru' : 'yanlis') + ' ' + c.sinif }, [
         el('span', { class: 'resim', 'aria-hidden': 'true' }, [c.emoji]),
         el('span', {}, [(s.dogru ? '✓ ' : '✗ ') + c.ad]),
-        el('span', { class: 'tahmin' }, ['Robot: ' + s.tahmin])
+        el('span', { class: 'tahmin' }, ['ARF: ' + s.tahmin])
       ]));
     });
     sahne.appendChild(sira);
 
-    // Robot'un yorumu: görmediği çeşit mi, az örnek mi?
+    // ARF'ın yorumu: görmediği çeşit mi, az örnek mi?
     var gorulmemisHata = sonuc.filter(function (s) {
       return !s.dogru && !ornekler.some(function (o) { return o.cesit === s.cesit; });
     })[0];
@@ -148,7 +148,7 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
     else if (gorulmemisHata) {
       var c2 = CESITLER[gorulmemisHata.cesit];
       var ayniRenkVar = ornekler.some(function (o) { return CESITLER[o.cesit].renkAd === c2.renkAd; });
-      yorum = 'Robot ' + c2.ad.toLowerCase() + ' hiç görmedi; ' + (ayniRenkVar ? 'rengine bakıp ' : 'bilmeden ') + gorulmemisHata.tahmin + ' dedi. Ona bunu da gösterelim mi?';
+      yorum = 'ARF ' + c2.ad.toLowerCase() + ' hiç görmedi; ' + (ayniRenkVar ? 'rengine bakıp ' : 'bilmeden ') + gorulmemisHata.tahmin + ' dedi. Ona bunu da gösterelim mi?';
     } else if (ornekler.length < 6) yorum = 'Birkaç hata var. Daha çok örnek gösterelim mi?';
     else yorum = 'Az hata kaldı. Yanıldığı çeşitten birkaç örnek daha göster.';
 

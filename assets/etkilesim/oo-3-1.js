@@ -1,4 +1,4 @@
-// YZO-OÖ-3.1 Robot Masal Anlatıyor, Ama… — masaldaki yanlışı bul.
+// YZO-OÖ-3.1 ARF Masal Anlatıyor, Ama… — masaldaki yanlışı bul.
 // Her sahnede üç resim; biri yanlış. Çocuk yanlışa dokunur.
 YZO.kaydet('oo-3-1', function (kutu, Y) {
   'use strict';
@@ -6,7 +6,7 @@ YZO.kaydet('oo-3-1', function (kutu, Y) {
   var SAHNELER = [
     { cumle: 'Ali pazara gitti, mavi bir muz aldı.', secenekler: [
       { emoji: '🧒', ad: 'Ali' }, { emoji: '🛒', ad: 'Pazar' }, { emoji: '🍌', ad: 'Muz', yanlis: true, renk: 'hue-rotate(180deg)' }],
-      neden: 'Muz mavi olmaz! Sarı olur. Robot yanıldı, biz düzelttik.' },
+      neden: 'Muz mavi olmaz! Sarı olur. ARF yanıldı, biz düzelttik.' },
     { cumle: 'Yolda gökyüzünde uçan bir koyun gördü.', secenekler: [
       { emoji: '🐑', ad: 'Koyun', yanlis: true, ucan: true }, { emoji: '🌳', ad: 'Ağaç' }, { emoji: '🏠', ad: 'Ev' }],
       neden: 'Koyunlar uçmaz! Çayırda otlar.' },
@@ -26,15 +26,15 @@ YZO.kaydet('oo-3-1', function (kutu, Y) {
     if (sira >= SAHNELER.length) {
       oyun.appendChild(el('div', { class: 'sonuc' }, [
         el('div', { class: 'yildizlar', 'aria-hidden': 'true' }, [Y.yildizlar(Math.round(bulunan / SAHNELER.length * 5), 5)]),
-        el('div', { class: 'buyuk' }, ['Robot\'un ' + SAHNELER.length + ' yanlışından ' + Y.sayili(bulunan) + ' ilk seferde buldun']),
-        el('p', {}, ['Robot her şeyi bilmez, bazen yanılır. Yanlışı biz bulur, birlikte düzeltiriz.']),
+        el('div', { class: 'buyuk' }, ['ARF\'un ' + SAHNELER.length + ' yanlışından ' + Y.sayili(bulunan) + ' ilk seferde buldun']),
+        el('p', {}, ['ARF her şeyi bilmez, bazen yanılır. Yanlışı biz bulur, birlikte düzeltiriz.']),
         el('button', { class: 'secim sari', type: 'button', onclick: function () { sira = 0; bulunan = 0; ciz(); } }, ['Yeniden oyna'])
       ]));
       return;
     }
     var s = SAHNELER[sira], ilk = true;
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, ['Robot masal anlatıyor. Yanlış nerede?']),
+      el('h2', {}, ['ARF masal anlatıyor. Yanlış nerede?']),
       el('span', { class: 'ilerleme' }, ['Sahne ' + (sira + 1) + ' / ' + SAHNELER.length])
     ]));
     var sahne = el('div', { class: 'sahne' });
@@ -49,7 +49,7 @@ YZO.kaydet('oo-3-1', function (kutu, Y) {
           secimler.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
           b.style.background = 'var(--cimen-acik)';
           mesaj.innerHTML = '';
-          mesaj.appendChild(el('div', { class: 'geri-bildirim dogru' }, [Y.robot(), el('div', {}, ['Robot yanıldı!', el('span', { class: 'aciklama' }, [s.neden])])]));
+          mesaj.appendChild(el('div', { class: 'geri-bildirim dogru' }, [Y.robot(), el('div', {}, ['ARF yanıldı!', el('span', { class: 'aciklama' }, [s.neden])])]));
           mesaj.appendChild(el('div', { class: 'alt-dugmeler' }, [
             el('button', { class: 'secim sari', type: 'button', onclick: function () { sira++; ciz(); } }, [sira + 1 < SAHNELER.length ? 'Masala devam' : 'Sonucu gör'])
           ]));

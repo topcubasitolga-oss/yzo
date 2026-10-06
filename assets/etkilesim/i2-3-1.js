@@ -1,8 +1,8 @@
-// YZO-İ2-3.1 Dedektif: Doğru mu, Uydurma mı? — Robot çok emin konuşuyor; sen kontrol et.
+// YZO-İ2-3.1 Dedektif: Doğru mu, Uydurma mı? — ARF çok emin konuşuyor; sen kontrol et.
 YZO.kaydet('i2-3-1', function (kutu, Y) {
   'use strict';
   Y.kartOyunu(kutu, {
-    soru: 'Robot çok emin konuşuyor. Doğru mu, uydurma mı?',
+    soru: 'ARF çok emin konuşuyor. Doğru mu, uydurma mı?',
     secenekler: [
       { deger: 'dogru', etiket: 'Doğru', ikon: '✅', sinif: 'yesil' },
       { deger: 'uydurma', etiket: 'Uydurma', ikon: '🕵️', sinif: 'sari' }
