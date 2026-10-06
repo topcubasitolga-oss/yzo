@@ -483,3 +483,33 @@ svg.arf.gel .arf-teker { animation: arfTeker 1.1s linear 1; }
 .oyun .inceleme-satir .secim { min-height: 44px; padding: 4px 16px; font-size: 1rem; box-shadow: none; }
 .oyun .beyan { border: 3px dashed var(--murekkep); border-radius: 16px; padding: 14px 16px; background: #fff; font-family: var(--f-metin); }
 .oyun .beyan p { margin: 4px 0 0; }
+
+/* Metin atölyesi */
+.oyun .hikaye-sayfa { background: #FFFDF5; border: 3px solid var(--murekkep); border-radius: 18px; padding: 16px 20px; font-family: var(--f-metin); font-size: 1.25rem; line-height: 1.6; }
+.oyun .hikaye-sayfa p { margin: 0 0 8px; max-width: none; }
+.oyun .hikaye-sayfa .orta { background: var(--deniz-acik); border-radius: 10px; padding: 4px 8px; }
+.oyun .hikaye-sayfa .orta.sorunlu { background: var(--kiraz-acik); text-decoration: underline wavy var(--kiraz); }
+.oyun .hikaye-sayfa.kitap h3 { font-family: var(--f-baslik); font-size: 1.6rem; margin-bottom: 10px; }
+.oyun .oneri-liste { display: grid; gap: 10px; }
+.oyun .oneri { text-align: left; display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 3px solid var(--murekkep); border-radius: 16px; padding: 12px 14px; font-family: var(--f-metin); font-size: 1.1rem; cursor: pointer; color: var(--murekkep); }
+.oyun .oneri .harf { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--limon); border: 2px solid var(--murekkep); display: grid; place-items: center; font-family: var(--f-baslik); font-weight: 700; }
+.oyun .oneri.secili { background: var(--limon-acik); outline: 4px solid var(--limon); }
+.oyun textarea { width: 100%; border: 3px solid var(--murekkep); border-radius: 14px; padding: 12px 14px; font-family: var(--f-metin); font-size: 1.1rem; resize: vertical; }
+.oyun .inceleme-satir em { font-style: normal; color: #1E6B35; font-weight: 700; }
+
+/* Video atölyesi */
+.oyun .video-sahne { position: relative; aspect-ratio: 16 / 9; max-width: 760px; width: 100%; margin: 0 auto; border: 3px solid var(--murekkep); border-radius: 18px; overflow: hidden; background: #000; }
+.oyun .video-sahne > svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+.oyun .video-karakter { position: absolute; left: 42%; bottom: 14%; font-size: clamp(4rem, 13vw, 8rem); line-height: 1; transform-origin: 50% 100%; }
+.oyun .video-balon { position: absolute; left: 50%; top: 8%; max-width: 46%; background: #fff; border: 3px solid var(--murekkep); border-radius: 20px; padding: 10px 14px; font-family: var(--f-baslik); font-weight: 600; font-size: clamp(.9rem, 2.2vw, 1.3rem); opacity: 0; }
+.oyun .video-etiket { position: absolute; right: 10px; bottom: 10px; background: rgba(255,255,255,.9); border-radius: 8px; padding: 4px 10px; font-family: var(--f-baslik); font-weight: 600; font-size: .85rem; }
+.oyun .video-sahne.oynuyor .video-balon { animation: balonGel .4s ease-out 1.1s both; }
+.oyun .video-sahne.oynuyor .hareket-salla { animation: vSalla .6s ease-in-out 4; }
+.oyun .video-sahne.oynuyor .hareket-zipla { animation: vZipla .55s ease-out 4; }
+.oyun .video-sahne.oynuyor .hareket-don { animation: vDon 1.2s ease-in-out 2; }
+.oyun .video-sahne.oynuyor .hareket-yuru { animation: vYuru 1.4s ease-out both; }
+@keyframes balonGel { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+@keyframes vSalla { 0%,100% { transform: rotate(0); } 25% { transform: rotate(-10deg); } 75% { transform: rotate(10deg); } }
+@keyframes vZipla { 0%,100% { transform: translateY(0); } 45% { transform: translateY(-38%); } }
+@keyframes vDon { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
+@keyframes vYuru { from { transform: translateX(-160%); } to { transform: none; } }

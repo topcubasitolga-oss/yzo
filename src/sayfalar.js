@@ -444,6 +444,8 @@ ${uniteler.map(({ d, h: hs }) => `<section class="plan-unite d-${d.id}" aria-lab
 /* ---------------- ARF Atölyesi ---------------- */
 const ATOLYE_OYUNLAR = [
   { modul: 'atolye-gorsel', yol: 'gorsel', ad: 'ARF\'la Resim Yapalım', aciklama: 'Kartlarla istem kur, ARF çizsin; incele, düzelt, beyan et.', tur: 'Görsel atölyesi', yas: '1–4. sınıf (okul öncesinde öğretmenle)' },
+  { modul: 'atolye-metin', yol: 'metin', ad: 'ARF\'la Hikâye Yazalım', aciklama: 'Başlangıcı sen kur, ARF üç devam önersin; birinde bir yanlış var! Sonunu sen yaz, beyan et.', tur: 'Metin atölyesi', yas: '1–4. sınıf (1–2. sınıfta öğretmen yazar)' },
+  { modul: 'atolye-video', yol: 'video', ad: 'Karakterimi Konuşturuyorum', aciklama: 'Karakter ve replik seç, sahne istemi kur; ARF canlandırsın ve seslendirsin.', tur: 'Video atölyesi', yas: '1–4. sınıf' },
   { modul: 'atolye-odev', yol: 'odev', ad: 'Ödevde Yapay Zekâ: Trafik Işığı', aciklama: 'Ödevde hangi kullanım yeşil, hangisi sarı, hangisi kırmızı?', tur: 'Sürükle-bırak', yas: '3–4. sınıf, veli ve öğretmen' }
 ];
 function atolyeSayfasi(veri, kok = '../') {
@@ -477,8 +479,6 @@ function atolyeSayfasi(veri, kok = '../') {
   <h2 id="atolyeler"><span class="simge" aria-hidden="true">✋</span>Atölyeler</h2>
   <ul class="oyun-kartlar">
     ${ATOLYE_OYUNLAR.map(o => `<li><a class="oyun-kart d-5" href="${kok}atolye/${o.yol}.html"><span class="ust-serit"><span>${h(o.tur)}</span><span>Hazır</span></span><span class="oyun-ad">${h(o.ad)}</span><span class="oyun-aciklama">${h(o.aciklama)} <em>${h(o.yas)}</em></span><span class="oyna">Oyna</span></a></li>`).join('')}
-    <li><div class="oyun-kart planli"><span class="ust-serit"><span>Metin atölyesi</span><span>Hazırlanıyor</span></span><span class="oyun-ad">ARF'la Hikâye Yazalım</span><span class="oyun-aciklama">Hikâyenin başını çocuk yazar, ARF devam önerir; çocuk seçer, değiştirir, sonunu kendisi bağlar. Bilmece ve mektup da var.</span></div></li>
-    <li><div class="oyun-kart planli"><span class="ust-serit"><span>Video atölyesi</span><span>Hazırlanıyor</span></span><span class="oyun-ad">Karakterimi Konuşturuyorum</span><span class="oyun-aciklama">Çocuk karakterini çizer, sınıf repliğini yazar; öğretmen video aracıyla canlandırır. Sahne sahne istem yazmayı öğrenir.</span></div></li>
   </ul>
 </section>
 
