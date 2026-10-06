@@ -48,6 +48,15 @@
     kagit: function (s) {
       return '<h2>' + h(s.baslik) + '</h2><div class="s-kagit"><div class="s-a4">' + h(V.kagitBaslik) + '</div><div><p>' + h(s.metin) + '</p><a class="s-dugme" href="' + h(V.kagitYolu) + '" target="_blank">Çalışma kâğıdını aç</a></div></div>';
     },
+    rozet: function (s) {
+      var konfeti = '';
+      for (var i = 0; i < 28; i++) konfeti += '<i style="left:' + ((i * 37) % 100) + '%;animation-delay:' + ((i % 7) * 0.18) + 's;background:' + ['#F28C28', '#3FA35B', '#7B61D1', '#D9455F', '#2A8FBD', '#F6C945'][i % 6] + '"></i>';
+      return '<div class="s-konfeti" aria-hidden="true">' + konfeti + '</div><div class="s-rozet-duzen"><div class="s-rozet"><svg viewBox="0 0 200 220" width="300" height="330" aria-hidden="true">' +
+        '<path d="M60 150 L40 215 L75 195 L100 220 L110 160Z" fill="#D9455F" stroke="#1F2A48" stroke-width="5"/><path d="M140 150 L160 215 L125 195 L100 220 L90 160Z" fill="#2A8FBD" stroke="#1F2A48" stroke-width="5"/>' +
+        '<circle cx="100" cy="95" r="80" fill="#F6C945" stroke="#1F2A48" stroke-width="7"/><circle cx="100" cy="95" r="62" fill="#fff" stroke="#1F2A48" stroke-width="4"/>' +
+        '<text x="100" y="118" text-anchor="middle" font-size="64">' + (s.emoji || '🔍') + '</text></svg></div>' +
+        '<div><p class="s-ust">Rozet kazandınız!</p><h1>' + h(s.baslik) + '</h1><p class="s-alt">' + h(s.metin) + '</p></div></div>';
+    },
     kapanis: function (s) {
       return '<div class="s-kapak"><div class="robot-buyuk">' + arf('sevincli', 'zipla') + '</div><div><p class="s-ust">Bugün öğrendik</p><h1>' + h(s.baslik) + '</h1>' +
         (s.maddeler ? '<ul class="s-maddeler">' + s.maddeler.map(function (m) { return '<li class="adim">' + h(m) + '</li>'; }).join('') + '</ul>' : '') + '</div></div>';

@@ -243,5 +243,120 @@ function robot(ruh, sinif) {
     ciz();
   }
 
-  return { surukleBirak: surukleBirak, kartOyunu: kartOyunu, kaydet: kaydet, baslat: baslat, el: el, tohum: tohum, karistir: karistir, robot: robot, yildizlar: yildizlar, sayili: sayili };
+  // Sahnede bul: bir sahne çiziminin üstünde nesneler; doğru olanlara dokun.
+  // ayar = { soru, sahne: 'ev'|'mahalle'|svg metni, ogeler:[{emoji, ad, x, y, dogru, neden}], son }
+  // x, y: sahne içinde yüzde konum.
+  var SAHNELER = {
+    ev: '<svg viewBox="0 0 800 450" preserveAspectRatio="none"><rect width="800" height="450" fill="#FDF3C7"/><rect y="330" width="800" height="120" fill="#E8C9A0"/><rect x="0" y="0" width="390" height="330" fill="#D9EDF7"/><rect x="40" y="40" width="140" height="110" rx="6" fill="#fff" stroke="#1F2A48" stroke-width="5"/><line x1="110" y1="40" x2="110" y2="150" stroke="#1F2A48" stroke-width="4"/><rect x="420" y="180" width="300" height="150" rx="10" fill="#B07A4A" stroke="#1F2A48" stroke-width="5"/><rect x="60" y="240" width="250" height="90" rx="20" fill="#7B61D1" stroke="#1F2A48" stroke-width="5"/><rect x="560" y="40" width="160" height="100" rx="8" fill="#26335A" stroke="#1F2A48" stroke-width="5"/></svg>',
+    mahalle: '<svg viewBox="0 0 800 450" preserveAspectRatio="none"><rect width="800" height="450" fill="#D9EDF7"/><rect y="300" width="800" height="150" fill="#9AA3B5"/><rect y="360" width="800" height="8" fill="#fff" opacity=".7"/><rect x="30" y="90" width="200" height="210" fill="#F28C28" stroke="#1F2A48" stroke-width="5"/><rect x="260" y="50" width="220" height="250" fill="#3FA35B" stroke="#1F2A48" stroke-width="5"/><rect x="520" y="120" width="250" height="180" fill="#D9455F" stroke="#1F2A48" stroke-width="5"/><rect x="540" y="140" width="210" height="34" fill="#fff" stroke="#1F2A48" stroke-width="3"/><text x="645" y="166" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="24" fill="#1F2A48">MARKET</text><rect x="300" y="80" width="140" height="34" fill="#fff" stroke="#1F2A48" stroke-width="3"/><text x="370" y="106" text-anchor="middle" font-family="Fredoka,sans-serif" font-weight="700" font-size="22" fill="#1F2A48">OKUL</text></svg>'
+  };
+  function sahnedeBul(kutu, ayar) {
+    function ciz() {
+      kutu.innerHTML = '';
+      var oyun = el('div', { class: 'oyun bul' });
+      kutu.appendChild(oyun);
+      var hedefSay = ayar.ogeler.filter(function (o) { return o.dogru; }).length, bulunan = 0, hata = 0;
+      var ilerleme = el('span', { class: 'ilerleme' }, ['0 / ' + hedefSay]);
+      oyun.appendChild(el('div', { class: 'baslik' }, [el('h2', {}, [ayar.soru]), ilerleme]));
+      var sahne = el('div', { class: 'bul-sahne' });
+      sahne.innerHTML = SAHNELER[ayar.sahne] || ayar.sahne;
+      var mesaj = el('div', { class: 'sb-mesaj', 'aria-live': 'polite' });
+      ayar.ogeler.forEach(function (o) {
+        var b = el('button', { type: 'button', class: 'bul-oge', style: 'left:' + o.x + '%;top:' + o.y + '%', 'aria-label': o.ad }, [
+          el('span', { class: 'resim', 'aria-hidden': 'true' }, [o.emoji]), el('span', { class: 'etiket' }, [o.ad])
+        ]);
+        b.addEventListener('click', function () {
+          if (b.classList.contains('bulundu')) return;
+          mesaj.innerHTML = '';
+          if (o.dogru) {
+            b.classList.add('bulundu'); bulunan++;
+            ilerleme.textContent = bulunan + ' / ' + hedefSay;
+            mesaj.appendChild(el('div', { class: 'geri-bildirim dogru' }, [robot(), el('div', {}, ['Buldun! ' + o.ad + '.', el('span', { class: 'aciklama' }, [o.neden])])]));
+            if (bulunan === hedefSay) setTimeout(bitti, 900);
+          } else {
+            hata++;
+            b.classList.add('salla'); setTimeout(function () { b.classList.remove('salla'); }, 450);
+            mesaj.appendChild(el('div', { class: 'geri-bildirim bak' }, [robot(), el('div', {}, [o.ad + ' değil.', el('span', { class: 'aciklama' }, [o.neden])])]));
+          }
+        });
+        sahne.appendChild(b);
+      });
+      oyun.appendChild(sahne);
+      oyun.appendChild(mesaj);
+      function bitti() {
+        mesaj.innerHTML = '';
+        mesaj.appendChild(el('div', { class: 'sonuc' }, [
+          el('div', { class: 'yildizlar', 'aria-hidden': 'true' }, [yildizlar(Math.max(1, 5 - hata), 5)]),
+          el('div', { class: 'buyuk' }, ['Hepsini buldun!']),
+          el('p', {}, [ayar.son]),
+          el('button', { class: 'secim sari', type: 'button', onclick: ciz }, ['Yeniden oyna'])
+        ]));
+      }
+    }
+    ciz();
+  }
+
+  // Sırala: kartları sürükleyip numaralı yuvalara diz, sonra kontrol et.
+  // ayar = { soru, adimlar:[{emoji, ad}] (doğru sırada), son }
+  function sirala(kutu, ayar) {
+    function ciz() {
+      kutu.innerHTML = '';
+      var oyun = el('div', { class: 'oyun srl' });
+      kutu.appendChild(oyun);
+      oyun.appendChild(el('div', { class: 'baslik' }, [el('h2', {}, [ayar.soru]), el('span', { class: 'ilerleme' }, [ayar.adimlar.length + ' adım'])]));
+      var tepsi = el('div', { class: 'sb-tepsi' });
+      var yuvalar = el('div', { class: 'srl-yuvalar', style: 'grid-template-columns:repeat(' + ayar.adimlar.length + ',minmax(0,1fr))' });
+      var mesaj = el('div', { class: 'sb-mesaj', 'aria-live': 'polite' });
+      var yuvaEl = ayar.adimlar.map(function (_, i) {
+        var y = el('div', { class: 'srl-yuva', 'data-i': i }, [el('span', { class: 'srl-no' }, [String(i + 1)])]);
+        yuvalar.appendChild(y); return y;
+      });
+      function parcaYap(o, idx) {
+        var p = el('div', { class: 'sb-parca', tabindex: '0', role: 'button', 'data-idx': idx, 'aria-label': o.ad }, [el('span', { class: 'resim', 'aria-hidden': 'true' }, [o.emoji]), el('span', {}, [o.ad])]);
+        var bas = null;
+        p.addEventListener('pointerdown', function (e) { e.preventDefault(); p.setPointerCapture(e.pointerId); var r = p.getBoundingClientRect(); bas = { x: e.clientX, y: e.clientY, olcek: r.width / p.offsetWidth || 1 }; p.classList.add('tutuluyor'); });
+        p.addEventListener('pointermove', function (e) {
+          if (!bas) return;
+          p.style.transform = 'translate(' + (e.clientX - bas.x) / bas.olcek + 'px,' + (e.clientY - bas.y) / bas.olcek + 'px) scale(1.06)';
+          yuvaEl.forEach(function (y) { var r = y.getBoundingClientRect(); y.classList.toggle('uzerinde', e.clientX > r.left && e.clientX < r.right && e.clientY > r.top && e.clientY < r.bottom); });
+        });
+        function birak(e) {
+          if (!bas) return; bas = null; p.classList.remove('tutuluyor'); p.style.transform = '';
+          var hedef = null;
+          yuvaEl.forEach(function (y) { var r = y.getBoundingClientRect(); y.classList.remove('uzerinde'); if (e.clientX > r.left && e.clientX < r.right && e.clientY > r.top && e.clientY < r.bottom) hedef = y; });
+          if (!hedef) { tepsi.appendChild(p); return; }
+          var eski = hedef.querySelector('.sb-parca');
+          if (eski && eski !== p) (p.parentNode.classList.contains('srl-yuva') ? p.parentNode : tepsi).appendChild(eski);
+          hedef.appendChild(p);
+          if (window.YZO && window.YZO.ses) window.YZO.ses.efekt('tik');
+        }
+        p.addEventListener('pointerup', birak); p.addEventListener('pointercancel', birak);
+        p.addEventListener('keydown', function (e) {
+          if (e.key !== 'Enter' && e.key !== ' ') return; e.preventDefault();
+          var bos = yuvaEl.filter(function (y) { return !y.querySelector('.sb-parca'); })[0];
+          if (bos) bos.appendChild(p);
+        });
+        return p;
+      }
+      karistir(ayar.adimlar.map(function (o, i) { return [o, i]; }), Math.random).forEach(function (x) { tepsi.appendChild(parcaYap(x[0], x[1])); });
+      oyun.appendChild(tepsi);
+      oyun.appendChild(yuvalar);
+      oyun.appendChild(el('div', { class: 'alt-dugmeler' }, [el('button', { type: 'button', class: 'secim mavi', onclick: function () {
+        mesaj.innerHTML = '';
+        var dolu = yuvaEl.every(function (y) { return y.querySelector('.sb-parca'); });
+        if (!dolu) { mesaj.appendChild(el('div', { class: 'geri-bildirim bak' }, [robot(), el('div', {}, ['Önce bütün kartları yerleştir.'])])); return; }
+        var yanlis = yuvaEl.filter(function (y, i) { var ok = Number(y.querySelector('.sb-parca').dataset.idx) === i; y.classList.toggle('dogru', ok); y.classList.toggle('yanlis', !ok); return !ok; }).length;
+        if (yanlis === 0) {
+          mesaj.appendChild(el('div', { class: 'geri-bildirim dogru' }, [robot(), el('div', {}, ['Doğru sıra!', el('span', { class: 'aciklama' }, [ayar.son])])]));
+          mesaj.appendChild(el('div', { class: 'alt-dugmeler' }, [el('button', { class: 'secim sari', type: 'button', onclick: ciz }, ['Yeniden oyna'])]));
+        } else {
+          mesaj.appendChild(el('div', { class: 'geri-bildirim bak' }, [robot(), el('div', {}, [yanlis + ' kart yanlış yerde.', el('span', { class: 'aciklama' }, ['Kırmızı yuvalardaki kartlara bak. Önce ne yapılır?'])])]));
+        }
+      } }, ['ARF, kontrol et!'])]));
+      oyun.appendChild(mesaj);
+    }
+    ciz();
+  }
+
+  return { sahnedeBul: sahnedeBul, sirala: sirala, surukleBirak: surukleBirak, kartOyunu: kartOyunu, kaydet: kaydet, baslat: baslat, el: el, tohum: tohum, karistir: karistir, robot: robot, yildizlar: yildizlar, sayili: sayili };
 })());

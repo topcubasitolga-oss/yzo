@@ -100,6 +100,7 @@ function bantSayfasi(veri, bant, kok = '../../') {
     <li class="cip">Süre: ${h(bant.sure)}</li>
     <li class="cip">${liste.length} etkinlik</li>
   </ul>
+  ${(veri.yillik || {})[bant.id] ? `<p style="margin-top:14px"><a class="dugme" href="${kok}plan/${bant.id}/index.html">36 haftalık yıllık planı aç</a></p>` : ''}
 </header>
 
 <div class="sekmeler" role="tablist" aria-label="Dünya seç">
@@ -259,7 +260,7 @@ ${e.sunum ? '' : `<section class="bolum d-${d.id}" id="ekran" aria-labelledby="e
 
 
 /* ---------------- Ders akışı (sunum + plan + oyunlar) ---------------- */
-const SLAYT_AD = { kapak: 'Giriş', soru: 'Isınma sorusu', konusma: 'ARF anlatıyor', kartlar: 'Kavram kartları', ikili: 'Karşılaştırma', oyun: 'Etkinlik (oyun)', tartisma: 'Tartışma', kagit: 'Çalışma kâğıdı', kapanis: 'Kapanış' };
+const SLAYT_AD = { kapak: 'Giriş', soru: 'Isınma sorusu', konusma: 'ARF anlatıyor', kartlar: 'Kavram kartları', ikili: 'Karşılaştırma', oyun: 'Etkinlik (oyun)', tartisma: 'Tartışma', kagit: 'Çalışma kâğıdı', kapanis: 'Kapanış', rozet: 'Rozet' };
 function slaytBasligi(s) { return s.baslik || s.soru || ''; }
 function akisBolumu(e, d, kok) {
   const sl = e.sunum.slaytlar;
@@ -408,6 +409,37 @@ ${hazir.filter(e => e.ekran.oneCikan).map(e => `<a class="one-cikan" href="${kok
   return iskelet({ baslik: `Oyunlar: ${site.ad}`, aciklama: 'Sınıfta akıllı tahtada oynanacak yapay zekâ okuryazarlığı oyunları.', kok, aktif: 'oyunlar', govde, site });
 }
 
+
+/* ---------------- Yıllık plan ---------------- */
+function planSayfasi(veri, bant, kok = '../../') {
+  const { site, dunyalar, etkinlikler } = veri;
+  const haftalar = (veri.yillik || {})[bant.id] || [];
+  const durum = (w) => {
+    const e = w.slug && etkinlikler.find(x => x.slug === w.slug);
+    if (e && e.sunum) return ['hazir', 'Hazır', e];
+    if (e) return ['taslak', 'Etkinlik var, sunum hazırlanıyor', e];
+    return ['plan', 'Planlanıyor', null];
+  };
+  const hazirSay = haftalar.filter(w => durum(w)[0] === 'hazir').length;
+  const uniteler = dunyalar.map(d => ({ d, h: haftalar.filter(w => w.dunya === d.id) })).filter(u => u.h.length);
+  const govde = `
+<p class="kirinti"><a href="${kok}index.html">Ana sayfa</a><span>›</span><a href="${kok}bant/${bant.id}/index.html">${h(bant.ad)}</a><span>›</span>Yıllık plan</p>
+<header class="sayfa-baslik">
+  <p class="ust-yazi">${h(bant.ad)} · ${h(bant.yas)}</p>
+  <h1>Yıllık plan: 36 hafta</h1>
+  <p class="oncu">Haftada bir ders, ${h(bant.sure)}. Beş ünite; her ünite dersler ve bir meydan okuma haftasıyla biter, sınıf bir rozet kazanır. ${hazirSay} hafta hazır.</p>
+  <div class="plan-ilerleme" role="img" aria-label="${hazirSay} / 36 hafta hazır"><span style="width:${(hazirSay / 36 * 100).toFixed(1)}%"></span></div>
+</header>
+${uniteler.map(({ d, h: hs }) => `<section class="plan-unite d-${d.id}" aria-labelledby="u-${d.id}">
+  <h2 id="u-${d.id}"><span class="nokta" aria-hidden="true"></span>${d.id}. ünite: ${h(d.ad)} <small>Hafta ${hs[0].hafta}–${hs[hs.length - 1].hafta}${hs[hs.length - 1].rozet ? ' · Rozet: ' + h(hs[hs.length - 1].rozet) : ''}</small></h2>
+  <ol class="plan-haftalar">
+    ${hs.map(w => { const [k, et, e] = durum(w); const ic = `<span class="hafta-no">Hafta ${w.hafta}</span><span class="hafta-ad">${h(w.ad)}</span><span class="hafta-durum ${k}">${et}</span>`;
+      return `<li class="hafta ${k}${w.meydan ? ' meydan' : ''}">${e ? `<a href="${kok}e/${e.slug}/index.html">${ic}</a>` : `<div>${ic}</div>`}</li>`; }).join('\n    ')}
+  </ol>
+</section>`).join('\n')}`;
+  return iskelet({ baslik: `Yıllık plan, ${bant.ad}: ${site.ad}`, aciklama: '36 haftalık yapay zekâ okuryazarlığı programı.', kok, aktif: '', govde, site });
+}
+
 /* ---------------- Öğretmen köşesi ---------------- */
 function ogretmenSayfasi(veri, kok = '../') {
   const { site, dunyalar, bantlar, etkinlikler } = veri;
@@ -547,4 +579,4 @@ function arastirmaSayfasi(veri, kok = '../') {
   return iskelet({ baslik: `Araştırma: ${site.ad}`, aciklama: 'Çerçeve, yaş bantları, veri ve gizlilik.', kok, aktif: 'arastirma', govde, site });
 }
 
-module.exports = { sunumSayfasi, oyunSayfasi, oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };
+module.exports = { planSayfasi, sunumSayfasi, oyunSayfasi, oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };

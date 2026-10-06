@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mahallede Yapay Zekâ Avı: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Andika:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sunum.css">
+</head>
+<body class="d-1">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="../../e/oo-1-6/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">{"kod":"YZO-OÖ-1.6","dunya":"Tanı","kagitBaslik":"Mahalle Haritam","kagitYolu":"../../k/oo-1-6/index.html","slaytlar":[{"tip":"kapak","baslik":"Mahallede Yapay Zekâ Avı","metin":"ARF'la sokağa çıkıyoruz!","anlatim":"Hazır mısınız? Mahalleyi geziyoruz!","plan":{"sure":"1 dk","ogretmen":"Avcı şapkası hareketi yapın; çocukları ava hazırlayın.","cocuk":"Dürbün hareketi yapar."}},{"tip":"konusma","baslik":"ARF sokakta","balonlar":["Sokakta da benim gibi akıllı makineler var!","Biri yolu buluyor.","Biri kapıya geleni görüyor.","Biri meyveye bakıp adını söylüyor.","Ama trafik ışığı akıllı değil. Neden olabilir?"],"plan":{"sure":"3 dk","ogretmen":"Son balonda tahmin isteyin.","cocuk":"Trafik ışığı için tahmin eder."}},{"tip":"oyun","baslik":"Etkinlik 1: Mahallede ara, bul!","modul":"oo-1-6-mahalle","plan":{"sure":"5 dk","ogretmen":"Çocuklar sırayla tahtaya gelip dokunur. Yanlışlarda ARF'ın açıklamasını tekrar edin.","cocuk":"Mahalle resminde akıllı makineye dokunur."}},{"tip":"oyun","baslik":"Etkinlik 2: Evde ve sokakta","modul":"oo-1-6-tekrar","plan":{"sure":"4 dk","ogretmen":"Bu ünitede öğrendiklerimizin tekrarı. Hızlı oynayın.","cocuk":"Kartı doğru kutuya taşır."}},{"tip":"tartisma","soru":"Okulumuzda akıllı makine var mı?","cevaplar":["Öğretmenin bilgisayarı.","Akıllı tahta.","Kapıdaki kamera."],"plan":{"sure":"2 dk","ogretmen":"Çocukların cevaplarını gerçekten akıllı mı diye birlikte kontrol edin (akıllı tahta bir ekrandır; üstünde akıllı programlar çalışabilir).","cocuk":"Okulundan örnek verir."}},{"tip":"kagit","baslik":"Çalışma kâğıdı: Mahalle Haritam","metin":"Mahalleni çiz, akıllı makinelere yıldız koy.","plan":{"sure":"Ders sonu","ogretmen":"Kâğıdı dağıtın.","cocuk":"Mahallesini çizer."}},{"tip":"kapanis","baslik":"Akıllı makineler her yerde!","maddeler":["Evde de sokakta da akıllı makineler var.","Trafik ışığı saatine göre yanar; akıllı değildir.","Gelecek hafta büyük sınav var!"],"anlatim":"Gelecek hafta büyük bir sınavım var. Bana yardım eder misiniz?","plan":{"sure":"1 dk","ogretmen":"Meydan okuma haftasını duyurun.","cocuk":"Hazırım der!"}}]}</script>
+<script src="../../assets/arf.js"></script>
+<script src="../../assets/ses.js"></script>
+<script src="../../assets/etkilesim/motor.js"></script>
+<script src="../../assets/etkilesim/oo-1-6-mahalle.js"></script>
+<script src="../../assets/etkilesim/oo-1-6-tekrar.js"></script>
+<script src="../../assets/sunum.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evimizdeki Akıllı Makineler: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Andika:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sunum.css">
+</head>
+<body class="d-1">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="../../e/oo-1-2/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">{"kod":"YZO-OÖ-1.2","dunya":"Tanı","kagitBaslik":"Evimdeki Akıllı Makineler","kagitYolu":"../../k/oo-1-2/index.html","slaytlar":[{"tip":"kapak","baslik":"Evimizdeki Akıllı Makineler","metin":"ARF bugün evimize misafir geliyor!","anlatim":"Merhaba çocuklar! Bugün evinizi gezmek istiyorum.","plan":{"sure":"1 dk","ogretmen":"ARF'ı selamlayın; geçen haftayı hatırlatın: \"ARF neyle görüyordu, neyle duyuyordu?\"","cocuk":"ARF'a el sallar, kamerayı ve mikrofonu hatırlar."}},{"tip":"soru","baslik":"Evde hangisiyle konuşabiliriz?","secenekler":[{"emoji":"🛋️","ad":"Koltuk"},{"emoji":"🔊","ad":"Sesli asistan"},{"emoji":"🪴","ad":"Saksı"}],"metin":"Dokun, seç.","plan":{"sure":"2 dk","ogretmen":"Oylama yapın. Sesli asistanı seçenlere \"Nereden biliyorsun?\" diye sorun.","cocuk":"Oy verir, evinden örnek verir."}},{"tip":"konusma","baslik":"ARF evi geziyor","balonlar":["Bu evde benim gibi akıllı makineler var!","Biri sesinizi duyuyor.","Biri yüzünüzü görüyor.","Biri size yeni çizgi filmler öneriyor.","Hadi hepsini birlikte bulalım!"],"plan":{"sure":"2 dk","ogretmen":"Balonları sırayla açın. Her balonda \"Bu hangi makine olabilir?\" diye tahmin isteyin.","cocuk":"Tahmin eder: telefon, televizyon, sesli asistan."}},{"tip":"ikili","baslik":"Akıllı mı, değil mi?","sol":{"emoji":"✓","ad":"Akıllı makine","ornekler":["🔊 Sesli asistan","📱 Yüz tanıyan telefon","🧹 Süpürge robotu"]},"sag":{"emoji":"✋","ad":"Akıllı değil","ornekler":["⏰ Çalar saat","💡 Lamba","🧸 Oyuncak ayı"]},"plan":{"sure":"2 dk","ogretmen":"Örnekleri tek tek açın. Çalar saatte durun: \"Hep aynı saatte çalar; seni görmez, karar vermez.\"","cocuk":"Her örnekte \"akıllı!\" ya da \"değil!\" der."}},{"tip":"oyun","baslik":"Etkinlik 1: Evde ara, bul!","modul":"oo-1-2-ev","plan":{"sure":"5 dk","ogretmen":"Çocukları sırayla tahtaya çağırın; her çocuk bir nesneye dokunur. Yanlışta ARF nedenini söyler.","cocuk":"Evin resminde akıllı makineye dokunur."}},{"tip":"oyun","baslik":"Etkinlik 2: Ne yapıyor?","modul":"oo-1-2-ne","plan":{"sure":"4 dk","ogretmen":"Her kartı okuyun; sınıf el kaldırarak \"görüyor, duyuyor, öneriyor\" seçeneklerinden birini oylar.","cocuk":"Gözünü, kulağını gösterir ya da \"öneriyor\" der."}},{"tip":"tartisma","soru":"Sizin evinizde hangi akıllı makine var?","cevaplar":["Telefonum yüzümü tanıyor.","Televizyon bana çizgi film öneriyor.","Annem sesli asistana şarkı açtırıyor."],"plan":{"sure":"2 dk","ogretmen":"Çocukların örneklerini alın, sonra örnek cevapları açın.","cocuk":"Evinden bir örnek söyler."}},{"tip":"kagit","baslik":"Çalışma kâğıdı: Evimdeki Akıllı Makineler","metin":"Akıllı makineleri çember içine al, evindeki bir akıllı makineyi çiz.","plan":{"sure":"Ders sonu","ogretmen":"Kâğıdı dağıtın, yönergeyi okuyun.","cocuk":"Çember içine alır, çizer."}},{"tip":"kapanis","baslik":"Evimizde akıllı makineler var!","maddeler":["Akıllı makineler görür, duyar, önerir.","Çalar saat ve lamba akıllı değildir.","Son kararı biz veririz."],"anlatim":"Evinizi gezdirdiğiniz için teşekkürler! Görüşürüz.","plan":{"sure":"1 dk","ogretmen":"Maddeleri birlikte okuyun; aile notunu hatırlatın.","cocuk":"Maddeleri tekrar eder."}}]}</script>
+<script src="../../assets/arf.js"></script>
+<script src="../../assets/ses.js"></script>
+<script src="../../assets/etkilesim/motor.js"></script>
+<script src="../../assets/etkilesim/oo-1-2-ev.js"></script>
+<script src="../../assets/etkilesim/oo-1-2-ne.js"></script>
+<script src="../../assets/sunum.js"></script>
+</body>
+</html>
