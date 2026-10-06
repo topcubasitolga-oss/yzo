@@ -26,7 +26,7 @@ YZO.kaydet('oo-3-1', function (kutu, Y) {
     if (sira >= SAHNELER.length) {
       oyun.appendChild(el('div', { class: 'sonuc' }, [
         el('div', { class: 'yildizlar', 'aria-hidden': 'true' }, [Y.yildizlar(Math.round(bulunan / SAHNELER.length * 5), 5)]),
-        el('div', { class: 'buyuk' }, ['ARF\'un ' + SAHNELER.length + ' yanlışından ' + Y.sayili(bulunan) + ' ilk seferde buldun']),
+        el('div', { class: 'buyuk' }, ['ARF\'ın ' + SAHNELER.length + ' yanlışından ' + Y.sayili(bulunan) + ' ilk seferde buldun']),
         el('p', {}, ['ARF her şeyi bilmez, bazen yanılır. Yanlışı biz bulur, birlikte düzeltiriz.']),
         el('button', { class: 'secim sari', type: 'button', onclick: function () { sira = 0; bulunan = 0; ciz(); } }, ['Yeniden oyna'])
       ]));

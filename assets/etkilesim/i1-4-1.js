@@ -35,7 +35,7 @@ YZO.kaydet('i1-4-1', function (kutu, Y) {
     kutu.appendChild(oyun);
     var alan = COCUKLAR.filter(topAlir).length;
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, [asama === 'oyku' ? 'ARF bahçede top dağıtıyor' : 'ARF\'un defterini düzelt']),
+      el('h2', {}, [asama === 'oyku' ? 'ARF bahçede top dağıtıyor' : 'ARF\'ın defterini düzelt']),
       el('span', { class: 'ilerleme' }, [alan + ' / ' + COCUKLAR.length + ' çocuk top aldı'])
     ]));
     var sahne = el('div', { class: 'sahne' });
@@ -46,10 +46,10 @@ YZO.kaydet('i1-4-1', function (kutu, Y) {
     if (asama === 'oyku') {
       sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, [
         'Bu adil mi? Kimler top alamadı?',
-        el('span', { class: 'aciklama' }, ['ARF\'un neden böyle yaptığını bulmak için defterine bak.'])
+        el('span', { class: 'aciklama' }, ['ARF\'ın neden böyle yaptığını bulmak için defterine bak.'])
       ])]));
       sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
-        el('button', { class: 'secim sari', type: 'button', onclick: function () { asama = 'defter'; ciz(); } }, ['ARF\'un defterini aç'])
+        el('button', { class: 'secim sari', type: 'button', onclick: function () { asama = 'defter'; ciz(); } }, ['ARF\'ın defterini aç'])
       ]));
     } else {
       sahne.appendChild(el('div', { class: 'robot-defter' }, [Y.robot(), el('div', {}, [

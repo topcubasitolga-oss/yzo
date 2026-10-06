@@ -513,3 +513,22 @@ svg.arf.gel .arf-teker { animation: arfTeker 1.1s linear 1; }
 @keyframes vZipla { 0%,100% { transform: translateY(0); } 45% { transform: translateY(-38%); } }
 @keyframes vDon { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
 @keyframes vYuru { from { transform: translateX(-160%); } to { transform: none; } }
+
+/* ---------- Çiz, ARF bilsin ---------- */
+.oyun.cizim-oyun .cizim-duzen { display: grid; gap: 16px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 760px) { .oyun.cizim-oyun .cizim-duzen { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); } }
+.oyun.cizim-oyun .cizim-sol { display: grid; gap: 10px; justify-items: center; min-width: 0; }
+.oyun.cizim-oyun .cizim-sol .etiketler .secim { min-height: 56px; padding: 6px 14px; font-size: 1.05rem; }
+.oyun .cizim-tuval { width: min(100%, 300px); aspect-ratio: 1; height: auto; border: 4px dashed var(--murekkep); border-radius: 18px; background: #fff; touch-action: none; cursor: crosshair; }
+.oyun.cizim-oyun .alt-dugmeler .secim { min-height: 56px; padding: 6px 16px; font-size: 1.05rem; }
+.oyun .cizim-mesaj { width: 100%; font-family: var(--f-metin); }
+.oyun .cizim-defter { background: var(--sumen); border-radius: 18px; padding: 12px; display: grid; gap: 8px; min-width: 0; }
+.oyun .cizim-defter .robot-defter { padding: 4px 8px; }
+.oyun .cizim-satir { display: grid; gap: 6px; background: #fff; border: 2px solid var(--cizgi); border-radius: 12px; padding: 8px 10px; }
+.oyun .cizim-satir strong { font-size: 1rem; }
+.oyun .cizim-resimler { display: flex; flex-wrap: wrap; gap: 6px; min-height: 40px; align-items: center; }
+.oyun .cizim-resimler img { width: 40px; height: 40px; border: 2px solid var(--murekkep); border-radius: 6px; background: #fff; image-rendering: pixelated; }
+.oyun .cizim-resimler .kucuk { color: var(--kursun); font-family: var(--f-metin); font-size: .9rem; }
+.oyun .cizim-benzer { display: flex; gap: 8px; margin-top: 8px; justify-content: center; }
+.oyun .cizim-benzer img { width: 56px; height: 56px; border: 2px solid var(--murekkep); border-radius: 8px; image-rendering: pixelated; }
+.oyun .cizim-defter > .secim { min-height: 44px; font-size: .95rem; padding: 4px 12px; box-shadow: none; }

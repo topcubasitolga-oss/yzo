@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Çok Örnek, Az Örnek: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Andika:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sunum.css">
+</head>
+<body class="d-2">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="../../e/oo-2-3/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">{"kod":"YZO-OÖ-2.3","dunya":"Nasıl öğrenir","kagitBaslik":"Kaç Örnek?","kagitYolu":"../../k/oo-2-3/index.html","slaytlar":[{"tip":"kapak","baslik":"Çok Örnek, Az Örnek","metin":"Pazarcı ARF işe başlıyor!","anlatim":"Pazarda meyve satacağım ama elma ile armudu karıştırıyorum!","plan":{"sure":"1 dk","ogretmen":"Varsa gerçek elma ve armudu masaya koyun.","cocuk":"Meyveleri tanır."}},{"tip":"soru","baslik":"ARF'a kaç örnek göstermeliyiz?","secenekler":[{"emoji":"1️⃣","ad":"Bir tane"},{"emoji":"🔟","ad":"On tane"},{"emoji":"🚫","ad":"Hiç"}],"metin":"Tahmin et!","plan":{"sure":"2 dk","ogretmen":"Oylayın; cevabı oyunda bulacağız.","cocuk":"Oy verir."}},{"tip":"oyun","baslik":"Etkinlik 1: Pazarcı ARF","modul":"i1-2-1","plan":{"sure":"7 dk","ogretmen":"Önce 2 örnekle sınayın, sonuç tahtaya yazılsın. Sonra 8–10 örnekle yeniden. Yeşil elma örneği gösterilmezse ARF'ın yanıldığını vurgulayın.","cocuk":"Meyveye dokunup etiketler, sınav sonucunu sayar."}},{"tip":"oyun","baslik":"Etkinlik 2: Hangi ARF daha iyi bilir?","modul":"oo-2-3-hangisi","plan":{"sure":"3 dk","ogretmen":"Sağ-sol el kaldırarak oylayın.","cocuk":"Elini kaldırarak oy verir."}},{"tip":"tartisma","soru":"Hiç görmediği bir meyveyi ARF bilir mi?","cevaplar":["Bilemez.","Benzettiği bir meyve sanabilir.","Önce ona örnek göstermeliyiz."],"plan":{"sure":"2 dk","ogretmen":"2. slayttaki soruya dönün.","cocuk":"Fikrini söyler."}},{"tip":"kagit","baslik":"Çalışma kâğıdı: Kaç Örnek?","metin":"Daha çok örnek gören ARF'ı çember içine al.","plan":{"sure":"Ders sonu","ogretmen":"Kâğıdı dağıtın.","cocuk":"Çember içine alır, boyar."}},{"tip":"kapanis","baslik":"Çok örnek, daha iyi ARF!","maddeler":["Az örnek gören ARF yanılır.","Çok örnek gören ARF daha iyi bilir.","Hiç görmediğini bilemez."],"plan":{"sure":"1 dk","ogretmen":"Tekerleme: \"Çok örnek, iyi ARF!\"","cocuk":"Tekrar eder."}}]}</script>
+<script src="../../assets/arf.js"></script>
+<script src="../../assets/ses.js"></script>
+<script src="../../assets/etkilesim/motor.js"></script>
+<script src="../../assets/etkilesim/i1-2-1.js"></script>
+<script src="../../assets/etkilesim/oo-2-3-hangisi.js"></script>
+<script src="../../assets/sunum.js"></script>
+</body>
+</html>

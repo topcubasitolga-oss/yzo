@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yanlış Etiket: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Andika:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sunum.css">
+</head>
+<body class="d-2">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="../../e/oo-2-6/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">{"kod":"YZO-OÖ-2.6","dunya":"Nasıl öğrenir","kagitBaslik":"Etiket Dedektifi","kagitYolu":"../../k/oo-2-6/index.html","slaytlar":[{"tip":"kapak","baslik":"Yanlış Etiket","metin":"ARF'a yanlış öğretirsek ne olur?","ruh":"yanilmis","anlatim":"Çocuklar! Bugün bir köpeğe kedi dedim. Herkes güldü!","plan":{"sure":"1 dk","ogretmen":"ARF'ın yanılmış yüzünü gösterin.","cocuk":"Güler, tahmin eder."}},{"tip":"konusma","baslik":"Ne oldu?","ruh":"yanilmis","balonlar":["Biri defterime bir köpek resmi koymuş.","Ama altına \"kedi\" yazmış!","Ben de öyle öğrendim.","Şimdi köpeklere kedi diyorum. Bana yardım edin!"],"plan":{"sure":"2 dk","ogretmen":"\"ARF mi suçlu, yoksa yanlış etiket mi?\" diye tartışın.","cocuk":"Fikrini söyler."}},{"tip":"oyun","baslik":"Etkinlik 1: Bu etiket doğru mu?","modul":"oo-2-6-dogru","plan":{"sure":"4 dk","ogretmen":"Yanlış etiketlerde doğrusunu birlikte söyleyin.","cocuk":"Oy verir, doğru etiketi söyler."}},{"tip":"oyun","baslik":"Etkinlik 2: Doğru sayfaya koy","modul":"oo-2-6-sayfa","plan":{"sure":"5 dk","ogretmen":"Çocuklar sırayla sürükler. \"Etiketi biz koyuyoruz, dikkatli olalım!\"","cocuk":"Hayvanı doğru sayfaya taşır."}},{"tip":"tartisma","soru":"ARF'a öğretirken nelere dikkat ederiz?","cevaplar":["Etiket doğru mu, kontrol ederiz.","Çok örnek gösteririz.","Farklı örnekler gösteririz."],"plan":{"sure":"2 dk","ogretmen":"Ünitenin üç kuralını toplayın: çok, farklı, doğru.","cocuk":"Bir kural söyler."}},{"tip":"kagit","baslik":"Çalışma kâğıdı: Etiket Dedektifi","metin":"Yanlış etiketlere çarpı koy.","plan":{"sure":"Ders sonu","ogretmen":"Kâğıdı dağıtın.","cocuk":"İşaretler."}},{"tip":"kapanis","baslik":"Çok, farklı, doğru!","maddeler":["Çok örnek göster.","Farklı örnekler göster.","Etiketi doğru koy."],"anlatim":"Gelecek hafta beni sınayacaksınız. Hazır mısınız?","plan":{"sure":"1 dk","ogretmen":"\"Çok, farklı, doğru\" kuralını el hareketleriyle söyleyin; meydan okumayı duyurun.","cocuk":"Kuralı söyler."}}]}</script>
+<script src="../../assets/arf.js"></script>
+<script src="../../assets/ses.js"></script>
+<script src="../../assets/etkilesim/motor.js"></script>
+<script src="../../assets/etkilesim/oo-2-6-dogru.js"></script>
+<script src="../../assets/etkilesim/oo-2-6-sayfa.js"></script>
+<script src="../../assets/sunum.js"></script>
+</body>
+</html>

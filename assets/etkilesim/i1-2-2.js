@@ -60,7 +60,7 @@ YZO.kaydet('i1-2-2', function (kutu, Y) {
     kutu.appendChild(oyun);
     var hazir = SINIFLAR.every(function (s) { return sayi(s.id) >= 2; });
     oyun.appendChild(el('div', { class: 'baslik' }, [
-      el('h2', {}, [asama === 'ogret' ? '1. ARF\'a öğret: seç ve çiz' : '2. ARF\'u sına: bir şey çiz, ARF tahmin etsin']),
+      el('h2', {}, [asama === 'ogret' ? '1. ARF\'a öğret: seç ve çiz' : '2. ARF\'ı sına: bir şey çiz, ARF tahmin etsin']),
       el('span', { class: 'ilerleme' }, ['ARF ' + ornekler.length + ' çizim gördü'])
     ]));
     var duzen = el('div', { class: 'cizim-duzen' });
@@ -115,7 +115,7 @@ YZO.kaydet('i1-2-2', function (kutu, Y) {
     sol.appendChild(mesaj);
     duzen.appendChild(sol);
 
-    var defter = el('div', { class: 'cizim-defter' }, [el('div', { class: 'robot-defter' }, [Y.robot(), el('span', { class: 'sayac' }, ['ARF\'un defteri'])])]);
+    var defter = el('div', { class: 'cizim-defter' }, [el('div', { class: 'robot-defter' }, [Y.robot(), el('span', { class: 'sayac' }, ['ARF\'ın defteri'])])]);
     SINIFLAR.forEach(function (s) {
       var satir = el('div', { class: 'cizim-satir' }, [el('strong', {}, [s.emoji + ' ' + s.ad])]);
       var resimler = el('div', { class: 'cizim-resimler' });

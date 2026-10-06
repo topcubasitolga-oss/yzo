@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Örnek Göster, ARF Öğrensin: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Andika:ital,wght@0,400;0,700;1,400&display=swap">
+<link rel="stylesheet" href="../../assets/site.css">
+<link rel="stylesheet" href="../../assets/sunum.css">
+</head>
+<body class="d-2">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="../../e/oo-2-2/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" class="ses-dugme" data-ses-dugme>🔊 Ses açık</button>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">{"kod":"YZO-OÖ-2.2","dunya":"Nasıl öğrenir","kagitBaslik":"Benim Örneklerim","kagitYolu":"../../k/oo-2-2/index.html","slaytlar":[{"tip":"kapak","baslik":"Örnek Göster, ARF Öğrensin","metin":"Bugün ARF'a çizerek öğreteceğiz!","anlatim":"Bugün bana resim çizecek misiniz?","plan":{"sure":"1 dk","ogretmen":"Tahtanın dokunmatik çizimini deneyin.","cocuk":"Parmağıyla havada çizim yapar."}},{"tip":"konusma","baslik":"ARF nasıl tahmin eder?","balonlar":["Bana güneş, ev ve balık çizin.","Her çizimi defterime koyacağım.","Sonra yeni bir resim çizerseniz…","Defterimdeki en çok benzeyen çizimlere bakıp tahmin edeceğim!"],"plan":{"sure":"2 dk","ogretmen":"\"Benzetmek\" ne demek? Sınıfta iki benzer nesne gösterin.","cocuk":"Benzeyen nesneleri bulur."}},{"tip":"oyun","baslik":"Etkinlik 1: Çiz, ARF bilsin","modul":"i1-2-2","plan":{"sure":"7 dk","ogretmen":"Önce her resimden 2 çizim yaptırın (çocuklar sırayla). Sonra bir çocuk yeni bir şey çizsin; ARF tahmin etsin. Yanılırsa \"Daha çok öğret\"e dönün.","cocuk":"Tahtada parmağıyla çizer, ARF'ın tahminini kontrol eder."}},{"tip":"oyun","baslik":"Etkinlik 2: Meyve defteri","modul":"oo-2-2-meyve","plan":{"sure":"4 dk","ogretmen":"Yaban mersini kartında durun: \"Biz de karıştırabiliriz! Defterde yanlış olursa ARF de yanlış öğrenir.\"","cocuk":"Meyveyi doğru sayfaya taşır."}},{"tip":"tartisma","soru":"ARF çizimimizi neden yanlış bildi?","cevaplar":["Az örnek görmüştü.","Çizimimiz başka bir şeye benziyordu.","Defterde yanlış örnek vardı."],"plan":{"sure":"2 dk","ogretmen":"ARF'ın yanıldığı bir anı hatırlatın, nedenini tartışın.","cocuk":"Bir neden söyler."}},{"tip":"kagit","baslik":"Çalışma kâğıdı: Benim Örneklerim","metin":"Güneş, ev ve balık çiz. ARF'ın defterine koyacağız!","plan":{"sure":"Ders sonu","ogretmen":"Kâğıtları ARF'ın defteri gibi panoya asın.","cocuk":"Çizer."}},{"tip":"kapanis","baslik":"Çizdik, ARF öğrendi!","maddeler":["ARF yeni resmi örneklere benzeterek tahmin eder.","Örnek yanlışsa ARF de yanlış öğrenir."],"plan":{"sure":"1 dk","ogretmen":"Maddeleri okuyun.","cocuk":"Tekrar eder."}}]}</script>
+<script src="../../assets/arf.js"></script>
+<script src="../../assets/ses.js"></script>
+<script src="../../assets/etkilesim/motor.js"></script>
+<script src="../../assets/etkilesim/i1-2-2.js"></script>
+<script src="../../assets/etkilesim/oo-2-2-meyve.js"></script>
+<script src="../../assets/sunum.js"></script>
+</body>
+</html>

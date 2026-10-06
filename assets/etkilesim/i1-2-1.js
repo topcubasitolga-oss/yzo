@@ -97,13 +97,13 @@ YZO.kaydet('i1-2-1', function (kutu, Y) {
         el('button', { class: 'secim sari', type: 'button', onclick: function () { etiketle('armut'); } }, ['Bu bir armut'])
       ]));
     } else if (ornekler.length >= EN_COK) {
-      sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, ['ARF\'un defteri doldu. Şimdi sınav zamanı.'])]));
+      sahne.appendChild(el('div', { class: 'geri-bildirim bak' }, [Y.robot(), el('div', {}, ['ARF\'ın defteri doldu. Şimdi sınav zamanı.'])]));
     }
 
     if (mesaj) sahne.appendChild(el('div', { class: 'geri-bildirim dogru' }, [Y.robot(), el('div', {}, [mesaj])]));
 
     sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
-      el('button', { class: 'secim mavi', type: 'button', disabled: ornekler.length === 0, onclick: sinav }, ['ARF\'u sına']),
+      el('button', { class: 'secim mavi', type: 'button', disabled: ornekler.length === 0, onclick: sinav }, ['ARF\'ı sına']),
       el('button', { class: 'secim gri', type: 'button', onclick: function () { ornekler = []; deneme = 0; secili = null; mesaj = ''; ciz(); } }, ['Baştan'])
     ]));
     oyun.appendChild(sahne);

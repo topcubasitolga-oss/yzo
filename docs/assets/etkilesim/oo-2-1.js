@@ -36,7 +36,7 @@ YZO.kaydet('oo-2-1', function (kutu, Y) {
     sahne.appendChild(tezgah);
     if (mesaj) sahne.appendChild(mesaj);
     sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
-      el('button', { class: 'secim mavi', type: 'button', onclick: sina }, ['ARF\'u sına']),
+      el('button', { class: 'secim mavi', type: 'button', onclick: sina }, ['ARF\'ı sına']),
       el('button', { class: 'secim gri', type: 'button', onclick: function () { gordu = { kedi: 0, kopek: 0 }; deneme = 0; mesaj = null; ciz(); } }, ['Baştan'])
     ]));
     oyun.appendChild(sahne);
