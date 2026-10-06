@@ -1,5 +1,5 @@
 'use strict';
-const { h, robotSvg, dunyaSimge, iskelet } = require('./ortak');
+const { h, robotSvg, dunyaSimge, iskelet, FONTLAR } = require('./ortak');
 
 const bantSlug = (e) => e.bant; // oo | i1 | i2
 const etkinlikYolu = (kok, e) => `${kok}e/${e.slug}/index.html`;
@@ -167,20 +167,21 @@ function etkinlikSayfasi(veri, e, kok = '../../') {
 </header>
 
 <nav class="bolum-nav" aria-label="Etkinlik bölümleri">
-  <a href="#ekran">Ekran</a>
+  ${e.sunum ? '<a href="#akis">Ders akışı</a><a href="#oyunlar">Oyunlar</a>' : '<a href="#ekran">Ekran</a>'}
   <a href="#kagit">Çalışma kâğıdı</a>
   <a href="#not">Öğretmen notu</a>
   <a href="#kunye">Künye</a>
 </nav>
 
-<section class="bolum d-${d.id}" id="ekran" aria-labelledby="ekran-baslik">
+${e.sunum ? akisBolumu(e, d, kok) : ''}
+${e.sunum ? '' : `<section class="bolum d-${d.id}" id="ekran" aria-labelledby="ekran-baslik">
   <h2 id="ekran-baslik"><span class="simge" aria-hidden="true">▶</span>Ekran etkileşimi</h2>
   <p class="aciklama">${h(e.ekran.aciklama)} Akıllı tahtada ya da tablette, 3–6 dakika. Hiçbir sonuç saklanmaz.</p>
   <div class="ekran-kutu">
     <div class="ekran-ust"><span>${h(e.ad)}</span>${hazir ? `<a class="dugme dugme-ikincil" href="${kok}e/${e.slug}/ekran.html">Tam ekran aç</a>` : '<span class="cip cip-yakinda">Yakında</span>'}</div>
     ${ekranIc}
   </div>
-</section>
+</section>`}
 
 <section class="bolum d-${d.id}" id="kagit" aria-labelledby="kagit-baslik">
   <h2 id="kagit-baslik"><span class="simge" aria-hidden="true">✎</span>Çalışma kâğıdı</h2>
@@ -252,8 +253,93 @@ function etkinlikSayfasi(veri, e, kok = '../../') {
   <a class="dugme dugme-sade" href="${bantYolu(kok, b.id)}">${h(b.ad)} listesine dön</a>
 </div>`;
 
-  const ekSon = hazir ? `<script src="${kok}assets/etkilesim/motor.js"></script>\n<script src="${kok}assets/etkilesim/${h(e.ekran.modul)}.js"></script>` : '';
+  const ekSon = (hazir && !e.sunum) ? `<script src="${kok}assets/etkilesim/motor.js"></script>\n<script src="${kok}assets/etkilesim/${h(e.ekran.modul)}.js"></script>` : '';
   return iskelet({ baslik: `${e.ad} (${e.kod}): ${site.ad}`, aciklama: e.ozet, kok, aktif: '', govde, ekSon, site });
+}
+
+
+/* ---------------- Ders akışı (sunum + plan + oyunlar) ---------------- */
+const SLAYT_AD = { kapak: 'Giriş', soru: 'Isınma sorusu', konusma: 'Robot anlatıyor', kartlar: 'Kavram kartları', ikili: 'Karşılaştırma', oyun: 'Etkinlik (oyun)', tartisma: 'Tartışma', kagit: 'Çalışma kâğıdı', kapanis: 'Kapanış' };
+function slaytBasligi(s) { return s.baslik || s.soru || ''; }
+function akisBolumu(e, d, kok) {
+  const sl = e.sunum.slaytlar;
+  return `<section class="bolum d-${d.id}" id="akis" aria-labelledby="akis-baslik">
+  <h2 id="akis-baslik"><span class="simge" aria-hidden="true">▶</span>Ders akışı</h2>
+  <div class="akis-ust">
+    <p class="aciklama">Sunumu akıllı tahtada açın; ${sl.length} slayt, yaklaşık ${h(e.sure)}. Sunumun içinde etkinlik oyunları da var. Öğretmen notunu sunum sırasında <strong>N</strong> tuşuyla ya da alttaki "Öğretmen notu" düğmesiyle açabilirsiniz.</p>
+    <a class="dugme dugme-buyuk" href="${kok}e/${e.slug}/sunum.html">Sunumu başlat</a>
+  </div>
+  <h3>Ders planı</h3>
+  <div class="tablo-sarmal">
+  <table class="tablo plan-tablo">
+    <thead><tr><th>Slayt</th><th>Süre</th><th>Öğretmen ne yapar</th><th>Çocuklar ne yapar</th></tr></thead>
+    <tbody>
+      ${sl.map((s, i) => `<tr${s.tip === 'oyun' ? ' class="oyun-satir"' : ''}>
+        <td><a href="${kok}e/${e.slug}/sunum.html#${i + 1}"><strong>${i + 1}</strong></a><span class="slayt-tur">${h(SLAYT_AD[s.tip] || s.tip)}</span><span class="slayt-ad">${h(slaytBasligi(s))}</span></td>
+        <td>${h((s.plan || {}).sure)}</td>
+        <td>${h((s.plan || {}).ogretmen)}</td>
+        <td>${h((s.plan || {}).cocuk)}</td>
+      </tr>`).join('')}
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<section class="bolum d-${d.id}" id="oyunlar" aria-labelledby="oyunlar-baslik">
+  <h2 id="oyunlar-baslik"><span class="simge" aria-hidden="true">✋</span>Etkinlik oyunları</h2>
+  <p class="aciklama">Sunumun içinde de açılırlar. Ayrı açmak için bir karta dokunun; akıllı tahtada tam ekran açılır.</p>
+  <ul class="oyun-kartlar">
+    ${(e.oyunlar || []).map((o, i) => `<li><a class="oyun-kart d-${d.id}" href="${kok}e/${e.slug}/oyun-${i + 1}.html">
+      <span class="ust-serit"><span>Oyun ${i + 1}</span><span>${h(o.tur)}</span></span>
+      <span class="oyun-ad">${h(o.ad)}</span>
+      <span class="oyun-aciklama">${h(o.aciklama)}</span>
+      <span class="oyna">Oyna</span>
+    </a></li>`).join('')}
+  </ul>
+</section>`;
+}
+
+function sunumSayfasi(veri, e, kok = '../../') {
+  const d = veri.dunyalar.find(x => x.id === e.dunya);
+  const moduller = [...new Set(e.sunum.slaytlar.filter(s => s.tip === 'oyun').map(s => s.modul))];
+  const json = JSON.stringify({ kod: e.kod, dunya: d.ad, kagitBaslik: e.kagit.baslik, kagitYolu: `${kok}k/${e.slug}/index.html`, slaytlar: e.sunum.slaytlar.map(s => { const { plan, ...r } = s; return { ...r, plan }; }) }).replace(/</g, '\\u003c');
+  return `<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>${h(e.ad)}: sunum</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="${FONTLAR}">
+<link rel="stylesheet" href="${kok}assets/site.css">
+<link rel="stylesheet" href="${kok}assets/sunum.css">
+</head>
+<body class="d-${d.id}">
+<div id="sahne"><div id="slayt" class="slayt"></div></div>
+<template id="robot-sablon">${robotSvg('', 220)}</template>
+<div id="not" role="note"></div>
+<div id="cubuk">
+  <a href="${kok}e/${e.slug}/index.html">Kapat</a>
+  <span class="bosluk"></span>
+  <button type="button" id="geri" aria-label="Önceki slayt">◀</button>
+  <span id="sayac"></span>
+  <button type="button" id="ileri" aria-label="Sonraki slayt">▶</button>
+  <span class="bosluk"></span>
+  <button type="button" id="not-dugme">Öğretmen notu</button>
+  <button type="button" id="tam">Tam ekran</button>
+</div>
+<script type="application/json" id="sunum-veri">${json}</script>
+<script src="${kok}assets/etkilesim/motor.js"></script>
+${moduller.map(m => `<script src="${kok}assets/etkilesim/${h(m)}.js"></script>`).join('\n')}
+<script src="${kok}assets/sunum.js"></script>
+</body>
+</html>
+`;
+}
+
+function oyunSayfasi(veri, e, o, i, kok = '../../') {
+  return ekranSayfasi(veri, { ...e, ad: o.ad, ekran: { ...e.ekran, modul: o.modul } }, kok);
 }
 
 /* ---------------- Tam ekran sayfası ---------------- */
@@ -457,4 +543,4 @@ function arastirmaSayfasi(veri, kok = '../') {
   return iskelet({ baslik: `Araştırma: ${site.ad}`, aciklama: 'Çerçeve, yaş bantları, veri ve gizlilik.', kok, aktif: 'arastirma', govde, site });
 }
 
-module.exports = { oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };
+module.exports = { sunumSayfasi, oyunSayfasi, oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };

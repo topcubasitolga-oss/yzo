@@ -183,6 +183,179 @@
         "kolay": "Kart sayısını 4'e indir; yalnız çok belirgin çiftler (süpürge robotu / oyuncak ayı).",
         "zor": "Çamaşır makinesi kartını ekle: \"Düğmeye basınca hep aynı şeyi yapar; karar vermez.\"",
         "aile": "Bu akşam evde \"kendi başına karar veren\" bir alet arayın; bulduğunuzu yarın anlatsın."
+      },
+      "oyunlar": [
+        {
+          "modul": "oo-1-1-sb",
+          "ad": "Akıllı mı, Değil mi?",
+          "aciklama": "8 nesneyi iki kutuya sürükle: kendi başına karar verir / biri kullanmalı.",
+          "tur": "Sürükle-bırak"
+        },
+        {
+          "modul": "oo-1-1-duyu",
+          "ad": "Görür mü, Duyar mı?",
+          "aciklama": "Akıllı makineler seni nasıl fark eder? Kameralıları ve mikrofonluları ayır.",
+          "tur": "Sürükle-bırak"
+        },
+        {
+          "modul": "oo-1-1",
+          "ad": "Robot'a Sor",
+          "aciklama": "Kart kart ilerle; Robot her cevabın nedenini söylesin.",
+          "tur": "Kart oyunu"
+        }
+      ],
+      "sunum": {
+        "slaytlar": [
+          {
+            "tip": "kapak",
+            "baslik": "Akıllı mı, Değil mi?",
+            "metin": "Hangi makineler kendi başına karar verir?",
+            "plan": {
+              "sure": "1 dk",
+              "ogretmen": "Başlığı yüksek sesle okuyun. Robot'u tanıtın: \"Bugün Robot bize bir şey soracak.\"",
+              "cocuk": "Robot'a el sallar, başlığı tekrar eder."
+            }
+          },
+          {
+            "tip": "soru",
+            "baslik": "Hangisi kendi kendine hareket eder?",
+            "secenekler": [
+              {
+                "emoji": "🧸",
+                "ad": "Oyuncak ayı"
+              },
+              {
+                "emoji": "🧹",
+                "ad": "Süpürge robotu"
+              },
+              {
+                "emoji": "🚲",
+                "ad": "Bisiklet"
+              }
+            ],
+            "metin": "Dokun, seç. Doğru cevabı sunumun sonunda bulacağız.",
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Üç resmi gösterin, \"Hangisi kendi kendine hareket eder?\" diye sorun. Seçenekleri tahtada dokunarak işaretleyin. Cevabı henüz söylemeyin.",
+              "cocuk": "Parmak kaldırarak oy verir, bir gerekçe söyler."
+            }
+          },
+          {
+            "tip": "konusma",
+            "baslik": "Robot kendini tanıtıyor",
+            "balonlar": [
+              "Merhaba! Ben Robot.",
+              "Ben görürüm, duyarım.",
+              "Gördüğüme ve duyduğuma göre karar veririm.",
+              "Bazı makineler benim gibi. Bazıları değil!"
+            ],
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Her dokunuşta bir balon açılır; Robot'un sesini taklit ederek okuyun. Son balonda \"Hangileri Robot gibi olabilir?\" diye sorun.",
+              "cocuk": "Dinler, Robot'un cümlelerini tekrarlar."
+            }
+          },
+          {
+            "tip": "konusma",
+            "baslik": "Süpürge robotunun hikâyesi",
+            "balonlar": [
+              "Süpürge robotu odayı temizliyordu.",
+              "Birden duvara çarptı! 💥",
+              "Ne yaptı? Kendi döndü!",
+              "Kimse ona \"dön\" demedi. Kendi karar verdi."
+            ],
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Hikâyeyi balon balon anlatın. Üçüncü balondan önce durup sorun: \"Sizce ne yaptı?\"",
+              "cocuk": "Tahmin eder, el hareketiyle robotun dönüşünü canlandırır."
+            }
+          },
+          {
+            "tip": "ikili",
+            "baslik": "İki çeşit makine var",
+            "sol": {
+              "emoji": "✓",
+              "ad": "Kendi başına karar verir",
+              "ornekler": [
+                "🧹 Süpürge robotu",
+                "🔊 Sesli asistan",
+                "📱 Yüzünü tanıyan telefon"
+              ]
+            },
+            "sag": {
+              "emoji": "✋",
+              "ad": "Biri kullanmalı",
+              "ornekler": [
+                "🧸 Oyuncak ayı",
+                "🚲 Bisiklet",
+                "✂️ Makas"
+              ]
+            },
+            "plan": {
+              "sure": "3 dk",
+              "ogretmen": "Örnekleri tek tek açın. Her örnekte \"Bunu kim çalıştırıyor?\" diye sorun. 2. slayttaki soruya dönün: süpürge robotu doğru cevaptı.",
+              "cocuk": "Her örnekte \"kendi!\" ya da \"biz!\" diye cevap verir."
+            }
+          },
+          {
+            "tip": "oyun",
+            "baslik": "Etkinlik 1: Doğru kutuya taşı",
+            "modul": "oo-1-1-sb",
+            "plan": {
+              "sure": "4 dk",
+              "ogretmen": "Çocukları sırayla tahtaya çağırın; her çocuk bir nesneyi sürükler. Yanlışta Robot ipucu verir; sınıfa \"Yardım edelim mi?\" diye sorun.",
+              "cocuk": "Tahtaya gelir, nesneyi parmağıyla doğru kutuya taşır, nedenini söyler."
+            }
+          },
+          {
+            "tip": "oyun",
+            "baslik": "Etkinlik 2: Görür mü, duyar mı?",
+            "modul": "oo-1-1-duyu",
+            "plan": {
+              "sure": "3 dk",
+              "ogretmen": "\"Akıllı makinelerin gözü ve kulağı var\" deyin. Kamera ve mikrofonu gösterin (tabletin ya da telefonun üstünde). Çocuklar sırayla sürükler.",
+              "cocuk": "Gözünü ya da kulağını göstererek tahmin eder, sonra sürükler."
+            }
+          },
+          {
+            "tip": "tartisma",
+            "soru": "Evinizde kendi başına karar veren bir şey var mı?",
+            "cevaplar": [
+              "Telefon yüzümü tanıyor.",
+              "Tablet bana çizgi film öneriyor.",
+              "Sesli asistan şarkı açıyor."
+            ],
+            "plan": {
+              "sure": "2 dk",
+              "ogretmen": "Önce çocukların cevaplarını alın, sonra örnek cevapları tek tek açın. Her cevapta \"Görerek mi, duyarak mı?\" diye sorun.",
+              "cocuk": "Evinden bir örnek söyler."
+            }
+          },
+          {
+            "tip": "kagit",
+            "baslik": "Çalışma kâğıdı",
+            "metin": "Nesneleri doğru kutuya çizgiyle bağla. Sonra evinde kendi başına karar veren bir şey çiz.",
+            "plan": {
+              "sure": "Ders sonu",
+              "ogretmen": "Kâğıdı dağıtın. Yönergeyi okuyun; okul öncesinde yazma beklenmez, çizgi ve çizim yeterli.",
+              "cocuk": "Çizgiyle eşleştirir, evdeki akıllı makineyi çizer."
+            }
+          },
+          {
+            "tip": "kapanis",
+            "baslik": "Görür, duyar, karar verir!",
+            "maddeler": [
+              "Bazı makineler kendi başına karar verir.",
+              "Onlar görür ya da duyar.",
+              "Bazı makineleri ise biz kullanırız."
+            ],
+            "plan": {
+              "sure": "1 dk",
+              "ogretmen": "Tekerlemeyi birlikte söyleyin: \"Görür, duyar, karar verir; işte akıllı makine bu!\" Aileye not için öğretmen notuna bakın.",
+              "cocuk": "Tekerlemeyi el hareketleriyle söyler."
+            }
+          }
+        ]
       }
     },
     {
