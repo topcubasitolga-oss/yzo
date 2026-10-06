@@ -292,8 +292,18 @@ function oyunlarSayfasi(veri, kok = '../') {
   <h1>Oyunlar</h1>
   <p class="oncu">Akıllı tahtada ya da tablette açın, sınıfça oynayın. Bir karta dokunun, oyun tam ekran açılır. Hiçbir sonuç saklanmaz.</p>
 </header>
+${hazir.filter(e => e.ekran.oneCikan).map(e => `<a class="one-cikan" href="${kok}e/${e.slug}/ekran.html">
+  <div>
+    <p class="ust-yazi" style="margin:0 0 4px;font-family:var(--f-baslik);font-weight:600;color:var(--kiraz)">Yeni oyun</p>
+    <h2>${h(e.ad)}</h2>
+    <p>Her turda üç resim, biri yapay zekânın hatalı çizdiği resim. Bozuk yazıyı, fazla parmağı, ters gölgeyi bul. Kolay, orta ve zor seviye.</p>
+    <span class="dugme">Oyna</span>
+  </div>
+  <div class="kucuk-resimler" aria-hidden="true"><span>A</span><span>B</span><span>C</span></div>
+</a>`).join('')}
+<h2 style="margin-top:36px">Bütün oyunlar</h2>
 <ul class="oyun-kartlar">
-  ${hazir.map(e => {
+  ${hazir.filter(e => !e.ekran.oneCikan).map(e => {
     const d = dunyalar.find(x => x.id === e.dunya);
     const b = bantlar.find(x => x.id === e.bant);
     return `<li><a class="oyun-kart d-${d.id}" href="${kok}e/${e.slug}/ekran.html">

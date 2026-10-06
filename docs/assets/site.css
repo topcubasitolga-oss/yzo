@@ -306,3 +306,27 @@ li { margin-bottom: .35em; }
 .oyun-kart .oyun-ad { font-family: var(--f-baslik); font-weight: 600; font-size: 1.4rem; line-height: 1.2; padding: 4px 18px 0; }
 .oyun-kart .oyun-aciklama { color: var(--kursun); font-size: .98rem; padding: 0 18px; flex: 1; }
 .oyun-kart .oyna { align-self: flex-start; margin: 4px 18px 0; background: var(--limon); border: 2px solid var(--murekkep); border-radius: 999px; padding: 6px 22px; font-family: var(--f-baslik); font-weight: 700; font-size: 1.1rem; }
+
+/* ---------- Üç Resim, Biri Yapay ---------- */
+.oyun .uc-resim { display: grid; gap: 14px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .oyun .uc-resim { grid-template-columns: repeat(3, 1fr); } }
+.oyun .resim-kart { position: relative; padding: 0; border: 3px solid var(--murekkep); border-radius: 18px; background: #fff; overflow: hidden; cursor: pointer; box-shadow: var(--golge-ince); }
+.oyun .resim-kart svg { display: block; width: 100%; height: auto; }
+.oyun .resim-kart .harf { position: absolute; left: 10px; top: 10px; width: 36px; height: 36px; border-radius: 50%; background: var(--limon); border: 2px solid var(--murekkep); display: grid; place-items: center; font-family: var(--f-baslik); font-weight: 700; font-size: 1.2rem; }
+.oyun .resim-kart:hover:not([disabled]) { transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--murekkep); }
+.oyun .resim-kart[disabled] { cursor: default; }
+.oyun .resim-kart.yapay { border-color: var(--kiraz); box-shadow: 0 0 0 4px var(--kiraz-acik); }
+.oyun .resim-kart.yanlis-secim { opacity: .55; }
+.oyun .resim-kart.soluk { opacity: .55; }
+.oyun .ipucu-alani { display: grid; gap: 10px; }
+
+/* Öne çıkan oyun */
+.one-cikan { margin-top: 20px; display: grid; gap: 18px; grid-template-columns: 1fr; align-items: center; background: var(--kagit); border: 2px solid var(--murekkep); border-radius: var(--r-kart); box-shadow: var(--golge); padding: 22px; text-decoration: none; }
+@media (min-width: 760px) { .one-cikan { grid-template-columns: 1.2fr 1fr; } }
+.one-cikan h2 { font-size: clamp(1.6rem, 3.6vw, 2.2rem); margin-bottom: 8px; }
+.one-cikan p { color: var(--kursun); }
+.one-cikan .kucuk-resimler { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.one-cikan .kucuk-resimler span { aspect-ratio: 300 / 220; border: 2px solid var(--murekkep); border-radius: 12px; display: grid; place-items: center; font-family: var(--f-baslik); font-weight: 700; font-size: 1.6rem; background: var(--deniz-acik); }
+.one-cikan .kucuk-resimler span:nth-child(2) { background: var(--kiraz-acik); }
+.one-cikan .kucuk-resimler span:nth-child(3) { background: var(--cimen-acik); }
+.one-cikan:hover { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--murekkep); }
