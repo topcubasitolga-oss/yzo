@@ -40,6 +40,7 @@ function anaSayfa(veri, kok = '') {
     <div>
       <h1>Çocuklar yapay zekâyı oynayarak tanısın.</h1>
       <p class="oncu">Okul öncesi ve ilkokul için hazır etkinlikler: tahtada oynanan kısa bir ekran oyunu, yazdırılacak bir çalışma kâğıdı, bir sayfalık öğretmen notu. Hepsi ücretsiz.</p>
+      <p><a class="dugme" href="${kok}oyunlar/index.html">Oyunları aç (${etkinlikler.filter(e => e.ekran.durum === 'hazir').length})</a></p>
     </div>
     <div class="robot-balon">
       ${robotSvg('', 84)}
@@ -281,6 +282,32 @@ function ekranSayfasi(veri, e, kok = '../../') {
 `;
 }
 
+/* ---------------- Oyunlar ---------------- */
+function oyunlarSayfasi(veri, kok = '../') {
+  const { site, dunyalar, bantlar, etkinlikler } = veri;
+  const hazir = etkinlikler.filter(e => e.ekran.durum === 'hazir');
+  const govde = `
+<p class="kirinti"><a href="${kok}index.html">Ana sayfa</a><span>›</span>Oyunlar</p>
+<header class="sayfa-baslik">
+  <h1>Oyunlar</h1>
+  <p class="oncu">Akıllı tahtada ya da tablette açın, sınıfça oynayın. Bir karta dokunun, oyun tam ekran açılır. Hiçbir sonuç saklanmaz.</p>
+</header>
+<ul class="oyun-kartlar">
+  ${hazir.map(e => {
+    const d = dunyalar.find(x => x.id === e.dunya);
+    const b = bantlar.find(x => x.id === e.bant);
+    return `<li><a class="oyun-kart d-${d.id}" href="${kok}e/${e.slug}/ekran.html">
+      <span class="ust-serit"><span>${dunyaSimge[d.id]} ${h(d.ad)}</span><span>${h(b.yas)}</span></span>
+      <span class="oyun-ad">${h(e.ad)}</span>
+      <span class="oyun-aciklama">${h(e.ekran.aciklama)}</span>
+      <span class="oyna">Oyna</span>
+    </a></li>`;
+  }).join('\n  ')}
+</ul>
+<p class="bos-liste" style="margin-top:20px">${etkinlikler.length - hazir.length} etkinliğin oyunu hazırlanıyor. O etkinlikler kâğıt ve öğretmen notuyla ekransız uygulanabilir.</p>`;
+  return iskelet({ baslik: `Oyunlar: ${site.ad}`, aciklama: 'Sınıfta akıllı tahtada oynanacak yapay zekâ okuryazarlığı oyunları.', kok, aktif: 'oyunlar', govde, site });
+}
+
 /* ---------------- Öğretmen köşesi ---------------- */
 function ogretmenSayfasi(veri, kok = '../') {
   const { site, dunyalar, bantlar, etkinlikler } = veri;
@@ -420,4 +447,4 @@ function arastirmaSayfasi(veri, kok = '../') {
   return iskelet({ baslik: `Araştırma: ${site.ad}`, aciklama: 'Çerçeve, yaş bantları, veri ve gizlilik.', kok, aktif: 'arastirma', govde, site });
 }
 
-module.exports = { anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };
+module.exports = { oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };

@@ -78,5 +78,56 @@ window.YZO = (function () {
   var EKLER = { 1: "'ini", 2: "'sini", 3: "'ünü", 4: "'ünü", 5: "'ini", 6: "'sını", 7: "'sini", 8: "'ini", 9: "'unu", 10: "'unu", 11: "'ini", 12: "'sini" };
   function sayili(n) { return n === 0 ? 'hiçbirini' : n + (EKLER[n] || "'ini"); }
 
-  return { kaydet: kaydet, baslat: baslat, el: el, tohum: tohum, karistir: karistir, robot: robot, yildizlar: yildizlar, sayili: sayili };
+  // Genel kart oyunu: her kartta bir soru, iki-üç seçenek, Robot açıklar, sonunda puan.
+  // ayar = { soru, kartlar:[{emoji?, ad?, metin?, cevap, neden}], secenekler:[{deger, etiket, ikon, sinif}], son }
+  function kartOyunu(kutu, ayar) {
+    var sira = 0, dogru = 0;
+    function ciz() {
+      kutu.innerHTML = '';
+      var oyun = el('div', { class: 'oyun' });
+      kutu.appendChild(oyun);
+      var K = ayar.kartlar;
+      if (sira >= K.length) {
+        oyun.appendChild(el('div', { class: 'sonuc' }, [
+          el('div', { class: 'yildizlar', 'aria-hidden': 'true' }, [yildizlar(Math.round(dogru / K.length * 5), 5)]),
+          el('div', { class: 'buyuk' }, [K.length + ' karttan ' + sayili(dogru) + ' bildin']),
+          el('p', {}, [ayar.son]),
+          el('button', { class: 'secim sari', type: 'button', onclick: function () { sira = 0; dogru = 0; ciz(); } }, ['Yeniden oyna'])
+        ]));
+        return;
+      }
+      var k = K[sira];
+      oyun.appendChild(el('div', { class: 'baslik' }, [
+        el('h2', {}, [k.soru || ayar.soru]),
+        el('span', { class: 'ilerleme' }, ['Kart ' + (sira + 1) + ' / ' + K.length])
+      ]));
+      var sahne = el('div', { class: 'sahne' });
+      sahne.appendChild(el('div', { class: 'kart' }, [
+        k.emoji ? el('div', { class: 'resim', 'aria-hidden': 'true' }, [k.emoji]) : null,
+        k.ad ? el('div', { class: 'ad' }, [k.ad]) : null,
+        k.metin ? el('p', { class: 'metin' }, [k.metin]) : null
+      ]));
+      var secimler = el('div', { class: 'secimler' + (ayar.secenekler.length === 3 ? ' uclu' : '') });
+      ayar.secenekler.forEach(function (s) {
+        secimler.appendChild(el('button', { class: 'secim ' + (s.sinif || ''), type: 'button', onclick: function () {
+          var ok = s.deger === k.cevap;
+          if (ok) dogru++;
+          secimler.querySelectorAll('button').forEach(function (b) { b.disabled = true; });
+          var gb = el('div', { class: 'geri-bildirim ' + (ok ? 'dogru' : 'bak') }, [robot(), el('div', {}, [
+            ok ? 'Doğru!' : 'Bir daha düşün.', el('span', { class: 'aciklama' }, [k.neden])
+          ])]);
+          sahne.appendChild(gb);
+          sahne.appendChild(el('div', { class: 'alt-dugmeler' }, [
+            el('button', { class: 'secim sari', type: 'button', onclick: function () { sira++; ciz(); } }, [sira + 1 < K.length ? 'Sıradaki kart' : 'Sonucu gör'])
+          ]));
+          gb.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } }, [s.ikon ? el('span', { class: 'ikon', 'aria-hidden': 'true' }, [s.ikon]) : null, s.etiket]));
+      });
+      sahne.appendChild(secimler);
+      oyun.appendChild(sahne);
+    }
+    ciz();
+  }
+
+  return { kartOyunu: kartOyunu, kaydet: kaydet, baslat: baslat, el: el, tohum: tohum, karistir: karistir, robot: robot, yildizlar: yildizlar, sayili: sayili };
 })();

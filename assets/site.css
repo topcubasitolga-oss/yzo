@@ -294,3 +294,15 @@ li { margin-bottom: .35em; }
 /* İnsan mı makine mi */
 .oyun .cevrilmis .ipucu { background: var(--lavanta-acik); border: 3px solid var(--lavanta); border-radius: 18px; padding: 14px 18px; font-family: var(--f-metin); font-size: 1.05rem; }
 .oyun .cevrilmis .ipucu strong { font-family: var(--f-baslik); font-weight: 600; font-size: 1.15rem; display: block; margin-bottom: 4px; }
+
+/* ---------- Oyunlar sayfası ---------- */
+.oyun-kartlar { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .oyun-kartlar { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .oyun-kartlar { grid-template-columns: repeat(3, 1fr); } }
+.oyun-kartlar li { margin: 0; display: flex; }
+.oyun-kart { flex: 1; display: flex; flex-direction: column; gap: 10px; text-decoration: none; background: var(--kagit); border: 2px solid var(--murekkep); border-radius: var(--r-kart); overflow: hidden; box-shadow: var(--golge); transition: transform .12s ease, box-shadow .12s ease; padding-bottom: 18px; }
+.oyun-kart:hover, .oyun-kart:focus-visible { transform: translate(-2px, -2px); box-shadow: 7px 7px 0 var(--murekkep); }
+.oyun-kart .ust-serit { display: flex; justify-content: space-between; gap: 8px; background: var(--dunya); color: #fff; padding: 10px 18px; font-family: var(--f-baslik); font-weight: 600; font-size: .95rem; }
+.oyun-kart .oyun-ad { font-family: var(--f-baslik); font-weight: 600; font-size: 1.4rem; line-height: 1.2; padding: 4px 18px 0; }
+.oyun-kart .oyun-aciklama { color: var(--kursun); font-size: .98rem; padding: 0 18px; flex: 1; }
+.oyun-kart .oyna { align-self: flex-start; margin: 4px 18px 0; background: var(--limon); border: 2px solid var(--murekkep); border-radius: 999px; padding: 6px 22px; font-family: var(--f-baslik); font-weight: 700; font-size: 1.1rem; }

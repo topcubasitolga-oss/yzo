@@ -44,6 +44,7 @@ for (const e of veri.etkinlikler) {
   yaz(`k/${e.slug}/index.html`, kagitSayfasi(veri, e, '../../')); sayac++;
   if (e.ekran.durum === 'hazir') { yaz(`e/${e.slug}/ekran.html`, S.ekranSayfasi(veri, e, '../../')); sayac++; }
 }
+yaz('oyunlar/index.html', S.oyunlarSayfasi(veri, '../')); sayac++;
 yaz('ogretmen/index.html', S.ogretmenSayfasi(veri, '../')); sayac++;
 yaz('kitap/index.html', S.kitapSayfasi(veri, '../')); sayac++;
 yaz('arastirma/index.html', S.arastirmaSayfasi(veri, '../')); sayac++;

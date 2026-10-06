@@ -100,7 +100,11 @@
         "alan": "Bilişsel gelişim: nesneleri özelliklerine göre gruplama. Dil gelişimi: nedenleri açıklama.",
         "cikti": ""
       },
-      "malzeme": ["8 nesne kartı (basılı)", "iki kutu ya da iki çember", "isteğe bağlı: akıllı tahta"],
+      "malzeme": [
+        "8 nesne kartı (basılı)",
+        "iki kutu ya da iki çember",
+        "isteğe bağlı: akıllı tahta"
+      ],
       "hazirlik": "5 dk: kartları kes, kutuları etiketle (yeşil ✓ kendi başına / gri ✋ biri kullanmalı).",
       "ekran": {
         "durum": "hazir",
@@ -113,20 +117,53 @@
         "bloklar": [
           {
             "tip": "iki-kutu",
-            "sol": { "ad": "Kendi başına karar verir", "simge": "✓" },
-            "sag": { "ad": "Biri kullanmalı", "simge": "✋" },
+            "sol": {
+              "ad": "Kendi başına karar verir",
+              "simge": "✓"
+            },
+            "sag": {
+              "ad": "Biri kullanmalı",
+              "simge": "✋"
+            },
             "ogeler": [
-              { "emoji": "🧹", "ad": "Süpürge robotu" },
-              { "emoji": "🧸", "ad": "Oyuncak ayı" },
-              { "emoji": "🔊", "ad": "Sesli asistan" },
-              { "emoji": "🚲", "ad": "Bisiklet" },
-              { "emoji": "📱", "ad": "Yüzünü tanıyan telefon" },
-              { "emoji": "✂️", "ad": "Makas" },
-              { "emoji": "📺", "ad": "Çizgi film öneren tablet" },
-              { "emoji": "🚂", "ad": "Kurmalı tren" }
+              {
+                "emoji": "🧹",
+                "ad": "Süpürge robotu"
+              },
+              {
+                "emoji": "🧸",
+                "ad": "Oyuncak ayı"
+              },
+              {
+                "emoji": "🔊",
+                "ad": "Sesli asistan"
+              },
+              {
+                "emoji": "🚲",
+                "ad": "Bisiklet"
+              },
+              {
+                "emoji": "📱",
+                "ad": "Yüzünü tanıyan telefon"
+              },
+              {
+                "emoji": "✂️",
+                "ad": "Makas"
+              },
+              {
+                "emoji": "📺",
+                "ad": "Çizgi film öneren tablet"
+              },
+              {
+                "emoji": "🚂",
+                "ad": "Kurmalı tren"
+              }
             ]
           },
-          { "tip": "cizim", "baslik": "Evinde kendi başına karar veren bir şey var mı? Çiz." }
+          {
+            "tip": "cizim",
+            "baslik": "Evinde kendi başına karar veren bir şey var mı? Çiz."
+          }
         ]
       },
       "not": {
@@ -167,12 +204,16 @@
         "alan": "Bilişsel gelişim: neden-sonuç ilişkisi kurma, gruplama.",
         "cikti": ""
       },
-      "malzeme": ["Kukla ya da kutudan Robot", "12 kedi/köpek kartı", "\"öğrendim\" sayacı için 12 pul"],
+      "malzeme": [
+        "Kukla ya da kutudan Robot",
+        "12 kedi/köpek kartı",
+        "\"öğrendim\" sayacı için 12 pul"
+      ],
       "hazirlik": "10 dk: kartları kes, Robot kuklasını hazırla.",
       "ekran": {
-        "durum": "yakinda",
-        "modul": "",
-        "aciklama": "\"Örnek göster\" oyunu: kart ver, sayaç dolsun, Robot'u sına."
+        "durum": "hazir",
+        "modul": "oo-2-1",
+        "aciklama": "Kedi ve köpek resimlerine dokunarak Robot'a örnek göster, sonra sına. Az örnekte yanılır."
       },
       "kagit": {
         "baslik": "Robot'a Örnek Gösterelim",
@@ -182,17 +223,45 @@
             "tip": "kartlar",
             "baslik": "Örnek kartlar",
             "ogeler": [
-              { "emoji": "🐱", "ad": "kedi" },
-              { "emoji": "🐶", "ad": "köpek" },
-              { "emoji": "🐈", "ad": "kedi" },
-              { "emoji": "🐕", "ad": "köpek" },
-              { "emoji": "🐈‍⬛", "ad": "kedi" },
-              { "emoji": "🐩", "ad": "köpek" },
-              { "emoji": "😺", "ad": "kedi" },
-              { "emoji": "🦮", "ad": "köpek" }
+              {
+                "emoji": "🐱",
+                "ad": "kedi"
+              },
+              {
+                "emoji": "🐶",
+                "ad": "köpek"
+              },
+              {
+                "emoji": "🐈",
+                "ad": "kedi"
+              },
+              {
+                "emoji": "🐕",
+                "ad": "köpek"
+              },
+              {
+                "emoji": "🐈‍⬛",
+                "ad": "kedi"
+              },
+              {
+                "emoji": "🐩",
+                "ad": "köpek"
+              },
+              {
+                "emoji": "😺",
+                "ad": "kedi"
+              },
+              {
+                "emoji": "🦮",
+                "ad": "köpek"
+              }
             ]
           },
-          { "tip": "sayac", "baslik": "Robot kaç örnek gördü?", "adet": 12 }
+          {
+            "tip": "sayac",
+            "baslik": "Robot kaç örnek gördü?",
+            "adet": 12
+          }
         ]
       },
       "not": {
@@ -233,12 +302,16 @@
         "alan": "Dil gelişimi: dinlediğini anlama, yanlışı fark etme. Bilişsel gelişim: gerçek–hayal ayrımı.",
         "cikti": ""
       },
-      "malzeme": ["Masal metni (öğretmen notunda)", "4 hatalı sahne resmi", "kırmızı \"dur\" kartı (her çocuğa)"],
+      "malzeme": [
+        "Masal metni (öğretmen notunda)",
+        "4 hatalı sahne resmi",
+        "kırmızı \"dur\" kartı (her çocuğa)"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
-        "durum": "yakinda",
-        "modul": "",
-        "aciklama": "Resimde hatayı bul, dokun."
+        "durum": "hazir",
+        "modul": "oo-3-1",
+        "aciklama": "Robot masal anlatıyor; her sahnede yanlış resme dokun."
       },
       "kagit": {
         "baslik": "Hata Nerede?",
@@ -247,10 +320,22 @@
           {
             "tip": "sahneler",
             "ogeler": [
-              { "emoji": "🍌", "ad": "Mavi muz" },
-              { "emoji": "🐑", "ad": "Uçan koyun" },
-              { "emoji": "🌙", "ad": "Gece parlayan güneş" },
-              { "emoji": "🐟", "ad": "Ağaçta yüzen balık" }
+              {
+                "emoji": "🍌",
+                "ad": "Mavi muz"
+              },
+              {
+                "emoji": "🐑",
+                "ad": "Uçan koyun"
+              },
+              {
+                "emoji": "🌙",
+                "ad": "Gece parlayan güneş"
+              },
+              {
+                "emoji": "🐟",
+                "ad": "Ağaçta yüzen balık"
+              }
             ]
           }
         ]
@@ -293,12 +378,16 @@
         "alan": "Sosyal-duygusal gelişim: kendini koruma, güvenli davranış. Hayat Bilgisi \"Sağlığım ve Güvenliğim\" alanına köprü.",
         "cikti": ""
       },
-      "malzeme": ["10 durum kartı", "iki kutu: \"Söylerim\" / \"Önce büyüğüme sorarım\"", "konuşan oyuncak ya da kukla"],
+      "malzeme": [
+        "10 durum kartı",
+        "iki kutu: \"Söylerim\" / \"Önce büyüğüme sorarım\"",
+        "konuşan oyuncak ya da kukla"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
-        "durum": "yakinda",
-        "modul": "",
-        "aciklama": "Kutuya at oyunu."
+        "durum": "hazir",
+        "modul": "oo-4-1",
+        "aciklama": "Konuşan oyuncağın sorularına karar ver: söylerim mi, önce büyüğüme mi sorarım?"
       },
       "kagit": {
         "baslik": "Sır Kutusu",
@@ -306,15 +395,39 @@
         "bloklar": [
           {
             "tip": "iki-kutu",
-            "sol": { "ad": "Söylerim", "simge": "🙂" },
-            "sag": { "ad": "Önce büyüğüme sorarım", "simge": "🛑" },
+            "sol": {
+              "ad": "Söylerim",
+              "simge": "🙂"
+            },
+            "sag": {
+              "ad": "Önce büyüğüme sorarım",
+              "simge": "🛑"
+            },
             "ogeler": [
-              { "emoji": "🎨", "ad": "En sevdiğim renk" },
-              { "emoji": "🏠", "ad": "Evimin adresi" },
-              { "emoji": "🐶", "ad": "Sevdiğim hayvan" },
-              { "emoji": "📞", "ad": "Annemin telefonu" },
-              { "emoji": "🏫", "ad": "Okulumun adı" },
-              { "emoji": "⚽", "ad": "Sevdiğim oyun" }
+              {
+                "emoji": "🎨",
+                "ad": "En sevdiğim renk"
+              },
+              {
+                "emoji": "🏠",
+                "ad": "Evimin adresi"
+              },
+              {
+                "emoji": "🐶",
+                "ad": "Sevdiğim hayvan"
+              },
+              {
+                "emoji": "📞",
+                "ad": "Annemin telefonu"
+              },
+              {
+                "emoji": "🏫",
+                "ad": "Okulumun adı"
+              },
+              {
+                "emoji": "⚽",
+                "ad": "Sevdiğim oyun"
+              }
             ]
           }
         ]
@@ -357,7 +470,11 @@
         "alan": "Sanat ve yaratıcılık: kendi ürünü ile başkasının ürününü karşılaştırma. Dil gelişimi: betimleme.",
         "cikti": ""
       },
-      "malzeme": ["Öğretmen hesabıyla bir görsel üretme aracı (akıllı tahta)", "boya kalemleri", "A4 kâğıt"],
+      "malzeme": [
+        "Öğretmen hesabıyla bir görsel üretme aracı (akıllı tahta)",
+        "boya kalemleri",
+        "A4 kâğıt"
+      ],
       "hazirlik": "10 dk: aracı önceden dene. Çocuk hesabı açılmaz, çocuk adı girilmez.",
       "ekran": {
         "durum": "yakinda",
@@ -368,7 +485,11 @@
         "baslik": "Benim Çizimim, Robot'un Çizimi",
         "yonerge": "Üç sözcüğü söyledik: ______  ______  ______. Sol kutuya kendi resmini çiz. Sağ kutuya Robot'un resminde beğendiğin bir şeyi çiz.",
         "bloklar": [
-          { "tip": "iki-cizim", "sol": "Benim çizimim", "sag": "Robot'un çiziminden" }
+          {
+            "tip": "iki-cizim",
+            "sol": "Benim çizimim",
+            "sag": "Robot'un çiziminden"
+          }
         ]
       },
       "not": {
@@ -409,7 +530,11 @@
         "alan": "Bilim, Teknoloji ve Sanat. Ben ve Okulum (günlük yaşam).",
         "cikti": ""
       },
-      "malzeme": ["Gün şeridi çalışma kâğıdı", "çıkartma ya da renkli kalem", "akıllı tahta (isteğe bağlı)"],
+      "malzeme": [
+        "Gün şeridi çalışma kâğıdı",
+        "çıkartma ya da renkli kalem",
+        "akıllı tahta (isteğe bağlı)"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "yakinda",
@@ -423,17 +548,53 @@
           {
             "tip": "serit",
             "ogeler": [
-              { "saat": "07:30", "emoji": "⏰", "ad": "Telefon alarmı" },
-              { "saat": "08:00", "emoji": "🚗", "ad": "Arabada navigasyon" },
-              { "saat": "09:00", "emoji": "📚", "ad": "Sınıfta ders" },
-              { "saat": "12:30", "emoji": "🍽️", "ad": "Öğle yemeği" },
-              { "saat": "16:00", "emoji": "📱", "ad": "Tablette video önerisi" },
-              { "saat": "17:00", "emoji": "🔊", "ad": "Sesli asistana hava durumu sorma" },
-              { "saat": "18:00", "emoji": "📷", "ad": "Telefon yüzünü tanıyıp açılıyor" },
-              { "saat": "20:00", "emoji": "📖", "ad": "Kitap okuma" }
+              {
+                "saat": "07:30",
+                "emoji": "⏰",
+                "ad": "Telefon alarmı"
+              },
+              {
+                "saat": "08:00",
+                "emoji": "🚗",
+                "ad": "Arabada navigasyon"
+              },
+              {
+                "saat": "09:00",
+                "emoji": "📚",
+                "ad": "Sınıfta ders"
+              },
+              {
+                "saat": "12:30",
+                "emoji": "🍽️",
+                "ad": "Öğle yemeği"
+              },
+              {
+                "saat": "16:00",
+                "emoji": "📱",
+                "ad": "Tablette video önerisi"
+              },
+              {
+                "saat": "17:00",
+                "emoji": "🔊",
+                "ad": "Sesli asistana hava durumu sorma"
+              },
+              {
+                "saat": "18:00",
+                "emoji": "📷",
+                "ad": "Telefon yüzünü tanıyıp açılıyor"
+              },
+              {
+                "saat": "20:00",
+                "emoji": "📖",
+                "ad": "Kitap okuma"
+              }
             ]
           },
-          { "tip": "satirlar", "baslik": "Bulduğun yapay zekâ ne yapıyor? (öneriyor / tanıyor / yol buluyor)", "adet": 3 }
+          {
+            "tip": "satirlar",
+            "baslik": "Bulduğun yapay zekâ ne yapıyor? (öneriyor / tanıyor / yol buluyor)",
+            "adet": 3
+          }
         ]
       },
       "not": {
@@ -474,7 +635,11 @@
         "alan": "Bilim, Teknoloji ve Sanat. Matematik ile köprü: sayma, karşılaştırma.",
         "cikti": ""
       },
-      "malzeme": ["Elma/armut kartları (kırmızı, yeşil, sarı çeşitleri)", "\"Robot'un defteri\" kâğıdı", "akıllı tahta ya da tablet (ekran etkileşimi)"],
+      "malzeme": [
+        "Elma/armut kartları (kırmızı, yeşil, sarı çeşitleri)",
+        "\"Robot'un defteri\" kâğıdı",
+        "akıllı tahta ya da tablet (ekran etkileşimi)"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "hazir",
@@ -487,11 +652,44 @@
         "bloklar": [
           {
             "tip": "tablo",
-            "basliklar": ["Deneme", "Kaç örnek gösterdim?", "Sınavda kaçını bildi? (6 üzerinden)"],
-            "satirlar": [["1. deneme", "", ""], ["2. deneme", "", ""], ["3. deneme", "", ""]]
+            "basliklar": [
+              "Deneme",
+              "Kaç örnek gösterdim?",
+              "Sınavda kaçını bildi? (6 üzerinden)"
+            ],
+            "satirlar": [
+              [
+                "1. deneme",
+                "",
+                ""
+              ],
+              [
+                "2. deneme",
+                "",
+                ""
+              ],
+              [
+                "3. deneme",
+                "",
+                ""
+              ]
+            ]
           },
-          { "tip": "isaretle", "baslik": "Robot'a gösterdiğim örnekler", "secenekler": ["Kırmızı elma", "Yeşil elma", "Sarı armut", "Yeşil armut"] },
-          { "tip": "satirlar", "baslik": "Robot yeşil elmayı armut sandı. Neden olabilir?", "adet": 2 }
+          {
+            "tip": "isaretle",
+            "baslik": "Robot'a gösterdiğim örnekler",
+            "secenekler": [
+              "Kırmızı elma",
+              "Yeşil elma",
+              "Sarı armut",
+              "Yeşil armut"
+            ]
+          },
+          {
+            "tip": "satirlar",
+            "baslik": "Robot yeşil elmayı armut sandı. Neden olabilir?",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -532,7 +730,10 @@
         "alan": "Bilim, Teknoloji ve Sanat. Türkçe: metinde kişisel ayrıntıyı fark etme.",
         "cikti": ""
       },
-      "malzeme": ["6 metin kartı (ekranda hazır)", "✓/✗ kâğıdı"],
+      "malzeme": [
+        "6 metin kartı (ekranda hazır)",
+        "✓/✗ kâğıdı"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "hazir",
@@ -546,13 +747,44 @@
           {
             "tip": "secim-metin",
             "ogeler": [
-              { "metin": "Dün parkta kardeşimle salıncağa bindik. Kardeşim düştü ama ağlamadı, dizine yaprak yapıştırdık.", "secenekler": ["İnsan", "Makine"] },
-              { "metin": "Park, çocuklar için eğlenceli bir yerdir. Parkta salıncak, kaydırak ve tahterevalli bulunur. Çocuklar parkta mutlu olur.", "secenekler": ["İnsan", "Makine"] },
-              { "metin": "Kedimizin adı Pamuk. Pamuk en çok babamın terliğinde uyur, bir de kutuların içinde.", "secenekler": ["İnsan", "Makine"] }
+              {
+                "metin": "Dün parkta kardeşimle salıncağa bindik. Kardeşim düştü ama ağlamadı, dizine yaprak yapıştırdık.",
+                "secenekler": [
+                  "İnsan",
+                  "Makine"
+                ]
+              },
+              {
+                "metin": "Park, çocuklar için eğlenceli bir yerdir. Parkta salıncak, kaydırak ve tahterevalli bulunur. Çocuklar parkta mutlu olur.",
+                "secenekler": [
+                  "İnsan",
+                  "Makine"
+                ]
+              },
+              {
+                "metin": "Kedimizin adı Pamuk. Pamuk en çok babamın terliğinde uyur, bir de kutuların içinde.",
+                "secenekler": [
+                  "İnsan",
+                  "Makine"
+                ]
+              }
             ]
           },
-          { "tip": "satirlar", "baslik": "Neden böyle düşündüm? İpucum:", "adet": 2 },
-          { "tip": "isaretle", "baslik": "Makinenin bilemeyeceği şeyler", "secenekler": ["Benim kedimin adı", "Dünkü gezide ne olduğu", "Dünyanın en yüksek dağı", "Bugün ne yediğim"] }
+          {
+            "tip": "satirlar",
+            "baslik": "Neden böyle düşündüm? İpucum:",
+            "adet": 2
+          },
+          {
+            "tip": "isaretle",
+            "baslik": "Makinenin bilemeyeceği şeyler",
+            "secenekler": [
+              "Benim kedimin adı",
+              "Dünkü gezide ne olduğu",
+              "Dünyanın en yüksek dağı",
+              "Bugün ne yediğim"
+            ]
+          }
         ]
       },
       "not": {
@@ -593,12 +825,16 @@
         "alan": "Ben ve Okulum: adalet, kurallar, arkadaşlık. Değer: Adalet.",
         "cikti": ""
       },
-      "malzeme": ["Öykü (öğretmen notunda)", "ayakkabı kartları (kırmızı/mavi/yeşil)", "\"Robot'a hangi örnekleri gösterelim?\" kâğıdı"],
+      "malzeme": [
+        "Öykü (öğretmen notunda)",
+        "ayakkabı kartları (kırmızı/mavi/yeşil)",
+        "\"Robot'a hangi örnekleri gösterelim?\" kâğıdı"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
-        "durum": "yakinda",
-        "modul": "",
-        "aciklama": "Örnekleri karıştır, yeniden eğit, sonucu gör."
+        "durum": "hazir",
+        "modul": "i1-4-1",
+        "aciklama": "Robot topu yalnız kırmızı ayakkabılılara veriyor. Defterine örnek ekle, adil yap."
       },
       "kagit": {
         "baslik": "Adil Robot",
@@ -606,11 +842,43 @@
         "bloklar": [
           {
             "tip": "tablo",
-            "basliklar": ["Çocuk", "Ayakkabısı", "Top aldı mı?"],
-            "satirlar": [["Ece", "kırmızı", "☐ evet   ☐ hayır"], ["Can", "mavi", "☐ evet   ☐ hayır"], ["Zeynep", "yeşil", "☐ evet   ☐ hayır"], ["Ali", "kırmızı", "☐ evet   ☐ hayır"]]
+            "basliklar": [
+              "Çocuk",
+              "Ayakkabısı",
+              "Top aldı mı?"
+            ],
+            "satirlar": [
+              [
+                "Ece",
+                "kırmızı",
+                "☐ evet   ☐ hayır"
+              ],
+              [
+                "Can",
+                "mavi",
+                "☐ evet   ☐ hayır"
+              ],
+              [
+                "Zeynep",
+                "yeşil",
+                "☐ evet   ☐ hayır"
+              ],
+              [
+                "Ali",
+                "kırmızı",
+                "☐ evet   ☐ hayır"
+              ]
+            ]
           },
-          { "tip": "cizim", "baslik": "Robot'a göstereceğim örnekler (adil olması için)" },
-          { "tip": "satirlar", "baslik": "Robot neden haksızlık yaptı?", "adet": 2 }
+          {
+            "tip": "cizim",
+            "baslik": "Robot'a göstereceğim örnekler (adil olması için)"
+          },
+          {
+            "tip": "satirlar",
+            "baslik": "Robot neden haksızlık yaptı?",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -651,7 +919,11 @@
         "alan": "Bilim, Teknoloji ve Sanat. Ben ve Okulum: sınıf içi karar alma.",
         "cikti": ""
       },
-      "malzeme": ["Öğretmen hesabıyla görsel üretme aracı", "\"Ne söyledik, ne çıktı?\" kâğıdı", "boya kalemleri"],
+      "malzeme": [
+        "Öğretmen hesabıyla görsel üretme aracı",
+        "\"Ne söyledik, ne çıktı?\" kâğıdı",
+        "boya kalemleri"
+      ],
       "hazirlik": "10 dk: aracı dene. Çocuk hesabı yok, çocuk adı girilmez.",
       "ekran": {
         "durum": "yakinda",
@@ -664,10 +936,37 @@
         "bloklar": [
           {
             "tip": "tablo",
-            "basliklar": ["Deneme", "Robot'a söylediğimiz", "Çıkan resimde beğendiğimiz", "Değiştirmek istediğimiz"],
-            "satirlar": [["1", "", "", ""], ["2", "", "", ""], ["3", "", "", ""]]
+            "basliklar": [
+              "Deneme",
+              "Robot'a söylediğimiz",
+              "Çıkan resimde beğendiğimiz",
+              "Değiştirmek istediğimiz"
+            ],
+            "satirlar": [
+              [
+                "1",
+                "",
+                "",
+                ""
+              ],
+              [
+                "2",
+                "",
+                "",
+                ""
+              ],
+              [
+                "3",
+                "",
+                "",
+                ""
+              ]
+            ]
           },
-          { "tip": "cizim", "baslik": "Benim maskotum" }
+          {
+            "tip": "cizim",
+            "baslik": "Benim maskotum"
+          }
         ]
       },
       "not": {
@@ -708,7 +1007,11 @@
         "alan": "Bilim, Teknoloji ve Sanat: teknoloji ürünlerinin yaşamımıza etkisi.",
         "cikti": ""
       },
-      "malzeme": ["12 örnek kartı", "üç küme çemberi", "gerekçe tablosu"],
+      "malzeme": [
+        "12 örnek kartı",
+        "üç küme çemberi",
+        "gerekçe tablosu"
+      ],
       "hazirlik": "5 dk.",
       "ekran": {
         "durum": "yakinda",
@@ -721,19 +1024,59 @@
         "bloklar": [
           {
             "tip": "tablo",
-            "basliklar": ["Alet", "Küme (P / O / A)", "Gerekçem"],
+            "basliklar": [
+              "Alet",
+              "Küme (P / O / A)",
+              "Gerekçem"
+            ],
             "satirlar": [
-              ["Çamaşır makinesi", "", ""],
-              ["Otomatik kapı", "", ""],
-              ["Navigasyon (yol öneren)", "", ""],
-              ["Video öneri sistemi", "", ""],
-              ["Fabrika robot kolu", "", ""],
-              ["Yüz tanıyan telefon kilidi", "", ""],
-              ["Termostat (sıcaklığa göre kapanan)", "", ""],
-              ["Sesli asistan", "", ""]
+              [
+                "Çamaşır makinesi",
+                "",
+                ""
+              ],
+              [
+                "Otomatik kapı",
+                "",
+                ""
+              ],
+              [
+                "Navigasyon (yol öneren)",
+                "",
+                ""
+              ],
+              [
+                "Video öneri sistemi",
+                "",
+                ""
+              ],
+              [
+                "Fabrika robot kolu",
+                "",
+                ""
+              ],
+              [
+                "Yüz tanıyan telefon kilidi",
+                "",
+                ""
+              ],
+              [
+                "Termostat (sıcaklığa göre kapanan)",
+                "",
+                ""
+              ],
+              [
+                "Sesli asistan",
+                "",
+                ""
+              ]
             ]
           },
-          { "tip": "satirlar", "baslik": "Zor karar verdiğim bir alet ve nedeni:", "adet": 2 }
+          {
+            "tip": "satirlar",
+            "baslik": "Zor karar verdiğim bir alet ve nedeni:",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -774,7 +1117,12 @@
         "alan": "Doğa ve Çevre: geri dönüşüm. Bilim, Teknoloji ve Sanat.",
         "cikti": ""
       },
-      "malzeme": ["Geri dönüşüm nesne kartları ya da temiz atıklar", "etiket çıkartmaları: kâğıt / plastik / cam / metal", "veri toplama formu", "isteğe bağlı: tablet ve Teachable Machine (öğretmen hesabı)"],
+      "malzeme": [
+        "Geri dönüşüm nesne kartları ya da temiz atıklar",
+        "etiket çıkartmaları: kâğıt / plastik / cam / metal",
+        "veri toplama formu",
+        "isteğe bağlı: tablet ve Teachable Machine (öğretmen hesabı)"
+      ],
       "hazirlik": "15 dk.",
       "ekran": {
         "durum": "yakinda",
@@ -785,9 +1133,30 @@
         "baslik": "Veri Toplama Formu",
         "yonerge": "Topladığın her nesneyi yaz, etiketini seç. Eğitimden sonra Robot'un yanıldığı nesneleri işaretle. Hangi örnekler eksikti?",
         "bloklar": [
-          { "tip": "tablo", "basliklar": ["Nesne", "Etiket (kâğıt / plastik / cam / metal)", "Robot doğru bildi mi?"], "satir": 8 },
-          { "tip": "isaretle", "baslik": "Veri setimizde eksik olan", "secenekler": ["Çok az cam örneği", "Hep aynı şişe", "Etiketi yanlış yapıştırdık", "Karışık (kâğıt + plastik) nesne"] },
-          { "tip": "satirlar", "baslik": "Robot'u daha iyi yapmak için ne eklerdim?", "adet": 2 }
+          {
+            "tip": "tablo",
+            "basliklar": [
+              "Nesne",
+              "Etiket (kâğıt / plastik / cam / metal)",
+              "Robot doğru bildi mi?"
+            ],
+            "satir": 8
+          },
+          {
+            "tip": "isaretle",
+            "baslik": "Veri setimizde eksik olan",
+            "secenekler": [
+              "Çok az cam örneği",
+              "Hep aynı şişe",
+              "Etiketi yanlış yapıştırdık",
+              "Karışık (kâğıt + plastik) nesne"
+            ]
+          },
+          {
+            "tip": "satirlar",
+            "baslik": "Robot'u daha iyi yapmak için ne eklerdim?",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -828,12 +1197,16 @@
         "alan": "Yaşadığım Yer ve Ülkem: bilgi kaynakları. Bilgi okuryazarlığı.",
         "cikti": ""
       },
-      "malzeme": ["5 yanıt kartı (3 doğru, 2 uydurma)", "atlas, ansiklopedi, ders kitabı", "doğrulama tablosu"],
+      "malzeme": [
+        "5 yanıt kartı (3 doğru, 2 uydurma)",
+        "atlas, ansiklopedi, ders kitabı",
+        "doğrulama tablosu"
+      ],
       "hazirlik": "10 dk: yanıt kartlarını sınıfın konusuna göre hazırla (iller, hayvanlar).",
       "ekran": {
-        "durum": "yakinda",
-        "modul": "",
-        "aciklama": "Yanıt kartı ve kaynak kontrolü."
+        "durum": "hazir",
+        "modul": "i2-3-1",
+        "aciklama": "Robot'un emin cümlelerini değerlendir: doğru mu, uydurma mı? Kaynağı gör."
       },
       "kagit": {
         "baslik": "Dedektif Defteri",
@@ -841,16 +1214,44 @@
         "bloklar": [
           {
             "tip": "tablo",
-            "basliklar": ["Yapay zekânın iddiası", "Baktığım kaynak", "Sonuç"],
+            "basliklar": [
+              "Yapay zekânın iddiası",
+              "Baktığım kaynak",
+              "Sonuç"
+            ],
             "satirlar": [
-              ["Türkiye'nin en uzun nehri Kızılırmak'tır.", "", ""],
-              ["Penguenler Kuzey Kutbu'nda yaşar.", "", ""],
-              ["İstanbul iki kıtada yer alır.", "", ""],
-              ["Zürafaların boynunda 30 kemik vardır.", "", ""],
-              ["Ay'ın kendi ışığı yoktur.", "", ""]
+              [
+                "Türkiye'nin en uzun nehri Kızılırmak'tır.",
+                "",
+                ""
+              ],
+              [
+                "Penguenler Kuzey Kutbu'nda yaşar.",
+                "",
+                ""
+              ],
+              [
+                "İstanbul iki kıtada yer alır.",
+                "",
+                ""
+              ],
+              [
+                "Zürafaların boynunda 30 kemik vardır.",
+                "",
+                ""
+              ],
+              [
+                "Ay'ın kendi ışığı yoktur.",
+                "",
+                ""
+              ]
             ]
           },
-          { "tip": "satirlar", "baslik": "Yanlış iddia neden inandırıcıydı?", "adet": 2 }
+          {
+            "tip": "satirlar",
+            "baslik": "Yanlış iddia neden inandırıcıydı?",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -891,7 +1292,11 @@
         "alan": "Ben ve Okulum: haklar ve sorumluluklar, çocuk hakları. Sağlığım ve Güvenliğim.",
         "cikti": ""
       },
-      "malzeme": ["Uyarıcı öykü (öğretmen notunda)", "üç konum kartı: katılıyorum / katılmıyorum / kararsızım", "argüman şeması"],
+      "malzeme": [
+        "Uyarıcı öykü (öğretmen notunda)",
+        "üç konum kartı: katılıyorum / katılmıyorum / kararsızım",
+        "argüman şeması"
+      ],
       "hazirlik": "5 dk; sandalyeler halka düzeninde.",
       "ekran": {
         "durum": "yakinda",
@@ -905,17 +1310,42 @@
           {
             "tip": "secim-metin",
             "ogeler": [
-              { "metin": "Okul kapısına yüz tanıyan kamera koyulsun.", "secenekler": ["Katılıyorum", "Katılmıyorum", "Kararsızım"] }
+              {
+                "metin": "Okul kapısına yüz tanıyan kamera koyulsun.",
+                "secenekler": [
+                  "Katılıyorum",
+                  "Katılmıyorum",
+                  "Kararsızım"
+                ]
+              }
             ]
           },
-          { "tip": "tablo", "basliklar": ["İyi yanı", "Kötü yanı"], "satir": 3 },
+          {
+            "tip": "tablo",
+            "basliklar": [
+              "İyi yanı",
+              "Kötü yanı"
+            ],
+            "satir": 3
+          },
           {
             "tip": "secim-metin",
             "ogeler": [
-              { "metin": "Tartışmadan sonra görüşüm:", "secenekler": ["Katılıyorum", "Katılmıyorum", "Kararsızım"] }
+              {
+                "metin": "Tartışmadan sonra görüşüm:",
+                "secenekler": [
+                  "Katılıyorum",
+                  "Katılmıyorum",
+                  "Kararsızım"
+                ]
+              }
             ]
           },
-          { "tip": "satirlar", "baslik": "Görüşüm değişti ya da değişmedi, çünkü…", "adet": 2 }
+          {
+            "tip": "satirlar",
+            "baslik": "Görüşüm değişti ya da değişmedi, çünkü…",
+            "adet": 2
+          }
         ]
       },
       "not": {
@@ -956,7 +1386,11 @@
         "alan": "Bilim, Teknoloji ve Sanat: tasarım süreci. Ben ve Okulum: sorun çözme.",
         "cikti": ""
       },
-      "malzeme": ["Proje kanvası (A3 ya da kâğıt)", "yapışkan notlar", "isteğe bağlı: robotik set ya da Teachable Machine"],
+      "malzeme": [
+        "Proje kanvası (A3 ya da kâğıt)",
+        "yapışkan notlar",
+        "isteğe bağlı: robotik set ya da Teachable Machine"
+      ],
       "hazirlik": "10 dk.",
       "ekran": {
         "durum": "yakinda",
@@ -969,9 +1403,20 @@
         "bloklar": [
           {
             "tip": "kanvas",
-            "kutular": ["Sorunumuz", "Yapay zekâ ile çözülür mü? Neden?", "Toplayacağımız örnekler (veri)", "Nasıl eğitiriz?", "Nasıl sınarız?", "Yapamayacağı şeyler, dikkat edilecekler"]
+            "kutular": [
+              "Sorunumuz",
+              "Yapay zekâ ile çözülür mü? Neden?",
+              "Toplayacağımız örnekler (veri)",
+              "Nasıl eğitiriz?",
+              "Nasıl sınarız?",
+              "Yapamayacağı şeyler, dikkat edilecekler"
+            ]
           },
-          { "tip": "satirlar", "baslik": "Sunum planı (kim, ne anlatacak?)", "adet": 3 }
+          {
+            "tip": "satirlar",
+            "baslik": "Sunum planı (kim, ne anlatacak?)",
+            "adet": 3
+          }
         ]
       },
       "not": {

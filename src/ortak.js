@@ -36,6 +36,7 @@ const FONTLAR = 'https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;6
 
 function iskelet({ baslik, aciklama = '', kok = '', aktif = '', govde, ekBas = '', ekSon = '', govdeSinif = '', site }) {
   const nav = [
+    ['oyunlar', 'Oyunlar', `${kok}oyunlar/index.html`],
     ['ogretmen', 'Öğretmen köşesi', `${kok}ogretmen/index.html`],
     ['kitap', 'Kitap', `${kok}kitap/index.html`],
     ['arastirma', 'Araştırma', `${kok}arastirma/index.html`],
