@@ -440,6 +440,86 @@ ${uniteler.map(({ d, h: hs }) => `<section class="plan-unite d-${d.id}" aria-lab
   return iskelet({ baslik: `Yıllık plan, ${bant.ad}: ${site.ad}`, aciklama: '36 haftalık yapay zekâ okuryazarlığı programı.', kok, aktif: '', govde, site });
 }
 
+
+/* ---------------- ARF Atölyesi ---------------- */
+const ATOLYE_OYUNLAR = [
+  { modul: 'atolye-gorsel', yol: 'gorsel', ad: 'ARF\'la Resim Yapalım', aciklama: 'Kartlarla istem kur, ARF çizsin; incele, düzelt, beyan et.', tur: 'Görsel atölyesi', yas: '1–4. sınıf (okul öncesinde öğretmenle)' },
+  { modul: 'atolye-odev', yol: 'odev', ad: 'Ödevde Yapay Zekâ: Trafik Işığı', aciklama: 'Ödevde hangi kullanım yeşil, hangisi sarı, hangisi kırmızı?', tur: 'Sürükle-bırak', yas: '3–4. sınıf, veli ve öğretmen' }
+];
+function atolyeSayfasi(veri, kok = '../') {
+  const { site } = veri;
+  const adimlar = [
+    ['Düşün', 'Önce sen düşünürsün. Fikir senindir; ARF\'a gitmeden ne istediğini bilirsin.'],
+    ['İste', 'İstediğini açıkça yazarsın: kim, ne yapıyor, nerede, nasıl. Kişisel bilgi yazmazsın.'],
+    ['İncele', 'Sonuca bakarsın: istediğim gibi mi, doğru mu, herkes için uygun mu?'],
+    ['Düzelt', 'Beğenmediğin yeri değiştirirsin. Son karar senindir.'],
+    ['Beyan et', 'Paylaşırken yapay zekânın yardım ettiğini yazarsın.']
+  ];
+  const govde = `
+<p class="kirinti"><a href="${kok}index.html">Ana sayfa</a><span>›</span>ARF Atölyesi</p>
+<header class="sayfa-baslik atolye-giris">
+  <div>
+    <p class="ust-yazi">Üretken yapay zekâ ile üretmek</p>
+    <h1>ARF Atölyesi</h1>
+    <p class="oncu">Metin, resim ve video üretirken yapay zekâyı doğru kullanmayı öğreniyoruz: fikir bizden, yardım ARF'tan, son karar yine bizden. Ödevde ve projede nasıl kullanılacağı da burada.</p>
+  </div>
+  <div class="robot-balon">${robotSvg('', 110, 'sevincli')}<div class="balon">Ben yardım ederim. Ama fikir senin!</div></div>
+</header>
+
+<section class="bolum" aria-labelledby="dongu">
+  <h2 id="dongu"><span class="simge" aria-hidden="true">↻</span>Her üretimde beş adım</h2>
+  <ol class="uretim-dongu">
+    ${adimlar.map(([a, t], i) => `<li><span class="no">${i + 1}</span><strong>${h(a)}</strong><span>${h(t)}</span></li>`).join('')}
+  </ol>
+</section>
+
+<section class="bolum" aria-labelledby="atolyeler">
+  <h2 id="atolyeler"><span class="simge" aria-hidden="true">✋</span>Atölyeler</h2>
+  <ul class="oyun-kartlar">
+    ${ATOLYE_OYUNLAR.map(o => `<li><a class="oyun-kart d-5" href="${kok}atolye/${o.yol}.html"><span class="ust-serit"><span>${h(o.tur)}</span><span>Hazır</span></span><span class="oyun-ad">${h(o.ad)}</span><span class="oyun-aciklama">${h(o.aciklama)} <em>${h(o.yas)}</em></span><span class="oyna">Oyna</span></a></li>`).join('')}
+    <li><div class="oyun-kart planli"><span class="ust-serit"><span>Metin atölyesi</span><span>Hazırlanıyor</span></span><span class="oyun-ad">ARF'la Hikâye Yazalım</span><span class="oyun-aciklama">Hikâyenin başını çocuk yazar, ARF devam önerir; çocuk seçer, değiştirir, sonunu kendisi bağlar. Bilmece ve mektup da var.</span></div></li>
+    <li><div class="oyun-kart planli"><span class="ust-serit"><span>Video atölyesi</span><span>Hazırlanıyor</span></span><span class="oyun-ad">Karakterimi Konuşturuyorum</span><span class="oyun-aciklama">Çocuk karakterini çizer, sınıf repliğini yazar; öğretmen video aracıyla canlandırır. Sahne sahne istem yazmayı öğrenir.</span></div></li>
+  </ul>
+</section>
+
+<section class="bolum" aria-labelledby="yas">
+  <h2 id="yas"><span class="simge" aria-hidden="true">👥</span>Kim, nasıl kullanır?</h2>
+  <p class="aciklama">Yaygın üretken yapay zekâ araçlarının çoğu kullanım koşullarında 13 yaş altını kabul etmez. Bu yüzden ilkokulda çocuk kendi hesabıyla araç kullanmaz; öğretmen kendi hesabında, tahtada, sınıfla birlikte üretir.</p>
+  <div class="tablo-sarmal"><table class="tablo">
+    <thead><tr><th>Bant</th><th>Kim kullanır?</th><th>Çocuk ne yapar?</th></tr></thead>
+    <tbody>
+      <tr><td>Okul öncesi</td><td>Öğretmen, tahtada</td><td>Fikir verir, sonucu beğenir ya da değiştirtir, kendi resmiyle karşılaştırır.</td></tr>
+      <tr><td>1–2. sınıf</td><td>Öğretmen, sınıfla birlikte</td><td>Sınıfça istem kurar, sonucu inceler, düzeltir; beyan etiketini birlikte yazar.</td></tr>
+      <tr><td>3–4. sınıf</td><td>Öğretmen gözetiminde gruplar</td><td>Grup istemini yazar, sonucu kaynakla kontrol eder; ödevde kullandıysa beyan eder.</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section class="bolum" aria-labelledby="odev">
+  <h2 id="odev"><span class="simge" aria-hidden="true">🚦</span>Ödevde yapay zekâ: trafik ışığı</h2>
+  <div class="trafik">
+    <div class="isik yesil"><strong>🟢 Kullanabilirim</strong><ul><li>Konu için fikir almak</li><li>Yazım hatalarını kontrol ettirmek</li><li>Anlamadığım bir şeyi açıklatmak (kitaptan da kontrol ederek)</li></ul></div>
+    <div class="isik sari"><strong>🟡 Dikkat, beyan et</strong><ul><li>Sunuma yapay zekâyla resim yapmak</li><li>Taslağa öneri almak; son hâli kendi sözcüklerimle yazmak</li><li>Yardım aldığımı öğretmenime söylemek</li></ul></div>
+    <div class="isik kirmizi"><strong>🔴 Yapmam</strong><ul><li>Ödevin tamamını yaptırmak</li><li>Yapay zekânın yazdığını kendim yazdım demek</li><li>Adres, okul, fotoğraf gibi kişisel bilgileri yazmak</li></ul></div>
+  </div>
+  <p class="aciklama" style="margin-top:14px">Bu tablo öğretmenin sınıf kuralı, velinin ev rehberi ve çocuğun oyunu olarak kullanılır. Okul isterse kendi kurallarına göre uyarlayabilir.</p>
+</section>
+
+<section class="bolum" aria-labelledby="proje">
+  <h2 id="proje"><span class="simge" aria-hidden="true">📚</span>Dönem projesi: Sınıfımızın resimli masal kitabı</h2>
+  <ol class="akis">
+    <li><span class="etiket">1. hafta</span><span>Sınıf masalın konusunu ve kahramanlarını seçer; her çocuk kendi kahraman çizimini yapar.</span></li>
+    <li><span class="etiket">2. hafta</span><span>Gruplar masalın bölümlerini kendi sözcükleriyle yazar. ARF yalnız fikir ve yazım kontrolü için kullanılır.</span></li>
+    <li><span class="etiket">3. hafta</span><span>Her bölüm için sınıf istem yazar, öğretmen görselleri üretir; çocuklar inceler, düzelttirir, çocuk çizimleriyle karşılaştırır.</span></li>
+    <li><span class="etiket">4. hafta</span><span>Kitap birleştirilir; her sayfada beyan etiketi bulunur. Velilerle sergi; "ARF Üreticisi" belgesi.</span></li>
+  </ol>
+</section>`;
+  return iskelet({ baslik: `ARF Atölyesi: ${site.ad}`, aciklama: 'Üretken yapay zekâyı metin, görsel ve video üretiminde ve ödevde doğru kullanmak.', kok, aktif: 'atolye', govde, site });
+}
+function atolyeOyunSayfasi(veri, o, kok = '../') {
+  return ekranSayfasi(veri, { slug: '__atolye__', ad: o.ad, ekran: { modul: o.modul } }, kok).replace(`href="${kok}e/__atolye__/index.html">Etkinliğe dön`, `href="${kok}atolye/index.html">Atölyeye dön`);
+}
+
 /* ---------------- Öğretmen köşesi ---------------- */
 function ogretmenSayfasi(veri, kok = '../') {
   const { site, dunyalar, bantlar, etkinlikler } = veri;
@@ -579,4 +659,4 @@ function arastirmaSayfasi(veri, kok = '../') {
   return iskelet({ baslik: `Araştırma: ${site.ad}`, aciklama: 'Çerçeve, yaş bantları, veri ve gizlilik.', kok, aktif: 'arastirma', govde, site });
 }
 
-module.exports = { planSayfasi, sunumSayfasi, oyunSayfasi, oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };
+module.exports = { ATOLYE_OYUNLAR, atolyeSayfasi, atolyeOyunSayfasi, planSayfasi, sunumSayfasi, oyunSayfasi, oyunlarSayfasi, anaSayfa, bantSayfasi, etkinlikSayfasi, ekranSayfasi, ogretmenSayfasi, kitapSayfasi, arastirmaSayfasi };

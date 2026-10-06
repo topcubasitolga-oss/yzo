@@ -47,6 +47,8 @@ for (const e of veri.etkinlikler) {
   if (e.ekran.durum === 'hazir') { yaz(`e/${e.slug}/ekran.html`, S.ekranSayfasi(veri, e, '../../')); sayac++; }
 }
 for (const b of veri.bantlar) if ((veri.yillik || {})[b.id]) { yaz(`plan/${b.id}/index.html`, S.planSayfasi(veri, b, '../../')); sayac++; }
+yaz('atolye/index.html', S.atolyeSayfasi(veri, '../')); sayac++;
+for (const o of S.ATOLYE_OYUNLAR) { yaz(`atolye/${o.yol}.html`, S.atolyeOyunSayfasi(veri, o, '../')); sayac++; }
 yaz('oyunlar/index.html', S.oyunlarSayfasi(veri, '../')); sayac++;
 yaz('ogretmen/index.html', S.ogretmenSayfasi(veri, '../')); sayac++;
 yaz('kitap/index.html', S.kitapSayfasi(veri, '../')); sayac++;
